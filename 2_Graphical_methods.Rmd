@@ -102,11 +102,11 @@ sample(letters[c(1:4,6)],10, replace = TRUE)
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(dplyr)
-write.csv(midwest,"Data_Sets/state_demographics.csv",row.names = FALSE)
-write.csv(msleep,"Data_Sets/animal_sleep.csv",row.names = FALSE)
+#write.csv(midwest,"Data_Sets/state_demographics.csv",row.names = FALSE)
+#write.csv(msleep,"Data_Sets/animal_sleep.csv",row.names = FALSE)
 ```
 
-[State Demographic Data](Data_Sets/state_demographics.csv)  
+[State Demographic Data](https://docs.google.com/spreadsheets/d/1Dl4B872ZVHWTDKaRXt1kbQDj10txmt0DHCkieiHMKIk/edit?usp=sharing)  
 
 1. What is Illinois race **proportions**? 
 2. How does Illinois race proportions **compare** with other states? Compare with Wisconsin?
@@ -118,7 +118,7 @@ write.csv(msleep,"Data_Sets/animal_sleep.csv",row.names = FALSE)
 3. Comparative Bar Chart
 </div>
 
-## Illinios Proportions
+## Illinois Proportions
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
 library(reshape2)
@@ -139,7 +139,7 @@ library(gridExtra)
 grid.arrange(plot1, plot2, ncol=2)
 ```
 
-## Comparing Proportions
+## Comparing States
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
 b<-a %>% group_by(state) %>% mutate(Population = sum(value)) 
 b<- b %>% group_by(state, variable) %>% 
@@ -161,9 +161,11 @@ plot1 <- ggplot(b, aes(x = reorder(variable,-Race), y = Race, fill = state)) +
   geom_bar(stat = "identity",position="dodge") + labs(x = "Race", y ="Population")
 plot2 <- ggplot(b, aes(x = reorder(variable,-Frequency), y = Frequency, fill = state)) + 
   geom_bar(stat = "identity",position="dodge") + labs(x = "Race")
+plot2 <- ggplot(b, aes(x = reorder(variable,-Frequency), y = Frequency, fill = state)) + 
+  geom_bar(stat = "identity",position="dodge") + labs(x = "Race")
 plot3 <- ggplot(b, aes(x = state, y = Frequency, fill = variable)) + 
   geom_bar(stat = "identity") + scale_fill_discrete("Race")
-grid.arrange(plot1, plot2, plot2, plot3, ncol=2, nrow = 2)
+grid.arrange(plot1, plot2, plot2 + coord_flip(), plot3, ncol=2, nrow = 2)
 ```
 
 ## Numeric Univariate Data
@@ -207,7 +209,7 @@ plot(Table)
 
 ## Historgram, scatterplot or line chart?
 
-[Animal Sleep Data](Data_Sets/animal_sleep.csv)   
+[Animal Sleep Data](https://docs.google.com/spreadsheets/d/1uN_Gbko-9LFMpERoA897A6_GWRB-5qzuA6qDIldygRw/edit?usp=sharing)   
 
 1. What is the distribution of sleep time for different animals?  What is the cumulative distribution?
 2. How does the animal weight compare with the amount of sleep?
@@ -268,5 +270,4 @@ p + geom_line(aes(colour = factor(rating))) + labs(title = "IMDB Movie Ratings")
 
 * 3.3, 3.8, 3.9 
 * 3.16, 3.20, 3.23
-* 3.32, 3.39
 * 3.41, 3.47
