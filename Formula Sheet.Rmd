@@ -1,0 +1,148 @@
+---
+output: html_document
+---
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 2 100px;
+    -webkit-columns: 2 100px;
+    -moz-columns: 2 100px;
+  }
+  .pagebreak { page-break-before: always; }
+</style>
+
+<center>Formula Sheet</center>
+
+<div class="col2">
+<p>
+Population Mean $\mu$   
+Sample Mean $\bar{x} = \frac{x_1+x_2+\cdots +x_n}{n} = \frac{\sum (x)}{n}$
+
+* Estimating $\mu = \mu_\bar{x}$ 
+
+Population standard deviation $\sigma$   
+Sample Standard deviation $s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$ 
+
+* Estimating $\sigma = \frac{\sigma_\bar{x}}{\sqrt{n}}$  
+<br>
+Sample proportion of success $\hat{p} = \frac {\text{number of S's in the sample}}{n}$
+
+* $\mu_\hat{p} = p$
+* $\sigma_\hat{p} = \sqrt{\frac{p(1-p)}{n}}$
+* $\text{z} = \frac{\hat{p}- p}{\sqrt{\frac{p(1-p)}{n}}}$
+* Confidence Interval $\hat{p} \pm 1.96 \sqrt{\frac{p(1-p)}{n}}$
+* n with 95% confidence $n = p(1-p)\frac{1.96}{B}^2$
+</p>
+</div>
+<hr>
+Standardized Score | Bound of Error (B) | Confidence Interval | n with 95% confidence | Note
+------------- | ------------ | ------------ | ------------ | ------------
+$\text{z} = \frac{x- \bar{x}}{\sigma}$ | $(\text{z critical value})*(\frac{\sigma}{\sqrt{n}})$ | $\bar{x} \pm B$ | $n = \sqrt{(\frac{1.96\sigma}{B})}$| When $\sigma$ is known
+$t = \frac{\bar{x}-\mu}{\frac{s}{\sqrt{n}}}$ | $(\text{t critical value})*(\frac{s}{\sqrt{n}})$ | $\bar{x} \pm B$ | | When $\sigma$ is unknown
+<hr>
+
+Test | Null hypothesis | Alternative Hypothesis | Test statistic | P-Value | 
+------------- | ------------ | ------------ | ------------ | ------------
+Large-Sample for p | p = hypothesized value | $\begin{align}
+p > \text{hypothesized value}\\
+p < \text{hypothesized value}\\
+p \ne \text{hypothesized value}\\
+\end{align}$ | $\text{z} = \frac{\hat{p}- \text{hypothesized value}}{\sqrt{\frac{\text{hypothesized value}(1-\text{hypothesized value})}{n}}}$ | $\begin{align}
+\text{Area right of z}\\
+\text{Area right of z}\\
+2\text{(Area right or left of z)}\\
+\end{align}$
+One-Sample for $\mu$ | $\mu$ = hypothesized value | $\begin{align}
+\mu > \text{hypothesized value}\\
+\mu < \text{hypothesized value}\\
+\mu \ne \text{hypothesized value}\\
+\end{align}$| $t = \frac{\bar{x}-\text{hypothesized value}}{\frac{s}{\sqrt{n}}}$ | $\begin{align}
+\text{Area right of t}\\
+\text{Area right of t}\\
+\text{2(Area right or left of t)}\\
+\end{align}$
+Two-Sample for $\mu_1 - \mu_2$ | $\mu_1 - \mu_2$ = hypothesized value | $\begin{align}
+\mu_1 - \mu_2 > \text{hypothesized value}\\
+\mu_1 - \mu_2 < \text{hypothesized value}\\
+\mu_1 - \mu_2 \ne \text{hypothesized value}\\
+\end{align}$| $t = \frac{\bar{x}-\text{hypothesized value}}{\frac{s}{\sqrt{n}}}$,$df = \frac{(V_1 + V_2)^2}{\frac{V_1^2}{n_1-1}+\frac{V_2^2}{n_2-1}}$ where $V_1 = \frac{s_1^2}{n_1}$ and $V_2 = \frac{s_2^2}{n_2}$ | $\begin{align}
+\text{Area right of t}\\
+\text{Area right of t}\\
+\text{2(Area right or left of t)}\\
+\end{align}$
+Paired for $\mu_d$ | $\mu_d$ = hypothesized value | $\begin{align}
+\mu_d > \text{hypothesized value}\\
+\mu_d < \text{hypothesized value}\\
+\mu_d \ne \text{hypothesized value}\\
+\end{align}$| $t = \frac{\bar{x}-\text{hypothesized value}}{\frac{s}{\sqrt{n}}}$ | $\begin{align}
+\text{Area right of t}\\
+\text{Area right of t}\\
+\text{2(Area right or left of t)}\\
+\end{align}$
+Large-Sample for $p_1 - p_2$ | $p_1 - p_2$ = hypothesized value | $\begin{align}
+p_1 - p_2 > \text{hypothesized value}\\
+p_1 - p_2 < \text{hypothesized value}\\
+p_1 - p_2 \ne \text{hypothesized value}\\
+\end{align}$| $z = \frac{\hat{p_1} - \hat{p_2}}{\sqrt{\frac{\hat{p_c}(1-\hat{p_c})}{n_1}+\frac{\hat{p_c}(1-\hat{p_c})}{n_2}}}$, $\hat{p_c} = \frac{n_1\hat{p_1} + n_2\hat{p_2}}{n_1 + n_2}$ | $\begin{align}
+\text{Area right of z}\\
+\text{Area right of z}\\
+\text{2(Area right or left of z)}\\
+\end{align}$
+
+<div class="pagebreak"> </div>
+Correlation Coefficient $r = r_{xy} = \frac{\sum (Z_x Z_y)}{n-1} = \frac{1}{n-1} \sum ^n _{i=1} \left( \frac{x_i - \bar{x}}{s_x} \right) \left( \frac{y_i - \bar{y}}{s_y} \right)$  
+
+Least Squares Line **$\hat{y} = a + bx$** where  
+
+* Slope of $b = \frac{1}{\sum (x -\bar{x})^2} \sum ((x -\bar{x})(y -\bar{y}))$
+* Intercept of $a = \bar{y} - b\bar{x}$
+
+Coefficient of determination, $r^2 = 1 - \frac{\text{SSResid}}{\text{SSTo}}$ Where  
+
+* Residual sum of squares** $SSResid = \sum ^n _{i=1} (y_i - (a + bx_i))^2 = \sum ^n _{i=1} (y_i - \hat{y})^2$  
+* Total sum of squares** $SSTo = \sum ^n _{i=1} (y_i - \bar{y})^2$
+
+Standard deviation about the least squares line $s_e = \sqrt{\frac{SSResid}{n-2}}$
+
+Probability Events  
+
+Event|Probability
+------------- | ------------
+A|$P(A)\in[0,1]$
+Not A|$P(A^c)=1-P(A)$, $P(A^c) + P(A) = 1$
+A or B|$\begin{align}
+P(A\cup B) & = P(A)+P(B)-P(A\cap B) \\
+P(A\cup B) & = P(A)+P(B) \qquad\mbox{if A and B are mutually exclusive} \\
+\end{align}$
+A and B|$\begin{align}
+P(A\cap B) & = P(A|B)P(B) = P(B|A)P(A)\\
+P(A\cap B) &  = P(A)P(B) \qquad\mbox{if A and B are independent}\\
+\end{align}$
+A given B|$P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B)}$
+
+Law of Total Probability $P(E)= P(E \cap B_1) + P(E \cap B_2) + ... + P(E \cap B_k)$  
+Bays Rule $P(B_i|E) = \frac{P(E|B_i)P(B_i)}{P(E|B_1)P(B_1) + P(E|B_2)P(B_2) + ... + P(E|B_k)P(B_k)}$  
+
+#### Discete Probability Random Variable  
+
+* Mean $\mu_x = \sum xp(x)$  
+* Discete Probability Variance $\sigma_x^2 = \sum (x- \mu_x)^2p(x)$   
+
+Linear function of the random variable x  
+
+* The mean of y = a+ bx is $\mu_y = \mu_{a + bx} = a + b\mu_x$  
+* The variance of y is $\sigma_y^2 = \sigma_{a + bx}^2 = b^2 + \sigma_x^2$  
+
+Binomial Distribution  
+
+* $P(x) = \binom n x  p^x(1-p)^{n-x} \text{ where } \binom n x =\frac{n!}{x!(n-x)!}$
+* $\mu_x = np  \text{ and } \sigma_x = \sqrt{np(1-p)}$
+
+Geometric  
+
+* $P(x) = p(1-p)^(x-1)$
+

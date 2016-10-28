@@ -1,0 +1,298 @@
+---
+title: "Comparing Populations"
+author: "Eric Miedema"
+output: ioslides_presentation
+widescreen: true
+---
+
+## Statistics Class Week 10
+
+![](Pictures/dilbert_compare.png)
+
+### Announcements
+
+* Chapter 10 homework due Wednesday
+* Start reading chapter 11
+
+# Chapter 11 Comparing Two Populations
+
+## Comparing Sample Terms
+
+**Independent samples** Two samples where the individuals or objects in the first sample are selected independently from those in the second sample.
+
+**Paired samples** Two samples for which each observation in one sample is paired in a meaningful way with a particular observation in a second sample.
+
+<div class="notes">
+Independent examples would be comparing populations from different years, gender, age, etc whereas paired examples are the same group of individuals evaluated pre and post treatment or natural occurring pairs (twins, husband/wives) used to reduce extraneous factors.
+</div>
+
+## Notation Review
+
+Population  | Mean | Variance | Standard Deviation
+------------- | ------------- | ------------- | -------------
+Population 1  | $\mu_1$ | $\sigma_1^2$ | $\sigma_1$
+Population 2  | $\mu_2$ | $\sigma_2^2$ | $\sigma_2$
+<p>
+<br>
+<br>
+</p>
+Sample from Population  | Mean | Variance | Standard Deviation
+------------- | ------------- | ------------- | -------------
+Sample from Population 1  | $\bar{x}_1$ | $s_1^2$ | $s_1$
+Sample from Population 2  | $\bar{x}_2$ | $s_2^2$ | $s_2$
+
+## Properties of the Samping Distribution $\bar{x}_1 - \bar{x}_2$
+
+If the random samples on which $\bar{x}_1$ and $\bar{x}_2$ are based are selected **independently** of one another, then
+
+1.  $\mu_{\bar{x}_1 - \bar{x}_2} = \mu_{\bar{x}_1} - \mu_{\bar{x}_2} = \mu_1 - \mu_2$
+2.  $\sigma_{\bar{x}_1 - \bar{x}_2}^2 = \sigma_{\bar{x}_1}^2 + \sigma_{\bar{x}_2}^2 = \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}$
+$$\sigma_{\bar{x}_1 - \bar{x}_2} = \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}$$
+
+## Two-Sample t Test  {.smaller}
+
+Null hypothesis:  $H_0$: $\mu_1 - \mu_2$ = hypothesized value  
+Test statistic:   $t = \frac{\bar{x}_1-\bar{x}_2-\text{hypothesized value}}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}$
+
+The appropriate df for the two-sample t test is 
+
+$df = \frac{(V_1 + V_2)^2}{\frac{V_1^2}{n_1-1}+\frac{V_2^2}{n_2-1}}$ where $V_1 = \frac{s_1^2}{n_1}$ and $V_2 = \frac{s_2^2}{n_2}$, note the df should be truncated to an integer  
+
+Alternative Hypothesis  | P-Value
+------------- | -------------
+$H_a$: $\mu_1 - \mu_2$ > hypothesized value  | Area under appropriate t curve to the right of the computed t
+$H_a$: $\mu_1 - \mu_2$ < hypothesized value  | Area under appropriate t curve to the left of the computed t
+$H_a$: $\mu_1 - \mu_2$ $\ne$ hypothesized value  |$\begin{align}
+\mbox{(1) 2(area to right of t) if t is positive}\\
+\mbox{(2) 2(area to left of t) if t is negative}\\
+\end{align}$  
+
+<div class="notes">
+Assumptions  
+
+1. The two samples are *independently selected random samples* from the populations of interest.
+2. The *sample sizes are large* (generally 30 or larger) or *the population distributions are (at least approximately) normal*.  
+
+$$\mathrm{d.f.} = \frac{(s_1^2/n_1 + s_2^2/n_2)^2}{(s_1^2/n_1)^2/(n_1-1) + (s_2^2/n_2)^2/(n_2-1)}.
+$$
+
+</div>
+
+## Two-Sample t Confidence Interval
+
+The general formula for a confidence interval for $\mu_1 - \mu_2$ is
+
+$$(\bar{x}_1 - \bar{x}_2) \pm (\text{t critical value})\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$$
+
+The t critical value is based on    
+
+$df = \frac{(V_1 + V_2)^2}{\frac{V_1^2}{n_1-1}+\frac{V_2^2}{n_2-1}}$ where $V_1 = \frac{s_1^2}{n_1}$ and $V_2 = \frac{s_2^2}{n_2}$
+
+Note: The df should be truncated (rounded down) to an integer
+<div class="notes">
+Assumptions  
+
+1. The two samples are *independently selected random samples* from the populations of interest.
+2. The *sample sizes are large* (generally 30 or larger) or *the population distributions are (at least approximately) normal*.  
+
+The two-sample t confidence interval formula can be used to estimate $\mu_1 - \mu_2$
+
+</div>
+
+## Example - Electronic Media
+
+Two surveys conducted of kids age 8 to 18 about number of hours per day spent on electronic media is indicated below.
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+df<-data.frame(Survey_Year_2009 = c(5,9,5,8,7,6,7,9,7,9,6,9,10,9,8), Survey_Year_1999 = c(4,5,7,7,5,7,5,6,5,6,7,8,5,6,6))
+```
+
+<div class="columns-2">
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+
+
+  1.  Does the given data provide convincing evidence that the mean time spent using electronic media was greater in 2009 than in 1999?  Test with a significance level of .05.
+  2.  Construct and interpret a 98% confidence interval estimating the difference between the mean time spent using electronic media.
+</div>
+
+<div class="notes">
+Problem 11.5  
+
+1.  t = 3.3332, P-value = 0.0001, reject $H_0$
+2.  (0.0423,2.910)
+</div>
+
+## Using Computer - Introduction to R {.smaller}
+
+1.  Add data: Survey_Year_1999 = c(4,5,7,7,5,7,5,6,5,6,7,8,5,6,6)
+    + Survey_Year_2009 = c(5,9,5,8,7,6,7,9,7,9,6,9,10,9,8)
+2.  Run function: t.test(Survey_Year_2009,Survey_Year_1999, paired=FALSE, alternative = "greater",var.equal=FALSE)
+3.  Edit function: conf.level = 0.98
+
+<iframe src="http://www.r-fiddle.org" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+<div class="notes">
+*  hist(Survey_Year_1999)
+*  plot(density(Survey_Year_1999))
+</div>
+
+## Paired t Test {.smaller}
+
+Null hypothesis:  $H_0$: $\mu_d$ = hypothesized value  
+Test statistic:   $t = \frac{\bar{x}_d -\text{hypothesized value}}{\frac{s_d}{\sqrt{n}}}$
+
+where *n* is the number of sample differences and $\bar{x}_d$ and $s_d$ are the mean and standard deviation of the sample differences. The test is based on df = n - 1.
+
+Alternative Hypothesis  | P-Value
+------------- | -------------
+$H_a$: p > hypothesized value  | Area under appropriate t curve to the right of the calculated t
+$H_a$: p < hypothesized value  | Area under appropriate t curve to the left of the calculated t
+$H_a$: p $\ne$ hypothesized value  |$\begin{align}
+\mbox{(1) 2(area to right of t) if t is positive}\\
+\mbox{(2) 2(area to left of t) if t is negative}\\
+\end{align}$  
+
+<div class="notes">
+
+$\mu_d =$ mean value of the difference population and $\sigma_d = $ standard deviation of the difference population where $\mu_d = \mu_1 - \mu_2$   
+
+Assumptions  
+
+1. The samples are *paired*.
+2. The n sample differences can be viewed as a *random sample* from a population of differences.
+3. The *sample sizes are large* (generally 30 or larger) or *the population distributions are (at least approximately) normal*.
+
+</div>
+
+## Paired t Confidence Interval for $\mu_d$
+
+The paired t confidence interval for $\mu_d$ is
+
+$$\bar{x}_d \pm (\text{t critical value})\frac{s_d}{\sqrt{n}}$$
+
+For a specified confidence level, the (n-1) df gives the appropriate t critical values.
+
+## Example - Cycling with milk
+
+To determine if chocolate milk was as effective as other carbohydrate replacement drinks, a study measured nine cyclists in exercises to exhaustion.  Below are the result of time in minutes to exhaustion:
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+df<-data.frame(
+  Cyclist = 1:9,
+  Chocolate_Milk = c(24.85,50.09,38.3,26.11,36.54,26.14,36.13,47.35,35.08), 
+  Other_Drink = c(10.02,29.96,37.4,15.52,9.11,21.58,31.23,22.04,17.02))
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+```
+
+<div class="columns-2">
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+
+Is there evidence that the mean time to exhaustion is greater after chocolate milk than after carbohydrate replacement drinks?  Test with a significance level of .05.
+
+</div>
+
+<div class="notes">
+Problem 11.24  
+
+t = 4.46, P-value $\approx 0$, reject $H_0$  
+<br>
+Chocolate_Milk = c(24.85,50.09,38.3,26.11,36.54,26.14,36.13,47.35,35.08)
+<br>
+Other_Drink = c(10.02,29.96,37.4,15.52,9.11,21.58,31.23,22.04,17.02)
+<br>
+t.test(Chocolate_Milk,Other_Drink, alternative = "less",paired = TRUE)   
+
+</div>
+
+## Use R 
+
+<iframe src="http://www.r-fiddle.org" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+## Large-Sample z test for $p_1 - p_2$ {.smaller}
+
+Null hypothesis:  $H_0$: $\hat{p_1} - \hat{p_2}$ = hypothesized value  
+Test statistic:   $z = \frac{\hat{p_1} - \hat{p_2}}{\sqrt{\frac{\hat{p_c}(1-\hat{p_c})}{n_1}+\frac{\hat{p_c}(1-\hat{p_c})}{n_2}}}$   
+where the combined estimate of a common population proportion is $\hat{p_c} = \frac{n_1\hat{p_1} + n_2\hat{p_2}}{n_1 + n_2}$
+
+Alternative Hypothesis  | P-Value
+------------- | -------------
+$H_a$: $p_1-p_2$ > hypothesized value  | Area under appropriate z curve to the right of the calculated z
+$H_a$: $p_1-p_2$ < hypothesized value  | Area under appropriate z curve to the left of the calculated z
+$H_a$: $p_1-p_2$ $\ne$ hypothesized value  |$\begin{align}
+\mbox{(1) 2(area to right of z) if z is positive}\\
+\mbox{(2) 2(area to left of z) if z is negative}\\
+\end{align}$  
+
+<div class="notes">
+Assumptions  
+
+1. The samples are *independently chosen random samples, or treatments were assigned at random*.
+2. Both *sample sizes are large*  
+
+$n_1\hat{p_1} \ge 10$ $n_1(1-\hat{p_1}) \ge 10$ $n_1\hat{p_2} \ge 10$ $n_1(1-\hat{p_2}) \ge 10$
+</div>
+
+## Two Population Porporiton Confidence Interval
+
+A large-sample confidence interval for $p_1 - p_2$ is
+$$\hat{p_1} - \hat{p_2} \pm (\text{z critical value})\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}$$
+<div class="notes">
+Assumptions  
+
+1. The samples are *independently chosen random samples, or treatments were assigned at random*.
+2. Both *sample sizes are large*  
+
+$n_1\hat{p_1} \ge 10$ $n_1(1-\hat{p_1}) \ge 10$ $n_1\hat{p_2} \ge 10$ $n_1(1-\hat{p_2}) \ge 10$
+</div>
+
+## Example - Fixing with duct tape
+
+This study compared treating wart with a process with duct tape or liquid nitrogen until a wart was removed or experiment ended after 2 months.  Here are the results:
+
+Treatment  | n | Number with Wart Successfully Removed
+------------- | ------------- | -------------
+Liquid nitrogen freezing  | 100 | 60
+Duct tape  | 104 | 88  
+<p>
+<br>
+</p>
+Do these data suggest that freezing is less successful than duct tape in removing warts?   
+Test the relavant hypothesis using a significance level of .01.
+
+</div>
+
+<div class="notes">
+Problem 11.37 
+
+t = -3.94, P-value $\approx 0$, reject $H_0$  
+<br>
+R reference:   
+<br>
+z.prop = function(x1,x2,n1,n2){
+  numerator = (x1/n1) - (x2/n2)
+  p.common = (x1+x2) / (n1+n2)
+  denominator = sqrt(p.common * (1-p.common) * (1/n1 + 1/n2))
+  z.prop.ris = numerator / denominator
+  return(z.prop.ris)
+}
+<br>
+z.prop(60,88,100,104)
+<br>
+pnorm(z.prop(60,88,100,104))
+</div>
+## Use R 
+
+<iframe src="http://www.r-fiddle.org" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+## Homework
+11.1, 11.7, 11.13, 11.18, 11.25   
+11.27, 11.32, 11.38, 11.39 

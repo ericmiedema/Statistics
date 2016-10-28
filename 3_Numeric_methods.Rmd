@@ -63,13 +63,12 @@ $$\text{Mean} > \text{median}$$
 Negatively skewed distribution
 $$\text{Mean} < \text{median}$$
 
-
 ## Categorical - Sample Porportion of Success
 
 The **sample proportion of success**, denoted by p, is
-$$p = \frac {\text{number of S's in the sample}}{n}$$
+$$\hat{p} = \frac {\text{number of S's in the sample}}{n}$$
 
-Where S is the label used for the response designated as success.  The population proportion of successes is denoted by $\pi$.
+Where S is the label used for the response designated as success.  The population proportion of successes is denoted by p.
 
 ## Variability of Data
 
