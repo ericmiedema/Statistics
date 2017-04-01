@@ -1,0 +1,44 @@
+---
+title: "Untitled"
+author: "Eric Miedema"
+date: "November 1, 2016"
+output: html_document
+---
+
+#### How does a multiple regression model differ from a simple linear regression model?
+	
+a.	A multiple regression model is not linear in nature.
+b.	A multiple regression model relates one dependent variable to more than one independent, or x value.
+c.	A multiple regression model has more than one dependent or y value for each x value.
+d.	A multiple regression model has no error term in the model.
+
+
+#### Fill in the blank. If the change in the mean y value associated with a 1-unit increase in one independent variable depends on the value of a second independent variable, there is __________ between these two variables.
+
+a.	multicollinearity
+b.	no relationship
+c.	a quadratic relationship
+d.	interaction
+	
+	
+#### What is another name for the 0-1 variable that is often used to represent a dichotomous categorical variable in a multiple regression model?
+
+a.	Both a dummy variable and an indicator variable are other names for the 0-1 variable.
+b.	a dummy variable
+c.	a multicollinearity variable
+d.	an indicator variable
+	
+	
+#### Which of the following is a plot that could be used to assess the validity of a model describing two quantitative variables?
+
+a.	a scatterplot for the two variables
+b.	a standardized residual plot
+c.	All of the choices.
+d.	a normal probability plot of the standardized residuals
+
+#### Which of the following statements is not true?
+
+a.	The number of degrees of freedom for SSRegr is equal to the number of predictors, k.
+b.	The model is typically useful if SSRegr is small relative to SSResid and the model uses a small number of predictors relative to the sample size.
+c.	SSReg is interpreted as the amount of total variation that has been explained by the regression model.
+d.	SSReg = SSTo - SSResid

@@ -1,0 +1,129 @@
+---
+title: "Untitled"
+author: "Eric Miedema"
+date: "November 1, 2016"
+output: word_document
+---
+
+#### Which of the following is correct with regards to hypothesis testing?
+
+a.	The researcher always begins by assuming the null hypothesis $H_0$ is true. <ANSWER>
+b.	The researcher always begins by assuming the null hypothesis Ha is false.
+c.	The researcher always begins by assuming the null hypothesis $H_0$ is false.
+d.	The researcher uses the sample data to decide whether the evidence suggests $H_0$ is true.
+	
+#### Suppose the average score on the SAT exam is $\mu = 1200$. A group of high school students believe that the average score is actually lower. What would be the null and alternative hypotheses used in testing their claim using a random sample of 200 students SAT scores?
+
+a. $H_0: \mu = 1200$ versus $H_a: \mu < 1200$ <ANSWER>
+a. $H_0: \mu = 1200$ versus $H_a: \mu > 1200$
+a. $H_0: \mu = 1200$ versus $H_a: \mu < 200$
+a. $H_0: \mu = 1200$ versus $H_a: \mu \ne 1200$
+
+#### Which of the following is the definition of a Type I error for a statistical test?
+
+a.	It is the probability of making a correct decision. 
+b.	It is denoted by $\beta$.
+c.	It is the error of accepting the null hypothesis when it is false.
+d..	It is the error of rejecting the null hypothesis when it is true. <ANSWER>
+	
+#### What is the probability of a Type I error of a test of $H_0: p =.62$ versus $H_a: p \ne .62$ if a 0.05 level of significance is used for the test?
+a.	0.62 
+b.	0.05 <ANSWER>
+c.	The sample data is needed to determine the probability of a Type I error for a test.
+d..	0.10
+	
+#### Fill in the blank. A __________ is the function of sample data on which a conclusion to reject or fail to reject $H_0$ is based.
+
+a.	p-value
+b.	critical value
+c.	test statistic <ANSWER>
+d..	significance level
+	
+#### When should the conclusion of a test be to fail to reject $H_0$?
+
+a.	The hypothesis $H_0$ should not be rejected when $\text{p-value} < \alpha$.
+b.	The hypothesis $H_0$ should not be rejected when $\text{p-value} < \beta$.
+c.	The hypothesis $H_0$ should not be rejected when $\text{p-value} \ne \alpha$.
+d..	The hypothesis $H_0$ should not be rejected when $\text{p-value} > \alpha$. <ANSWER>
+
+#### What is the P-value for a test of $H_0: p =.4$ versus $H_a: p \ne .4$ with a test statistic of z = 1.8?
+
+a.	0.036 <ANSWER>
+b.	1.928
+c.	0.072
+d..	0.9641
+	
+####  What is the test statistic for testing whether or not the true proportion of adults who visit a dentist regularly is indeed $\mu = 0.72$ or whether it is less? Suppose a random sample of 30 adults found that the proportion who visited a dentist regularly was p = 0.67.
+
+a. z = 0.61
+b. z = -0.6099 <ANSWER>
+c. z = 7.8044
+d.. z = -.5824
+	
+#### Which of the following is not true with regards to a P-value?
+
+a.	A P-value indicates the strength of the evidence against the null hypothesis.
+b.	A P-value is a probability and must be between 0 and 1.
+c.	A P-value does not tell us the probability that the null hypothesis is true.
+d..	The larger the P-value the more conclusive the evidence is against the null hypothesis. <ANSWER>
+	
+#### Suppose a researcher conducted a test to determine if the mean salary for recent graduates was equal to $40,000. If the hypothesis test $H_0: \mu = 40,000$ versus $H_a: \mu \ne 40,000$ computed a p-value = 0.03, which of the following statements is correct using a significance level of $\alpha = 0.05$?
+
+a.	We would reject the null hypothesis and conclude that the mean salary of recent graduates is not equal to $40,000. <ANSWER>
+b.	We would reject the null hypothesis and conclude that the mean salary of recent graduates is less than $40,000.
+c.	We would fail to reject the null hypothesis and conclude there that the mean salary of recent graduates is equal to $40,000.
+d..	We would fail to reject the null hypothesis and conclude that the mean salary of recent graduates is not equal to $40,000.
+	
+#### Suppose the P-value for an upper-tailed t test with t = 2.1 and 13 df is P-value = 0.028. If the test were a lower-tailed t test with t = -2.1 and 13 df instead, what would the P-value be?
+
+a.	0.972
+b.	0.028 <ANSWER>
+c.	0.056
+d..	-0.028
+
+#### What is the power of a test?
+
+a.	It is the probability of accepting the null hypothesis.
+b.	It is the quantity computed from sample data and used to make a decision for a hypothesis test.
+c.	It is the same as the probability of a Type II error. 
+d..	It is the probability of rejecting the null hypothesis. <ANSWER>
+	
+#### Which of the following would increase the power of a test?
+
+a.	A larger significance level, $\alpha$
+b.	A larger sample size
+c.	All of these choices. <ANSWER>
+d..	An increase in the size of the discrepancy between the hypothesized value and the true value of the population characteristic
+	
+#### If all the information about a population is known, which of the following statements is true?
+
+a.	More than one random sample should be taken and used in the hypothesis tests.
+b.	Only hypothesis tests using a z test statistic should be used to make inferences about the population.
+c.	No tests or confidence intervals are necessary to answer questions about the population. <ANSWER>
+d..	Only confidence intervals are necessary for estimating the population characteristic.
+	
+#### Which of the following is *not* a step in any hypothesis test?
+a.	Assume the alternative hypothesis is true and find the P-value. <ANSWER>
+b.	Select the significance level and summarize the data into an appropriate test statistic.
+c.	Report the conclusion in the context of the questions being asked.
+d..d.etermine the null and alternative hypotheses.
+	
+#### Suppose a random sample of 40 patients admitted at a local hospital was taken. If 28 of the patients had health insurance, what is the test statistic for testing whether the population proportion of patients admitted to a hospital that have insurance is less than 60%?  $H_0: p = 0.60$ versus $H_a: p < 0.60$?
+
+a. z=1.29 <ANSWER>
+b. z=-1.3
+c. There is not enough information to determine the test statistic.
+d.. z=1.38	
+	
+### Suppose the P-value equals 0.09 for testing whether grocery stores stocked on average more than 30 varieties of potato chips. Which of the following conclusions would be correct for testing the hypotheses $H_0: \mu = 30$ versus $H_a:\mu < 30$?
+
+a.	It can be concluded that on average stores do not stock more than 30 varieties using the $\alpha = 0.10$ significance level.
+b.	It can be concluded that stores stock more than 30 varieties on average using the $\alpha = 0.01$  significance level.
+c.	It can be concluded that on average stores do not stock more than 30 varieties using the $\alpha = 0.05$ significance level. <ANSWER>
+d..	It can be concluded that stores stock more than 30 varieties on average using the $\alpha = 0.05$ significance level.
+	
+#### What is the area of the lower-tail of a z curve for z=2.5?
+a.	The degrees of freedom must be known to find the area.
+b.	0.0124
+c.	0.9938 <ANSWER>
+d..	0.0062

@@ -1,0 +1,113 @@
+---
+title: "Untitled"
+author: "Eric Miedema"
+date: "November 1, 2016"
+output: html_document
+---
+
+#### Which of the following is a basic assumption of the simple linear regression model?
+
+a.	The distribution of e at any particular y value is normal.
+b.	The standard deviation of e is the same for any particular value of x.
+c.	The random deviations e1, e2, ... , en associated with different observations are dependent.
+d.	The distribution of e at any particular x value has mean value 1.
+
+<correct: b> 
+
+	
+#### Which of the following is the average change in y associated with a 1-unit increase in x for the population regression model $y= \alpha + \beta x + e$?
+
+a.	e
+b. $\alpha$
+c.	y
+d. $\beta$
+
+<correct: d>
+
+#### What is the equation of the estimated regression line using the information given below?   
+n=24,$\bar{x}=8.15$,$\bar{y}=6.53$,$S_{xx} = 1596$,$Sxy = 335$, $SSResid=3.76$
+
+a.$\hat{y}=5.14+0.17x$
+b.$\hat{y}=4.76+8.15x$
+c.$\hat{y}=6.530-8.15x$
+d.$\hat{y}=4.81+0.21x$
+
+<correct: d>
+
+#### Which of the following is not a true statement?
+
+a.	A linear regression line is used to describe a curvilinear relationship between x and y.
+b.	A regression line is use to predict the value of y for an individual given the individual's x value.
+c.	Before using a linear regression model with our data, we should always examine a scatterplot first.
+d.	A regression line is used to estimate the average value of y at any specified value of x on a straight line.
+<correct: a> 
+
+#### What is it called when regression methods are used for prediction outside the sampled range of x values?
+
+a.	Outliers
+b.	Estimation
+c.	Confidence Interval
+d.	Extrapolation
+<correct: d >
+
+	
+#### What would be a 90% confidence interval for $\beta$ if a sample of size 15 is used to compute a least squares regression line and gives a = 5.1.b=10.2 and $s_b$ = 2.2?
+
+a.	5.448 to 14.592
+b.	6.328 to 14.072
+c.	6.306 to 14.094
+d.	9.94 to 10.46
+
+<correct: c>
+
+#### How is the null hypothesis $H_0: \beta = 0$ interpreted?
+
+a.	If we failed to reject H0 we could conclude that knowledge of x is of no use in predicting y.
+b.	If we failed to reject H0 we could conclude that y is of no use in predicting x.
+c.	If we fail to reject H0 we could conclude that the population regression line is a vertical line.
+d.	If we failed to reject H0 we could conclude that the regression line does not have a y-intercept.
+
+<correct: a> 
+
+#### What is the test statistic for testing $H_0: \beta = 2$ verses $H_0: \beta \ne 2$ for an analysis of the height and weight of 10 randomly selected second grade students? Use the followgin output below.   
+
+The regression equation is weight = 5.7 + 0.853 height   
+
+Predictor  | Coef | $S_e$ Coef
+------------- | ------------- | ------------- 
+Constant  | 5.73 |20.88
+Height |  0.8528 | 0.442
+
+a.	t = 4.86
+b.	t = 1.93
+c.	t = 0.27
+d.	t = -2.60
+
+<correct: d> 
+
+#### What is a standardized residual?
+
+a.	It is a residual that has been divided by the sample size, n, of the model.
+b.	It is a residual that has been divided by it standard deviation.
+c.	It is a residual that has been divided by the slope of the regression line.
+d.	It is a residual that has been divided by its mean.
+
+<correct: b> 
+
+#### Fill in the blank. A prediction interval is __________ a confidence interval due to the increased variability in the prediction error.
+
+a.	wider than
+b.	half the size of
+c.	the same as
+d.	smaller than
+
+<correct: a>
+
+#### Fill in the blank. The __________ measures the extent to which the x and y values in an entire population are linearly related.
+
+a.	prediction interval
+b.	residual plot
+c.	population correlation coefficient
+d.	standardized residual
+
+<correct: c> 

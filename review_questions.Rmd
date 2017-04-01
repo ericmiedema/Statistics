@@ -1,0 +1,251 @@
+---
+title: "Untitled"
+author: "Eric Miedema"
+date: "November 26, 2016"
+output: html_document
+---
+
+## Review Questions
+### Practice Descriptive
+##### Consider the following output obtained when analyzing the percent nitrogen composition of soil collected in neighborhoods near a water treatment facility in 2015.    
+
+NumCases = 55   
+Mean = 23.01   
+Median = 24.26   
+StdDev = 4.131   
+Min = 12.05   
+Max = 31.49   
+75 %ile = 30.12   
+
+Which of the following statements is correct?   
+
+a. The 25th percentile must be about 18.4.
+b. Some outliers appear to be present. <ANSWER>
+  c. The IQR is 19.44
+d. About 10% of the values are in the range 30.12 to 31.49.
+e. Soil levels at 11% exist in the sample, but are not prevalent.
+
+##### The CEO of a software company is interested in the effects of playing two different versions of a new video game on the pulse rate of players. Forty beta-testers were identified online to participate in the study.   
+
+All 40 participants measured their at-rest pulse rates. Each participant will play each version of the game for twenty minutes. The experimenter flips a coin to determine which version each participant will play first. All participants get sufficient rest between gameplay to allow their pulse rates to return to their normal at-rest states.   
+The experiment then compares elevation in pulse rate resulting from playing version 1 to elevation in pulse rate resulting from playing version 2 for each participant.   
+Which of the following statements is true?   
+
+a. The design of the experiment is flawed because subjects were not randomly assigned to a control or an experimental group.
+b. This is an example of a completely randomized comparative experiment without blocking.
+c. This is an observational study and not an experiment, so no conclusion can be reached regarding the connection between version of the game and pulse rate that is characteristic of the overall population of video game players.
+d. All observations in this study are independent.
+e. Blocking is used in this study to reduce the difference in elevated pulse rates of the two observations for each individual participant.  <ANSWER>
+  
+  #### What type of bias occurs when the sample selected systematically excludes some part of the population being studied?
+  
+  a.	Response bias
+b.	Nonresponse bias
+c.	Measurement bias
+d.	Selection bias <answer>
+  
+  ##### What is used to ensure there is an adequate number of observations in each experimental condition?
+  
+  a.	Replication <answer>
+  b.	Confounding
+c.	Direct control
+d.	Blocking
+
+##### What term is used when a study collects information from the entire population?
+
+a.	Replication
+b.	Sampling
+c.	Census <answer>
+  d.	Bias
+
+##### Which of the following is the definition of a sample chosen by cluster sampling?
+
+a.	Random selection of one of the first k elements in list, and then the systematic selection of every kth element thereafter in the population.
+b.	A simple random sample from each of a given number of subpopulations.
+c.	A sample that is obtained by using an easily available or convenient group.
+d.	A simple random sample of clusters from the available clusters in the population. <answer>
+  
+  ##### Which of the following cannot be conveyed using a stem-and-leaf display?
+  
+  a.	The extent of symmetry in the distribution of values.
+b.	The order in which the observations were obtained. <anwer>
+  c.	The presence of any gaps in the data.
+d.	The presence of any outliers.
+
+##### Fill in the blank. The effect of a confounding variable on the response variable __________ the effect of the explanatory variable.
+
+a.	cannot be distinguished from <answer>
+  b.	is larger than
+c.	can be distinguished from
+d.	equals
+
+### Practice Inferential
+##### Does playing the television during an 8-hour workday reduce a pet Siberian Husky dog's activity level during the day? An experiment was conducted where a group of Siberian Huskies was divided into two groups. The television was played in the household for one group, and it was not played for the control group. Activity level was assessed as being the number of hours the dog was engaged in activities other than lying down or eating. The average decrease in activity level for the groups measured is 3.6 hours.   
+
+A 95% confidence interval for the difference (treatment - control) in the mean activity levels was computed to be (2.5, 4.7). Which of the following is an accurate interpretation of this interval?
+
+a. We do not know the true decrease in activity level in Siberian Huskies due to television exposure, but we are 95% confident that the increase in the mean decrease lies in this interval. <ANSWER>
+  b. Because the confidence interval does not include zero, we are 95% confident that the true decrease in activity level in Siberian Huskies is 3.6 hours.
+c. We are 95% confident that the average decrease in activity level in the sample is 3.6 hours.
+d. Because the confidence interval does not contain zero, we are 95% confident that there was no effect of playing the television on decreasing activity level in Siberian Huskies.
+e. The activity level of 95% of the Siberian Huskies decreased by between 2.5 and 4.7 hours.
+
+
+
+## Formula Sheet
+<div class="myClass_border">
+  <center><big>Descriptive Statistics</big></center>  
+  <div class="col2">
+  <p>
+  Population Mean $\mu$   
+  Sample Mean $\bar{x} = \frac{x_1+x_2+\cdots +x_n}{n} = \frac{\sum (x)}{n}$
+  
+  * Estimating $\mu = \mu_\bar{x}$ 
+  
+  Population standard deviation $\sigma$   
+  Sample Standard deviation $s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$ 
+  
+  * Estimating $\sigma = \frac{\sigma_\bar{x}}{\sqrt{n}}$  
+  </p>
+  <p>
+  Sample proportion of success $\hat{p} = \frac {\text{number of S's in the sample}}{n}$
+    
+    * Estimating $\mu_\hat{p} = p$
+    * Estimating $\sigma_\hat{p} = \sqrt{\frac{p(1-p)}{n}}$
+    </p>
+    </div>
+    </div>
+    <div class="myClass_border">
+    <center><big>Correlation and Regression</big></center>  
+    <div class="col2">
+    <p>
+    Correlation Coefficient $r = r_{xy} = \frac{\sum (Z_x Z_y)}{n-1} = \frac{1}{n-1} \sum ^n _{i=1} \left( \frac{x_i - \bar{x}}{s_x} \right) \left( \frac{y_i - \bar{y}}{s_y} \right)$   
+    
+    Least Squares Line **$\hat{y} = a + bx$** where  
+    
+    * Slope of $b = \frac{S_{xy}}{S_{xx}} = \frac{\sum ((x -\bar{x})(y -\bar{y}))}{\sum (x -\bar{x})^2}$
+    * Intercept of $a = \bar{y} - b\bar{x}$   
+    
+    Residual sum of squares   
+    $SSResid = \sum ^n _{i=1} (y_i - (a + bx_i))^2 = \sum ^n _{i=1} (y_i - \hat{y})^2$   
+    Total sum of squares, $SSTo = \sum ^n _{i=1} (y_i - \bar{y})^2$     
+    </p>
+    <p>
+    Standard deviation about the least squares line   
+    $s_e = \sqrt{\frac{SSResid}{n-2}} \text{ or for multiple regression } s_e = \sqrt{\frac{SSResid}{n-(k+1)}}$   
+    Standard deviation about the slope (b) and confidence interval   
+    $s_b = \frac{S_e}{\sqrt{S_{xx}}},b \pm (\text{t critical value}) s_b$   
+    Coefficient of determination 
+    
+    *  $r^2 = 1 - \frac{\text{SSResid}}{\text{SSTo}}$   
+    *  Adjusted $r^2 = 1 - [\frac{n-1}{n-(k+1)}] \frac{\text{SSResid}}{\text{SSTo}}$
+    </p>
+    </div>
+    </div>
+    <center><big>Probability Events</big></center>   
+    
+    Event|Probability
+    ------------- | ------------
+    A|$P(A)\in[0,1]$
+    Not A|$P(A^c)=1-P(A)$, $P(A^c) + P(A) = 1$
+    A or B|$\begin{align}
+    P(A\cup B) & = P(A)+P(B)-P(A\cap B) \\
+    P(A\cup B) & = P(A)+P(B) \qquad\mbox{if A and B are mutually exclusive} \\
+    \end{align}$
+    A and B|$\begin{align}
+    P(A\cap B) & = P(A|B)P(B) = P(B|A)P(A)\\
+    P(A\cap B) &  = P(A)P(B) \qquad\mbox{if A and B are independent}\\
+    \end{align}$
+    A given B|$P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B)}$
+    
+    Law of Total Probability $P(E)= P(E \cap B_1) + P(E \cap B_2) + ... + P(E \cap B_k)$  
+    Bays Rule $P(B_i|E) = \frac{P(E|B_i)P(B_i)}{P(E|B_1)P(B_1) + P(E|B_2)P(B_2) + ... + P(E|B_k)P(B_k)}$  
+    
+    <div class="myClass_border">
+    <center><big>Discete Probability Random Variable</big></center>   
+    
+    Mean $\mu_x = \sum xp(x)$,  Variance $\sigma_x^2 = \sum (x- \mu_x)^2p(x)$   
+    
+    <div class="col2" >
+    <p>
+    Binomial Distribution  
+    
+    * $P(x) = \binom n x  p^x(1-p)^{n-x} \text{ where } \binom n x =\frac{n!}{x!(n-x)!}$
+    * $\mu_x = np  \text{ and } \sigma_x = \sqrt{np(1-p)}$
+    </p>
+    <p>
+    Geometric Distribution  
+    
+    * $P(x) = p(1-p)^(x-1)$
+    </p>
+    </div>
+    </div>
+    </div>
+    <div class="myClass_border">
+    Estimate | Bound of Error (B) | Confidence Interval | n with 95% confidence | Notes
+    ------------- | ------------ | ------------ | ------------ | ------------
+    $\text{z} = \frac{x- \bar{x}}{\sigma}$ | $(\text{z critical value})*(\frac{\sigma}{\sqrt{n}})$ | $\bar{x} \pm B$ | $n = (\frac{1.96\sigma}{B})^2$ | $\begin{align}\text{Crical Value of 90%}=1.645\\
+    \text{Crical Value of 95%}=1.96\\
+    \text{Crical Value of 99%}=2.58\end{align}$ 
+    $t = \frac{\bar{x}-\mu}{\frac{s}{\sqrt{n}}}$ | $(\text{t critical value})*(\frac{s}{\sqrt{n}})$ | $\bar{x} \pm B$ | | df = n-1 and see table for t critical values
+    $\text{z} = \frac{\hat{p}- p}{\sqrt{\frac{p(1-p)}{n}}}$ | $(\text{z critical value})*\sqrt{\frac{p(1-p)}{n}}$ | $\hat{p} \pm B$ | $n = p(1-p)(\frac{1.96}{B})^2$ | Use p=.5 for convervative estimates of n and always round up.
+    For $\mu_1 - \mu_2$ | $\text{t critical value})\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}$ | $(\bar{x}_1 - \bar{x}_2) \pm B$ | | $df = \frac{(V_1 + V_2)^2}{\frac{V_1^2}{n_1-1}+\frac{V_2^2}{n_2-1}}$ where $V_1 = \frac{s_1^2}{n_1}$ and $V_2 = \frac{s_2^2}{n_2}$
+    For $p_1 - p_2$ | $\text{z critical value})\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}$ |$\hat{p_1} - \hat{p_2} \pm B$
+    </div>
+    <div class="myClass_border">
+    Test | Null hypothesis | Alternative Hypothesis | Test statistic | P-Value | 
+    ------------- | ------------ | ------------ | ------------ | ------------
+    Large-Sample for p | p = hypothesized value | $\begin{align}
+    p > \text{hypothesized value}\\
+    p < \text{hypothesized value}\\
+    p \ne \text{hypothesized value}\\
+    \end{align}$ | $\text{z} = \frac{\hat{p}- \text{hypothesized value}}{\sqrt{\frac{\text{hypothesized value}(1-\text{hypothesized value})}{n}}}$ | $\begin{align}
+    \text{Area right of z}\\
+    \text{Area left of z}\\
+    2\text{(Area right or left of z)}\\
+    \end{align}$
+    One-Sample for $\mu$ | $\mu$ = hypothesized value | $\begin{align}
+    \mu > \text{hypothesized value}\\
+    \mu < \text{hypothesized value}\\
+    \mu \ne \text{hypothesized value}\\
+    \end{align}$| $t = \frac{\bar{x}-\text{hypothesized value}}{\frac{s}{\sqrt{n}}}$ | $\begin{align}
+    \text{Area right of t}\\
+    \text{Area left of t}\\
+    \text{2(Area right or left of t)}\\
+    \end{align}$
+    Two-Sample for $\mu_1 - \mu_2$ | $\mu_1 - \mu_2$ = hypothesized value | $\begin{align}
+    \mu_1 - \mu_2 > \text{hypothesized value}\\
+    \mu_1 - \mu_2 < \text{hypothesized value}\\
+    \mu_1 - \mu_2 \ne \text{hypothesized value}\\
+    \end{align}$| $t = \frac{\bar{x}_1-\bar{x}_2-\text{hypothesized value}}{\sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}}$,$df = \frac{(V_1 + V_2)^2}{\frac{V_1^2}{n_1-1}+\frac{V_2^2}{n_2-1}}$ where $V_1 = \frac{s_1^2}{n_1}$ and $V_2 = \frac{s_2^2}{n_2}$ | $\begin{align}
+    \text{Area right of t}\\
+    \text{Area left  of t}\\
+    \text{2(Area right or left of t)}\\
+    \end{align}$
+    Paired for $\mu_d$ | $\mu_d$ = hypothesized value | $\begin{align}
+    \mu_d > \text{hypothesized value}\\
+    \mu_d < \text{hypothesized value}\\
+    \mu_d \ne \text{hypothesized value}\\
+    \end{align}$| $t = \frac{\bar{x}_d-\text{hypothesized value}}{\frac{s_d}{\sqrt{n}}}$ | $\begin{align}
+    \text{Area right of t}\\
+    \text{Area left of t}\\
+    \text{2(Area right or left of t)}\\
+    \end{align}$
+    Large-Sample for $p_1 - p_2$ | $p_1 - p_2$ = hypothesized value | $\begin{align}
+    p_1 - p_2 > \text{hypothesized value}\\
+    p_1 - p_2 < \text{hypothesized value}\\
+    p_1 - p_2 \ne \text{hypothesized value}\\
+    \end{align}$| $z = \frac{\hat{p_1} - \hat{p_2}}{\sqrt{\frac{\hat{p_c}(1-\hat{p_c})}{n_1}+\frac{\hat{p_c}(1-\hat{p_c})}{n_2}}}$, $\hat{p_c} = \frac{n_1\hat{p_1} + n_2\hat{p_2}}{n_1 + n_2}$ | $\begin{align}
+    \text{Area right of z}\\
+    \text{Area left of z}\\
+    \text{2(Area right or left of z)}\\
+    \end{align}$   
+    
+    
+    Test | Hypothesis |  Test statistic | P-Value | 
+    ------------- | ------------ | ------------ | ------------
+    Goodness-of-fit | $\begin{align}H_0: p_1  = \text{hypothesized proportion for Category 1}\\
+    p_2  = \text{hypothesized proportion for Category 2}\\
+    \vdots\\
+    p_k  = \text{hypothesized proportion for Category k}\end{align}$ $\begin{align}H_a: H_0 \text{ is not true}\end{align}$ | $\chi^2 = \sum{\frac{(\text{oberved cell count - expected cell count})^2}{\text{expected cell count}}}$ | Area to the right of $\chi^2$ under the df = k-1 chi-squared curve.   
+    </div>

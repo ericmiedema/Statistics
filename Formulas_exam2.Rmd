@@ -1,0 +1,105 @@
+---
+title: "Formula Overview"
+output:
+  html_document:
+    toc: yes
+---
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 2 100px;
+    -webkit-columns: 2 100px;
+    -moz-columns: 2 100px;
+  }
+  .myClass_border
+  {
+   border: 3px solid black;
+    padding: 2px;
+    margin: 2px;
+  }
+  .pagebreak { page-break-before: always; }
+</style>
+<div class="myClass_border">
+<center><h3>Numeric Methods</h3></center>  
+
+Numeric Method  | Numeric | Categorical
+------------- | ------------- | -------------
+Center  | Sample Mean $\bar{x} = \frac{x_1+x_2+\cdots +x_n}{n} = \frac{\sum (x)}{n}$  | Sample proportion of success $\hat{p} = \frac {\text{number of S's in the sample}}{n}$
+Variability  | Sample Standard deviation $s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$  |   
+Relative Standing Statistic  | Z SCORE $\text{z} = \frac{x- \bar{x}}{\sigma}$  |  
+Percentage calculation for normal distributions | Use formula of *=NORM.DIST(Z SCORE,0,1,TRUE)* or statistical table |
+</div>
+<div class="myClass_border">
+<center><h3>Correlation and Regression</h3></center>  
+<div class="col2">
+<p>
+Correlation Coefficient $r = r_{xy} = \frac{\sum (Z_x Z_y)}{n-1} = \frac{1}{n-1} \sum ^n _{i=1} \left( \frac{x_i - \bar{x}}{s_x} \right) \left( \frac{y_i - \bar{y}}{s_y} \right)$   
+
+Least Squares Line **$\hat{y} = a + bx$** where  
+
+* Slope of $b = \frac{S_{xy}}{S_{xx}} = \frac{\sum ((x -\bar{x})(y -\bar{y}))}{\sum (x -\bar{x})^2}$
+* Intercept of $a = \bar{y} - b\bar{x}$   
+
+Residual sum of squares   
+$SSResid = \sum ^n _{i=1} (y_i - (a + bx_i))^2 = \sum ^n _{i=1} (y_i - \hat{y})^2$   
+Total sum of squares, $SSTo = \sum ^n _{i=1} (y_i - \bar{y})^2$     
+</p>
+<p>
+Standard deviation about the least squares line   
+$s_e = \sqrt{\frac{SSResid}{n-2}} \text{ or for multiple regression } s_e = \sqrt{\frac{SSResid}{n-(k+1)}}$   
+Standard deviation about the slope (b), confidence interval df = n - 2   
+$s_b = \frac{S_e}{\sqrt{S_{xx}}}, b \pm (\text{t critical value}) s_b$   
+Coefficient of determination 
+
+*  $r^2 = 1 - \frac{\text{SSResid}}{\text{SSTo}}$   
+*  Adjusted $r^2 = 1 - [\frac{n-1}{n-(k+1)}] \frac{\text{SSResid}}{\text{SSTo}}$
+</p>
+</div>
+</div>
+<div class="myClass_border">
+<center><h3>Probability Events</h3></center> 
+Event|Probability
+------------- | ------------
+A|$P(A)\in[0,1]$
+Not A|$P(A^c)=1-P(A)$, $P(A^c) + P(A) = 1$
+A or B|$\begin{align}
+P(A\cup B) & = P(A)+P(B)-P(A\cap B) \\
+P(A\cup B) & = P(A)+P(B) \qquad\mbox{if A and B are mutually exclusive} \\
+\end{align}$
+A and B|$\begin{align}
+P(A\cap B) & = P(A|B)P(B) = P(B|A)P(A)\\
+P(A\cap B) &  = P(A)P(B) \qquad\mbox{if A and B are independent}\\
+\end{align}$
+A given B|$P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B)}$
+
+If $B_1,B_2,...B_k$ are mutually exclusive events with $P(B_1)+P(B_2) = 1$ then for any event E.   
+
+* Law of Total Probability $P(E)= P(E \cap B_1) + P(E \cap B_2)$  
+* Bays Rule $P(B_1|E) = \frac{P(E|B_1)P(B_1)}{P(E|B_1)P(B_1) + P(E|B_2)P(B_2)}$
+</div>
+
+<div class="myClass_border">
+<center><h5>Discrete Probability Random Variable</h5></center>   
+
+Mean $\mu_x = \sum xp(x)$,  Variance $\sigma_x^2 = \sum (x- \mu_x)^2p(x)$   
+
+<div class="col2" >
+<p>
+Binomial Distribution  
+
+* $P(x) = \binom n x  p^x(1-p)^{n-x} \text{ where } \binom n x =\frac{n!}{x!(n-x)!}$
+* $\mu_x = np  \text{ and } \sigma_x = \sqrt{np(1-p)}$
+</p>
+<p>
+Geometric Distribution  
+
+* $P(x) = p(1-p)^{(x-1)}$
+</p>
+</div>
+</div>
+</div>
+</div>

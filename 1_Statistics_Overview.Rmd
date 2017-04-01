@@ -13,28 +13,33 @@ widescreen: true
 
 ## Why Statistics
 
-My backgroud...    
+My background...    
 
 ![](Pictures/background.PNG)
 
 Why are you taking this class?  
 
+<div class="notes">
+Why? Is this class an elective or degree requirement?
+</div>
+
 ## Content on Moodle
 - Syllabus and schedule
+- Homework Data and Submission From
 - Slides for each week
-- Lecture notes and video  
+- Lecture video  
   
 ## Grades  
 - 10% Homework
-- 15%	Class participation and Quizzes
+- 15%	Quizzes and Participation
 - 50%	Exams - 3
 - 25%	Final
 
-## Today's Homework
-* Get your book!
-* Start reading chapters 1 and 2
-* **Start one discussion topic** on Moodle on why you are interested in statistics
-* **Reply to two** discussion topics that you find interesting.
+<div class="notes">
+* Homework: Completion only.  Submission needs to be a PDF
+* Quiz/Participation Tracking: Weekly on moode.  Will include homework questions
+* Exam/Final: Similar to homework and quiz questions
+</div>
 
 # Chapter 1: Roll of Statistics and Analytic Process
 
@@ -43,6 +48,12 @@ Why are you taking this class?
 1.  Being an informed "Information Consumer"
 2.  Understanding and Making Decisions
 3.  Evaluate Decisions That Affect Your Life
+
+<div class="notes">
+1.  Extract information for news, research and marketing
+2.  Informed decision are based on data and the knowledge of the risk of an incorrect decision
+3.  Statistics can give a good perspective on your own life to review past and influence future decisions
+</div>
 
 ## Steps of the Data Analysis Process
 1. Understand the Nature of the Problem
@@ -65,6 +76,12 @@ The problem is **variability**
 2. Inferential Statistics
     + Estimation
     + Decision making
+    
+## Organizing and Sumarizing Information
+
+* Variables and Data
+* Population and Samples
+* Observational and Experimental Studies
 
 ## Variables
 Variable: A variable is any characteristic whose value may change from one individual to another.  
@@ -89,12 +106,50 @@ round(runif(10,5,15),0)
 runif(10, 1,15)
 ```
 
+## Data Manipulaion
+
+Data manipulation is the process of changing data in an effort to make it easier to read or be more organized.
+
+<center>![](Pictures/data_manipulation.PNG)</center>   
+
+Data cleaning examples: Distinct, unique, filter, sort, join or merge, group and summarize.
+
 ## Frequency
+
 The frequency for a particular category is the number of times the category appears in the data set.  
 
 The relative frequency for a particular category is the fraction or proportion of the time that the category appears in the data set. It is calculated as 
 
 $$\text{Relative Frequency} = \frac{\text{frequency}}{\text{number of observations in the data set}}$$
+
+## Data Manipulation Tools 
+
+* Excel: Spreadsheet software for data manipulation, graphics and calculations
+* Google Sheets: Online spreadsheets software
+* R: Functional language to statistically explore data sets
+* Tableau: Data visualization software
+* Napkin Approach: Using a square piece of cloth or paper to make small calculations or graphs
+* Phone or Calculator:  Use for quick calculation
+
+## Dot Plot
+1. Draw a horizontal line and mark it with an appropriate measurement scale.
+2. Locate each value in the data set along the measurement scale, and represent it by a dot. If there are two or more observations with the same value, stack the dots vertically.
+
+Note: Dot plots are useful for **small** numeric data sets.
+
+## Dot Plot
+```{r}
+round(rnorm(10,mean = 150, sd = 3),0)
+```
+
+<div class="columns-2">
+  ![](Pictures/graph_paper.PNG)
+
+  - Chart Title
+  - Axis and Axis Title
+  - Legend
+  - Appropriate Scaling
+</div>
 
 ## Bar Chart
 1. Draw a horizontal line, and write the category names or labels below the line at regularly spaced intervals.
@@ -112,40 +167,33 @@ sample(letters[c(1:4,6)],10, replace = TRUE)
 ```
 ![](Pictures/graph_paper.PNG)
 
-
 ## Bar Charts
 
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
 df<-data.frame(Letter = sample(letters[c(1:4,6)],500, replace = TRUE))
 df$Letter
 g <- ggplot(df, aes(Letter))
 ```
 
-## Frequency Table
+## Try Excel!
+
+Frequency Table
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
 df2<-df %>% group_by(Letter) %>% summarize(Frequency = length(Letter), Relative_Frequency = Frequency/500)
 df2
 ```
 
-## Frequency Bar Chart
-```{r echo = FALSE, warning=FALSE, message=FALSE}
-g + geom_bar()
-```
+## Today's Homework
+* Get your book!
+* Start reading chapters 1 and 2
+* Start practicing excel: 
+    + YouTube Excel tutorials
+    + [Lynda.com](http://onestop.jessup.edu/c.php?g=399276&p=2713779) excel tutorials
+    + Excel challenge problem: Create a multiplication table using excel formulas
 
-## Relative Frequency
-```{r echo = FALSE, warning=FALSE, message=FALSE}
-g + geom_bar(aes(y = (..count..)/sum(..count..))) + labs(y = "Relative Frequency")
-```
-
-## Dot Plot
-1. Draw a horizontal line and mark it with an appropriate measurement scale.
-2. Locate each value in the data set along the measurement scale, and represent it by a dot. If there are two or more observations with the same value, stack the dots vertically.
-
-## Dot Plot
-```{r}
-round(rnorm(10,mean = 150, sd = 3),0)
-```
-![](Pictures/graph_paper.PNG)
+# Chapter 2: Collecting Data
 
 ## Population vs Sample
 Population: The entire collection of individuals or objects about which information is desired is called the population.  
@@ -163,8 +211,6 @@ more practical  than a census.
 <div class="notes">
 The study of statistics deals with understanding how to obtain samples and work with the sample data to make statistically justified decisions
 </div>
-
-# Chapter 2: Collecting Data
 
 ## Sample
 
@@ -187,7 +233,7 @@ Without Replacement: short straw, hat, cards
 
 <div class="notes">
 Strata: Example sample few teachers in each department  
-Cluster: Example all studends in a few selected classes
+Cluster: Example all students in a few selected classes
 </div>
 
 ## Types of Bias
@@ -198,7 +244,6 @@ Bias is introduced by the way in which a sample is selected so that increasing t
 *Measurement or Response Bias* is the tendency for samples to differ from the corresponding population because the method of observation tends to produce values that differ from the true value.  
 
 *Nonresponse Bias* is the tendency for samples to differ from the corresponding population because data is not obtained from all individuals selected for inclusion in the sample.
-
 
 ## Types of studies
 An **observational study** observes individuals and measures variables of interest but does not attempt to influence the responses.  
@@ -219,7 +264,7 @@ Observational studies are usually used to draw conclusions about the population 
 Experiments are usually used when attempting to determine the effect of the manipulation of the factors being controlled.  
 </div>
 
-## Variables 
+## Study Variables 
 
 An **explanatory variable** are those variables that have values that are controlled by the experimenter.  Also called factors.
 
@@ -247,7 +292,7 @@ The fundamental principles of statistical design of experiments are:
 1. Randomization:  Random assignment (of subjects to treatments or of treatments to trials) to ensure that the experiment does not systematically favor one experimental condition over another
 2. Blocking: Using extraneous factors to create groups (blocks) that are similar. All experimental conditions are then tied in each block 
 3. Direct Control: Holding extraneous factors constant so that their effects are not confounded with those of the experimental conditions
-4. Replication: Ensuring that there is an adequate number of observations in each experimental condition and the study can be dublicated.
+4. Replication: Ensuring that there is an adequate number of observations in each experimental condition and the study can be duplicated.
 
 ## Homework
 Chapter 1  
@@ -257,3 +302,5 @@ Chapter 1
 Chapter 2  
 
 * 2.4, 2.11, 2.18, 2.20, 2.38, 2.47
+
+Excel Practice: Create a multiplication table using excel formulas

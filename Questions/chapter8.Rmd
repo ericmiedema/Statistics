@@ -1,0 +1,111 @@
+---
+title: "Chapter 8"
+author: 'Name____________________'
+output: 
+  word_document:
+    reference_docx: word_style.docx
+---
+#### What is the distribution of the values of a statistic called?
+
+a.	a mean
+b.	Central Limit Theorem
+c.	a sample
+d.	a sampling distribution <ANSWER>
+
+#### When does the Central Limit Theorem state that the sampling distribution of $\bar{x}$ is well approximated by a normal curve?   
+
+a.	When the standard deviation of the population is normally distributed.
+b.	When the population distribution is not itself normal and n is greater than 30. <ANSWER>
+c.	Only when the population distribution itself is normal.
+d.	When the population is skewed.
+
+#### What are the mean and standard deviation of the sampling distribution $\bar{x}$ if random samples of size 25 are selected from a population with a mean of 110 and a standard deviation of 10?
+
+a. $\mu_\bar{x} = 110$ and $\sigma_\bar{x} = 10$
+b. $\mu_\bar{x} = 110$ and $\sigma_\bar{x} = 2$ <ANSWER>
+c. $\mu_\bar{x} = 4.4$ and $\sigma_\bar{x} = 2$
+d. $\mu_\bar{x} = 110$ and $\sigma_\bar{x} = 1.414$
+
+#### Which of the following is the fraction of a sample that has a certain trait or characteristic?  
+
+a.	the mean
+b.	p, the population proportion <ANSWER>
+c.	the interquartile range
+d.	$hat{p}, the sample proportion
+
+#### Which of the following situations would be an appropriate application of the Central Limit Theorem?   
+
+a.	When the sampled population is skewed, the sampling distribution of $\bar{x}$ becomes approximately normal for relatively small values of n.
+b.	If the sampled population is normal, then the sampling distribution of $\bar{x}$ will also be normal, no matter what sample size is chosen. <ANSWER>
+c.	When the sampled population is approximately symmetric, the sampling distribution of  becomes approximately normal only when n is large (at least 30).
+d.	If the sampled population is normal, then the sampling distribution of  will become normal only when n is large (at least 30).
+
+#### What will happen to the standard deviation of the sampling distribution of $\bar{x}$ if the sample size is increased?   
+
+a.	The standard deviation of the sampling distribution of $\bar{x}$ will decrease. <ANSWER>
+b.	The standard deviation of the sampling distribution of$\bar{x}$ will increase.
+c.	The standard deviation of the sampling distribution of $\bar{x}$ will remain the same.
+d.	It depends on the mean of the sampling distribution of $\bar{x}$.
+
+#### When can the Central Limit Theorem be safely applied using the conservative rule?   
+
+a.	When n is less than 10
+b.	When n is greater than 30 <ANSWER>
+c.	When n is greater than or equal to 10
+d.	When n is greater than 20
+
+#### Suppose 15 students pass an exam in a class of size 25. If the population proportion of students who pass the exam is 0.65, what are the mean and standard deviation for the sampling distribution of p?   
+
+a. $\mu_p = 0.60$ and $\sigma_p = 0.095$
+b. $\mu_\bar{x} = 0.05$ and $\sigma_\bar{x} = 0.0455$
+c. $\mu_\bar{x} = 0.65$ and $\sigma_\bar{x} = 0.095$ <ANSWER>
+d. $\mu_\bar{x} = 0.60$ and $\sigma_\bar{x} = 0.098$
+
+#### Suppose a population is normally distributed with a mean of 15 and a variance of 9, what are the mean and standard deviation for $\bar{x} the sampling distribution of  when samples of size n = 36 are randomly selected?   
+
+a. $\mu_\bar{x} = 2.5$ and $\sigma_\bar{x} = 9$
+b. $\mu_\bar{x} = 15$ and $\sigma_\bar{x} = 3$
+c. $\mu_\bar{x} = 15$ and $\sigma_\bar{x} = 1.5$
+d. $\mu_\bar{x} = 15$ and $\sigma_\bar{x} = 0.5$ <ANSWER>
+
+#### If a population has a proportion of successes of p = 0.60, what is $P(p \le 0.5)$ if a random sample of size n = 30 is selected?   
+
+a.	0.6195
+b.	0
+c.	0.1318 <ANSWER>
+d.	There is not enough information given to answer the question.
+
+#### Suppose the salaries of elementary school teachers are approximately normally distributed with a mean income of $25,000 and a standard deviation of $5,000. If a random sample of size 25 is taken and the mean calculated, what is the probability that this mean value will be between $22,000 and $24,000?   
+
+a.	0.1465
+b.	0.4207
+c.	0.1584
+d.	0.1573 <ANSWER>
+
+#### What does the sampling distribution describe?   
+
+a.	It describes the long-run behavior of a statistic. <ANSWER>
+b.	It describes the population proportion.
+c.	It describes the sample size.
+d.	It describes the short-term behavior of the population.
+
+#### For which of the following population distributions will the sampling distribution of $\bar{x}$ have an approximately normal distribution if the sample size is sufficiently large?   
+
+a.	binomial distribution
+b.	normal distribution
+c.	All of these choices. <ANSWER>
+d.	a skewed distribution
+
+### Homework
+
+#### Problem 8.19
+
+A manufacturing process is designed to produce bolts with a 0.5-inch diameter.  Once each day, a random sample of 36 bolts is selected and the bolt diameters are recorded. If the resulting sample mean is less than 0.49 inches or greater than 0.51 inches, the process is shut down for adjustment.  The standard deviation for diameter is 0.02 inches.
+
+What is the probability that the manufacuring line will be shut down unnecessarily, p($\mu_\bar{x}$<0.49 or $\mu_\bar{x}$>0.51)?
+
+a.  0%
+b.  0.27% <answer>
+c.  0.52%
+d.  0.68%
+e.  0.73%

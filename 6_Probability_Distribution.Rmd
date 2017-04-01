@@ -1,26 +1,16 @@
 ---
-title: "Probability Distribution"
+title: "Probability Distribution: Discrete"
 author: "Eric Miedema"
 output: ioslides_presentation
 widescreen: true
 ---
 
-## Statistics Class Week 6
-
-Probability Distributions
-
-![](Pictures/dilbert_odds.PNG)
-
 ## Announcements  
 
 * Start reading chapter 7
 * Complete chapter 6 homework
-* Discussion Board:  Useful and/or Informative Analytics
-    + What is the problem addressed or decision supported?
-    + What are the main variables and data sources?
-    + How is are the variables displayed?
-    + Does it capture and hold your attention?  Is it interactive or engaging?
-    + What could be improved to help communicate?
+
+<center>![](Pictures/dilbert_odds.PNG)</center>
 
 # Chapter 7: Probability Distribution
 
@@ -85,31 +75,34 @@ $\sigma_x$ is the square root of the variance which is computed by first subtrac
 2. when $\sigma_x$ is large, there will be more variability in observed values
 </div>
 
-## Coffee Break
-
-Suppose x is the number of sales staff needed on a given day.  If the cost opening the coffee shop on a day involves fixed costs of $255 and the cost per barista per day is $110. Answer the following questions where the distribution of x is given below   
-
-1.  What is the average, $\mu_x$, number of baristas that are needed?  Expected?
-2.  What is the mean cost, $\mu_y$,of doing business on a given day? What is the probability the cost is within 1 standard deviation of the mean cost?
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
-library(googleVis)
-op <- options(gvis.plot.tag='chart')
-df<-data.frame(x = c(1:5), probab_x = c(.25,.35,.2, .15, .05))
-```
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
-Table <- gvisTable(df)
-plot(Table)
-```
-
 ## Mean & Variance of a Linear Function
 
 If x is a random variable with mean, $\mu_x$, and variance, $\sigma_x^2$ and a and b are numeric constants, the random variable y defined by $y = a + bx$ is called a **linear function of the random variable x**
 
 The mean of y = a+ bx is $$\mu_y = \mu_{a + bx} = a + b\mu_x$$
 
-The variance of y is $$\sigma_y^2 = \sigma_{a + bx}^2 = b^2 + \sigma_x^2$$
+The variance of y is $$\sigma_y^2 = \sigma_{a + bx}^2 = b^2*\sigma_x^2$$
+
+## Coffee Break
+
+Suppose x is the number of sales staff needed on a given day.  If the cost opening the coffee shop on a day involves fixed costs of $255 and the cost per barista per day is $110. Answer the following questions where the distribution of x is given below   
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+df<-data.frame(x = c(1:5), probab_x = c(.25,.35,.2, .15, .05))
+```
+
+<center>
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+</center>
+<br>  
+
+1.  What is the average, $\mu_x$, number of baristas that are needed?
+2.  What is the mean cost, $\mu_y$,of doing business on a given day? 
+3.  What is the probability the cost is within 1 standard deviation of the mean cost?
 
 ## Coffee Break Results
 
@@ -126,10 +119,12 @@ cost_mean<-round(255+ 110*prob_mean,2)
 cost_sd<-round(sqrt(110^2*prob_var),2)
 ```
 
+<center>
 ```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
 Table <- gvisTable(df)
 plot(Table)
 ```
+</center>
 
 <div class="notes">
 $\mu_x$ = `r prob_mean`  
@@ -153,7 +148,14 @@ Note this can be read n choose x and 0! = 1 and $x^0=1$.  The $\mu_x$ and $\sigm
 $$\mu_x = np  \text{ and }  \sigma_x = \sqrt{np(1-p)}$$
 
 <div class="notes">
-n choose x give the number of outcomes of that type.
+n choose x give the number of outcomes of that type.  
+Challenge what is n choose 1 $\binom n 1$
+
+a.	1
+b.	The value of n must be known.
+c.	n
+d.	0
+
 </div>
 
 ## Back to Yahzee
@@ -164,6 +166,19 @@ Is rolling dice a **binomial experiment** of success or failure?
 Is each die an **independent trial**?  
 What is the **constant probability** of any particular die being one?   
 
+## Another binomial distribution problem
+
+Given that 7 in 10 auto accidents involve a single vehicle, suppose 15 accidents are randomly selected.
+
+1.  What is the probability that exactly six involve multiple vehicles?
+2.  What is the probability that six or less involve multiple vehicles?
+
+<div class="notes">
+1.  .147
+2.  .864
+
+</div>
+
 ## Geometric Distribution
 
 A **geometric** random variable is defined as
@@ -171,130 +186,14 @@ x = number of trials until the first success is observed (including the success 
 
 If x is a geometric random variable with probability of success = p for each trial, then 
 
-$$P(x) = p(1-p)^(x-1)$$
+$$P(x) = p(1-p)^{(x-1)}$$
 
 Example would be number of widgets from an assembly line until the widget meets specifications.
 
-# Continuous Distributions
+## Chapter 7: Discrete Homework
 
-## Normal Distribution  
+* 7.9, 7.17, 7.29
+* 7.30, 7.34, 7.43
+* 7.53, 7.54, 7.61
 
-A normal distribution with  $\mu_x = 0$ and $\sigma_x = 1$, is called the standard (or standardized) normal distribution.
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, fig.width = 9, fig.height = 4}
-library(ggplot2)
-library(gridExtra)
-x<-rnorm(50000,mean = 0, sd = 1)
-df<-data.frame(Value = x, Label = "Mean = 0")
-x<-rnorm(50000,mean = 2, sd = 1)
-dfb<-data.frame(Value = x, Label = "Mean = 2")
-df<-rbind(df,dfb)
-x<-rnorm(50000,mean = -2, sd = 1)
-dfb<-data.frame(Value = x, Label = "Mean = -2")
-df<-rbind(df,dfb)
-
-plot1<-ggplot(df, aes(Value, color = Label)) + geom_density(adjust = 3) + labs(title = 'Mean Change')
-
-x<-rnorm(50000,mean = 0, sd = 1)
-df<-data.frame(Value = x, Label = "SD = 1")
-x<-rnorm(50000,mean = 0, sd = .5)
-dfb<-data.frame(Value = x, Label = "SD = .5")
-df<-rbind(df,dfb)
-x<-rnorm(50000,mean = 0, sd = 2)
-dfb<-data.frame(Value = x, Label = "SD = = 2")
-df<-rbind(df,dfb)
-
-plot2<-ggplot(df, aes(Value, color = Label)) + geom_density(adjust = 3) + labs(title = 'Standard Deviation Change')
-
-grid.arrange(plot1, plot2, ncol=2)
-```
-
-## Using the Standard Normal Table
-
-[Link to table on Wiki](https://en.wikipedia.org/wiki/Standard_normal_table) or use back of statistics book.
-
-![](Pictures/z_table.png) ![](Pictures/z_probability.png)
-
-## Example Z Calculation
-
-![](Pictures/z_example.png)
-
-## 2 year old boys
-
-[CDC Baby Boy Growth Chart](http://www.cdc.gov/growthcharts/data/set1/chart05.pdf)
-
-What is the mean and standard deviation of height for a 2 year old boys?
-
-Reminder $\text{Z} = \frac{x- \bar{x}}{S}$  
-
-97 Percentile = 34.5
-50 Percentile = 34.5
-
-<div class="notes">
-
-</div>
-
-## 2 year Old height Sample
-
-Normal Distribution.  Say we take randomly sample 30 2 year old boys with $\mu$  = 34 inches and $\sigma$ = 1.2.
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
-library(googleVis)
-op <- options(gvis.plot.tag='chart')
-set.seed(10)
-n<-10
-A<-round(rnorm(n,mean = 34, sd = 1.2),2)
-B<-round(rnorm(n,mean = 34, sd = 1.2),2)
-C<-round(rnorm(n,mean = 34, sd = 1.2),2)
-#x<-runif(n,31,36)
-df<-data.frame(A = A,B=B,C=C)
-```
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
-Table <- gvisTable(df)
-plot(Table)
-```
-
-## Excel Practice
-
-1. Plot the density
-2. Plot the cumulative distribution
-3. What is the occurrence of height greater or equal to 3 ft? Probability based on the sample? Probability based on the population?
-4. What is the probability of height being between 34 and 36 inches? Probability based on the sample? Probability based on the population?
-
-## 2 year old Plots
-```{r echo = FALSE, warning=FALSE, message=FALSE, fig.width = 9, fig.height = 5}
-library(ggplot2)
-library(gridExtra)
-df<-data.frame(x = c(A,B,C))
-df$cum_x<-cumsum(df$x)
-df$z<-(df$x-mean(df$x))/sd(df$x)
-df$Probability<-pnorm(df$z)
-
-plot1<-ggplot(df,aes(x)) + geom_histogram(aes(y = ..density..),binwidth = .5) + geom_density(color = "red", size = 1) + labs(title = "2 Yrs Old PDF", x = "Height Inches")
-plot2<-ggplot(df,aes(x)) + stat_ecdf(binwidth = .5, size = 1, color = 'blue') + labs(title = "2 Yrs Old CDF", x = "Height Inches", y = "Cummulative Density")
-plot3<-ggplot(df,aes(y = Probability,x = x)) + geom_point() + labs(title = "Normal Probability Plot", x = "Height Inches")
-grid.arrange(plot1, plot2, plot3, ncol=3)
-```
-
-## 2 year old Sample Data
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
-Table <- gvisTable(df)
-plot(Table)
-```
-
-## Chapter 7 Homework
-
-* 7.9, 7.17, 7.20, 7.23, 7.24
-* 7.29, 7.30, 7.34, 7.43, 7.53
-* 7.54, 7.61, 7.64, 7.75
-
-
-
-
-
-
-
-
-
+Challenge: Create a excel tool for a binomial distribution problem

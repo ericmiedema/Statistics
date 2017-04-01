@@ -1,0 +1,167 @@
+---
+title: "Probability Distribution: Continuous"
+author: "Eric Miedema"
+output: ioslides_presentation
+widescreen: true
+---
+
+## Announcements  
+
+* Exam 2 is next Monday 3/13
+* Two Chapter 7 Homework's
+    + Discrete problems due this Friday 3/10
+    + Continuous problems due next Friday 3/17
+* Probability Challenge Quiz (bonus) will be due Friday
+
+# Chapter 7: Probability Distribution
+
+## Review - Random Variable
+
+A numerical variable whose value depends on the outcome of a chance experiment is called a **random variable**. A random variable associates a numerical value with each outcome of a chance experiment.
+
+* **Discrete** if the possible values are isolated points on the number line. 
+* **Continuous** if the set of possible values form an entire interval on the number line.
+
+## Review - Types of Probability distributions
+
+<center>
+```{r echo = FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=7}
+library(ggplot2)
+library(gridExtra)
+df<-data.frame(x = c(1:5),Density = c(0.25,0.35,0.2,0.15,0.05))
+plot1<-ggplot(df, aes(x=x, y=Density)) + geom_point(size = 2) + scale_x_continuous(limits = c(0,6),name = "x - baristas") + scale_y_continuous(limits = c(0,.5)) + labs(title = "Discrete Probability")
+plot2<-ggplot(df, aes(x=x, y=Density)) + geom_smooth(size = 1, span = 1) + scale_x_continuous(limits = c(0,6),name = "x - avg baristas") + scale_y_continuous(limits = c(0,.5)) + labs(title = "Continuous Probability")
+grid.arrange(plot1, plot2, ncol=2)
+```
+</center>  
+
+Discrete Probability distribution | Continuous Probability distribution |
+------------- | ------------- |
+Binomial or Geometric | Uniform, Triangle or Normal 
+
+## Uniform Distribution (problem 7.25) {.smaller}
+
+Let x be the amount of time (in minutes) that a particular San Francisco commuter must wait for a train.  Suppose that the density curve is as pictured.
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+df<-data.frame(x = c(0,20),Density = c(.05,.05))
+dfb<-data.frame(x = c(0,20,40),Density = c(0,.05,0))
+```
+<center>
+```{r echo = FALSE, warning=FALSE, message=FALSE, fig.height= 2.5, fig.width=4}
+ggplot(df, aes(x=x, y=Density)) + geom_line(size = 1) + scale_x_continuous(limits = c(0,25),name = "x - minutes") + scale_y_continuous(limits = c(0,.15))
+```
+</center>
+
+1. What is the probability that x is less than 10 minutes?
+2. What is the probability that x is between 7 and 12 minutes?
+3. Find the value c for which P(x<c)=.9
+
+<div class="notes">
+1. 50%
+2. 25%
+3. 18
+</div>
+
+## Triangular Distribution (problem 7.26) {.smaller}
+
+Let x and y be waiting times on two independently select days.  Define a new random variable w as the sum of the two waiting times, w = x + y. 
+
+<center>
+```{r echo = FALSE, warning=FALSE, message=FALSE, fig.height= 2.5, fig.width=4}
+ggplot(dfb, aes(x=x, y=Density)) + geom_line(size = 1) + scale_x_continuous(limits = c(0,50),name = "w - minutes") + scale_y_continuous(limits = c(0,.15))
+```
+</center>
+
+1. What is the probability that w is less than 20 minutes?
+2. What is the probability that w is between 10 and 30 minutes?  
+
+Reminder: Area of a triangle = 1/2 base * height
+
+<div class="notes">
+1. 50%
+2. 75%
+</div>
+
+## Normal Distribution  
+
+A normal distribution with  $\mu_x = 0$ and $\sigma_x = 1$, is called the standard (or standardized) normal distribution.
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, fig.width = 9, fig.height = 4}
+library(ggplot2)
+library(gridExtra)
+x<-rnorm(50000,mean = 0, sd = 1)
+df<-data.frame(Value = x, Label = "Mean = 0")
+x<-rnorm(50000,mean = 2, sd = 1)
+dfb<-data.frame(Value = x, Label = "Mean = 2")
+df<-rbind(df,dfb)
+x<-rnorm(50000,mean = -2, sd = 1)
+dfb<-data.frame(Value = x, Label = "Mean = -2")
+df<-rbind(df,dfb)
+
+plot1<-ggplot(df, aes(Value, color = Label)) + geom_density(adjust = 3) + labs(title = 'Mean Change')
+
+x<-rnorm(50000,mean = 0, sd = 1)
+df<-data.frame(Value = x, Label = "SD = 1")
+x<-rnorm(50000,mean = 0, sd = .5)
+dfb<-data.frame(Value = x, Label = "SD = .5")
+df<-rbind(df,dfb)
+x<-rnorm(50000,mean = 0, sd = 2)
+dfb<-data.frame(Value = x, Label = "SD = = 2")
+df<-rbind(df,dfb)
+
+plot2<-ggplot(df, aes(Value, color = Label)) + geom_density(adjust = 3) + labs(title = 'Standard Deviation Change')
+
+grid.arrange(plot1, plot2, ncol=2)
+```
+
+## Normal Distribution (Problem 7.82)
+
+Suppose that the distribution of typing speed in words per minute (wpm) for experienced typist can be approximated by a normal curve with mean 60 wpm and standard deviation 15 wpm.
+
+1.  What is the probability that a randomly selected typist's speed is at most 60 wpm?
+2.  What is the probability that a randomly selected typist's speed is between 45 and 90 wpm?
+
+<div class="notes">
+1. 50%
+2. 82%
+</div>
+
+## Steps to solving normal distribution problems
+
+1.  Visualize Probability Density Function
+2.  Calculate the Z score, $\text{Z} = \frac{x- \bar{x}}{S}$
+3.  Find appropriate area(s)
+    +  Estimate with empirical (68, 95, 99.7) rule
+    +  Look up on normal table: [link to wiki](https://en.wikipedia.org/wiki/Standard_normal_table), back of any statistics book or create your own.
+    +  Calculate with excel formula =NORM.DIST(x,0,1,TRUE)
+4.  Solve for probability
+
+## Example normal (Z) curve area lookup
+
+![](Pictures/z_example.png)
+
+
+## Practice : Create your own Standard normal probability table
+
+1. Normal Probability Density Function (PDF) graph
+2. Cumulative Distribution Function (CDF) graph
+3. Challenge: Standard normal probability table  
+
+Determine the following:  
+
+1.  The area between 1, 2, 3 and 4 standard deviations:  How does this compare to the empirical rule?
+2.  The area to the left and right of -0.68:  How do these areas compare?
+3.  The area to the left of -1.2 and to the right of 1.2:  How do these areas compare?
+
+## Chapter 7: Continuous Homework
+
+* 7.20, 7.23, 7.24
+* 7.64, 7.72, 7.75 
+
+Excel Challenge: Standard Probability table with graphs
+
+1. Normal Probability Density Function (PDF) graph
+2. Cumulative Distribution Function (CDF) graph
+3. Standard normal probability table

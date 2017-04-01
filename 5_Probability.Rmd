@@ -9,7 +9,7 @@ widescreen: true
 
 ![](Pictures/dilbert_probability.PNG)
 
-## Probability Terms
+## Probability Terms {.smaller}
 
 Review  
 
@@ -46,23 +46,13 @@ df<-data.frame(A = sample(1:6,5000,replace = TRUE), B = sample(1:6,500,replace =
 large<-length(df$A[df$A+df$B == 6])/length(df$A)
 ```
 
-Or based on observating 50 rolls we can and calculate the relative frequency of `r round(small,3)`.
-
-## Law of Large Numbers
-
-**Law of Large Numbers**: As the number of repetitions of a chance experiment increases, the chance that the relative frequency of occurrence for an event will differ from the true probability of the event by more than any very small number approaches zero.
-
-The probability of an event E, denoted by P(E), is defined to be the value approached by the **relative frequency** of occurrence of E in a very long series of trials of a chance experiment. Thus, if the number of trials is quite large,
-
-$$P(E) \approx \frac{\text{number of time E occurs}}{\text{number of trials}}$$
-
-Pevious example sample of 50 rolls is `r round(small,3)` whereas a sample of 500 is `r round(large,3)` compared to actual of `r round(5/36,3)`. 
+Or based on observing 50 rolls we can and calculate the relative frequency of `r round(small,3)`.
 
 ## Methods for Determining Probability
 
 1. **The classical approach**: Appropriate for experiments that can be described with equally likely outcomes.
 2. **The subjective approach**: Probabilities represent an individual's judgment based on facts combined with personal evaluation of other information.
-3. **The relative frequency approach**: An estimate is based on an accumulation of experimental results. This estimate, usually derived empirically, presumes a replicable chance experiment.
+3. **The relative frequency approach**: An estimate is based on an accumulation of experimental results. This estimate, usually derived empirically, presumes a repeatable chance experiment.
 
 ## Yahtzee!
 
@@ -75,6 +65,16 @@ Classical - 6 possible Yahtzee out of $6^5$ or `r 6^5` = `r round(6/6^5,4)`... n
 Subjective - Who plays Yahtzee?  normally how many games until a Yahtzee?
 Relative Frequency or Simulation?
 </div>
+
+## Law of Large Numbers
+
+**Law of Large Numbers**: As the number of repetitions of a chance experiment increases, the chance that the relative frequency of occurrence for an event will differ from the true probability of the event by more than any very small number approaches zero.
+
+The probability of an event E, denoted by P(E), is defined to be the value approached by the **relative frequency** of occurrence of E in a very long series of trials of a chance experiment. Thus, if the number of trials is quite large,
+
+$$P(E) \approx \frac{\text{number of time E occurs}}{\text{number of trials}}$$
+
+Previous example sample of 50 rolls is `r round(small,3)` whereas a sample of 500 is `r round(large,3)` compared to actual of `r round(5/36,3)`. 
 
 ## Yahtzee First Roll
 
@@ -174,6 +174,40 @@ Table <- gvisTable(df3[1:22,])
 plot(Table)
 ```
 
+## Venn Diagram
+
+A **Venn Diagram** is an informal picture that is used to identify relationships and visualize relationships of chance events.  The collection of all possible outcomes of a chance experiment are represented as the interior of a rectangle.
+
+![](Pictures/union.png) ![](Pictures/complement.png)  
+![](Pictures/muturally_exclusive.png)  ![](Pictures/intersection.png)
+
+## Venn Diagram Practice {.smaller}
+Given you manage the health plan of a large employer and 40% of employees have a healthy diet, 30%  of employees have a good exercise habits and 10% of employees have both a healthy diet and good exercise habits.  We can define the following events:  
+
+A = event that a selected employee is on a healthy diet  
+B = event that a select employee has good exercise habits  
+
+What is the probability of A union B $P(A\cup B)$ and A intersection B $P(A\cap B)$? 
+
+![](Pictures/union.png)  ![](Pictures/intersection.png)
+
+## Conditional Probability {.smaller}
+
+Let E and F be two events with P(F) > 0. The conditional probability of the event E given that the event F has occurred, denoted by P(E|F), is
+
+$$P(E \mid F) = \frac{P(E \cap F)}{P(F)}$$
+
+Level	| Satisfied	| Unsatisfied	| Total
+------------- | ------------ | ------------ | ------------
+College	| 0.095	| 0.055	| 0.150
+High School	| 0.288	| 0.220	| 0.508
+Elementary	| 0.162	| 0.180	| 0.342
+Total	| 0.545	| 0.455	| 1.000  
+
+  
+1. What is proportion of satisfied (S) college (C) teachers?  $P(S\cap C)$?  
+2. What is the proportion of teachers who are college teachers given they are satisfied is?  $P(C|S)$?
+
 ## Probility of Events
 
 Event|Probability
@@ -190,79 +224,135 @@ P(A\cap B) &  = P(A)P(B) \qquad\mbox{if A and B are independent}\\
 \end{align}$
 A given B|$P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B)}$
 
-## Venn Diagram
-
-A **Venn Diagram** is an informal picture that is used to identify relationships.  
-The collection of all possible outcomes of a chance experiment are represented as the interior of a rectangle.
-
-![](Pictures/union.png) ![](Pictures/complement.png)  
-![](Pictures/muturally_exclusive.png)  ![](Pictures/intersection.png)
-
-## Conditional Probability
-
-Let E and F be two events with P(F) > 0. The conditional probability of the event E given that the event F has occurred, denoted by P(E|F), is
-
-$$P(E \mid F) = \frac{P(E \cap F)}{P(F)}$$
-
-Level	| Satisfied	| Unsatisfied	| Total
-------------- | ------------ | ------------ | ------------
-College	| 0.095	| 0.055	| 0.150
-High School	| 0.288	| 0.220	| 0.508
-Elementary	| 0.162	| 0.180	| 0.342
-Total	| 0.545	| 0.455	| 1.000  
-
-<div class="notes">
-1. What is proportion of satisfied (S) college (C) teachers?  $P(S\cap C)$?  
-2. What is the proportion of teachers who are college teachers given they are satisfied is?  $P(C|S)$?
-</div>
-
-## Independence
+## Independence {.smaller}
 
 Two events E and F are said to be **independent** if P(E|F)=P(E).  
-
-If E and F are not independent, they are said to be **dependent events**.
 If P(E|F) = P(E), it is also true that P(F|E) = P(F) and vice versa.
 
-Previous example $P(C|S) \neq P(C)$, so C and S are dependent.
+If E and F are not independent, they are said to be **dependent events**.
 
-Multiplication Rule for Independent Events
+
+Previous example $P(C|S) \neq P(C)$, so C and S are **dependent**.  
+Whereas the probability of each dice roll (coin flip) is **independent**.
+
+Multiplication Rule for Independent Events (rolling multiple dice)
 
 * The events E and F are independent if and only if
 $$P(E\cap F) = P(E)P(F)$$
-* The events $E_1,E_2,...,E_k$ are independent and implies
-$$P(E_1 \cap E_2 \cap ... \cap E_k) = P(E_1)P(E_2)...P(E_k)$$
 
-## General Probability Rules
 
-Event|Probability
-------------- | ------------
-A|$P(A)\in[0,1]$
-Not A|$P(A^c)=1-P(A)$, $P(A^c) + P(A) = 1$
-A or B|$\begin{align}
-P(A\cup B) & = P(A)+P(B)-P(A\cap B) \\
-P(A\cup B) & = P(A)+P(B) \qquad\mbox{if A and B are mutually exclusive} \\
-\end{align}$
-A and B|$\begin{align}
-P(A\cap B) & = P(A|B)P(B) = P(B|A)P(A)\\
-P(A\cap B) &  = P(A)P(B) \qquad\mbox{if A and B are independent}\\
-\end{align}$
-A given B|$P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B)}$
+## Relative Frequency Excel Practice {.smaller}
 
-## General Probability Rules
-If $B_1,B_2,...B_k$ are mutually exclusive events with $P(B_1)+P(B_1)+...+P(B_k) = 1$ then for any event E
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+# Random Patient Generator
+vte_patients<-500 + rnorm(1, mean = 50, sd = 10)
+non_vte_patient<-vte_patients*10 + rnorm(1, mean = 100, sd = 20)
+genders<-c("M","F")
+
+df_vte<-data.frame(
+  Gender = sample(genders,vte_patients,replace = TRUE),
+  Age = round(runif(vte_patients,0,15)+rnorm(vte_patients, mean = 50, sd = 10),0),
+  D_Dimer = rbinom(vte_patients, 1, .8),
+  VTE = 1)
+
+#low risk: young women
+df_vte$D_Dimer[df_vte$Age<50 & df_vte$Gender == "F"]<-rbinom(length(df_vte$D_Dimer[df_vte$Age<50 & df_vte$Gender == "F"]), 1, .6)
+
+#high risk: old men
+df_vte$D_Dimer[df_vte$Age>50 & df_vte$Gender == "M"]<-rbinom(length(df_vte$D_Dimer[df_vte$Age>50 & df_vte$Gender == "M"]), 1, .8)
+
+df_novte<-data.frame(
+  Gender = sample(genders,non_vte_patient,replace = TRUE),
+  Age = round(runif(non_vte_patient,0,15)+rnorm(non_vte_patient, mean = 50, sd = 10),0),
+  D_Dimer = rbinom(non_vte_patient, 1, .2),
+  VTE = 0)
+
+#low risk: young women
+df_novte$D_Dimer[df_novte$Age<50 & df_novte$Gender == "F"]<-rbinom(length(df_novte$D_Dimer[df_novte$Age<50 & df_novte$Gender == "F"]), 1, .25)
+
+#high risk: old men
+df_novte$D_Dimer[df_novte$Age>50 & df_novte$Gender == "M"]<-rbinom(length(df_novte$D_Dimer[df_novte$Age>50 & df_novte$Gender == "M"]), 1, .3)
+
+df<-rbind(df_vte,df_novte)
+
+#write.csv(df, "Data_Sets/Random_Patients_VTE.csv",row.names = FALSE)
+df$NEG_D_Dimer<-0
+df$NEG_D_Dimer[df$D_Dimer==0]<-1
+
+P_VTE = round(mean(df$VTE),2)
+P_VTE_c= 1-P_VTE
+P_VTE_POS_D_Dimer = round(mean(df$VTE[df$D_Dimer==1]),2)
+P_VTE_NEG_D_Dimer = round(mean(df$VTE[df$D_Dimer==0]),2)
+
+P_TP = round(mean(df$D_Dimer[df$VTE==1]),2)
+P_TN = round(mean(df$NEG_D_Dimer[df$VTE==1]),2)
+P_FP = round(mean(df$D_Dimer[df$VTE==0]),2)
+P_FN = round(mean(df$NEG_D_Dimer[df$VTE==0]),2)
+
+#write.csv(df, "Data_Sets/Random_Patients_VTE.csv",row.names = FALSE)
+```
+
+A venous thromboembolism (VTE), is a blood clot that breaks loose and travels in the blood.  This may cause serious life-threatening condition such as a heart attack or stroke.  A d-dimer test is a blood test that measures a substance that is released when there is a blood clot and can be used to assess the likelihood of a VTE. 
+
+[VTE PATIENT DATA](https://docs.google.com/spreadsheets/d/1T6-CB3eaOhAjtUS6fdkWrHWCPYUBlOr6_moZbr-9Mgk/edit?usp=sharing)
+
+VTE Patients Part A - Using data set to find probabities (pivot table practice)
+
+1. What is the probability of a VTE with a positive d-dimer?
+2. What is the probability of a VTE with a negative d-dimer?
+3. What is the total probability of a VTE?
+4. If you are an older (above 50) male with a positive d-dimer test, what is your likelihood of a VTE?
+5. If you are an young (below 50) female with a positive d-dimer test, what is your likelihood of a VTE?
+
+## General Probability Rules: {.smaller}
+
+If $B_1,B_2,...B_k$ are mutually exclusive events with $P(B_1)+P(B_2) = 1$ then for any event E
 
 The law of Total Probability
-$$P(E)= P(E \cap B_1) + P(E \cap B_2) + ... + P(E \cap B_k)$$
+$$P(E)= P(E \cap B_1) + P(E \cap B_2) = P(E|B_1)P(B_1) + P(E|B_2)P(B_2)$$
 
-Bays Rule
-$$P(B_i|E) = \frac{P(E|B_i)P(B_i)}{P(E|B_1)P(B_1) + P(E|B_2)P(B_2) + ... + P(E|B_k)P(B_k)}$$
+Bays Rule  
+$$P(B_1|E) = \frac{P(E|B_1)P(B_1)}{P(E|B_1)P(B_1) + P(E|B_2)P(B_2)}$$
+
+## Law of total probability Example {.smaller}
+
+VTE Patients Part B - Calculating probabilities without the data set  
+
+$VTE$ = Event that the patient has a VTE  
+$VTE^c$ = Event that the patient does not of a VTE  
+$+DDIMER$ = Event that the patient has a positive d-dimer  
+$-DDIMER$ = Event that the patient has a negative d-dimer  
+
+If we only know:   
+P(VTE) = `r P_VTE`   
+P($VTE^c$)= `r P_VTE_c`   
+P(VTE|+DDimer) = `r P_VTE_POS_D_Dimer`  
+P(VTE|-DDimer) = `r P_VTE_NEG_D_Dimer`  
+
+<br>
+What is the probability of a positive d_dimer test, P(+DDIMER)?  
+
+## Bays Rule Example {.smaller}
+
+If we only know:  
+P(VTE) = `r P_VTE` and P($VTE^c$)= `r P_VTE_c`   
+
+Test Results  | Positive | Negative
+------------- | ------------- | -------------
+TRUE | $P(+DDIMER|VTE)$ = `r P_TP` |  $P(-DDIMER|VTE)$ = `r P_TN`
+FALSE | $P(+DDIMER|VTE^c)$ = `r P_FP` | $P(-DDIMER|VTE^c)$ = `r P_FN`
+
+<br>
+What is the probability of VTE given a positive d_dimer test, P(VTE|+DDimer)?
 
 ## Homework
-
-Discussion Post - Infographic/App
 
 Chapter 6
 
 * 6.3,6.11,6.24, 6.29
 * 6.31, 6.35, 6.43, 6.50
 * 6.54, 6.59, 6.67, 6.81
+
+Excel Challenge: Create all 7776 possible rolls in a Yahtzee game.  In one roll, what is the probability of getting 1, 2, 3, 4, or all 5 ones?
+
+<center>![](Pictures/yatzee.png)</center>

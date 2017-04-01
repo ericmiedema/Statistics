@@ -8,16 +8,29 @@ widescreen: true
 
 There are three types of statisticians. Those that can count and those that can't.
 
-### Numeric Methods
-* Describe the center of data
-* Describe variance from the center
-* Describe relative standing
-
 ### Today's Homework  
 * Start reading chapter 4
-* Prepare for the first exam next Monday
+* Prepare for the first exam (chapter 1 - 3) next Monday
 
 # Chapter 4 - Numeric Methods
+
+## Numeric Methods {.smaller}
+
+1.  Center of the data
+    + Mean, $\bar{x}$ and adjusted mean
+    + Median
+    + Categorical - Sample Porportion of Success, $\hat{p}$
+
+2.  Variability of Data
+    + Range
+    + Deviations from the mean
+    + Variance, $s^2$
+    + Standard deviation, s
+    + Quartiles
+  
+3.  Relative Standing
+    + Percentile
+    + Standard deviations from mean
 
 ## Center of the data - mean
 
@@ -54,21 +67,34 @@ Even data set with n = 8
 
 ## Mean vs Median
 
-Symmetric distribution  
-$$\text{Mean} = \text{median}$$
+<div class="centered">
+![](Pictures/skew_plots.PNG)
+</div>
 
-Positively skewed distribution
-$$\text{Mean} > \text{median}$$
+Symmetric distribution:  $\text{Mean} = \text{median}$  
 
-Negatively skewed distribution
-$$\text{Mean} < \text{median}$$
+Positively skewed distribution:  $\text{Mean} > \text{median}$  
+
+Negatively skewed distribution:  $\text{Mean} < \text{median}$
+
+## Excel Practice
+
+[State Demographic Data](https://docs.google.com/spreadsheets/d/1Dl4B872ZVHWTDKaRXt1kbQDj10txmt0DHCkieiHMKIk/edit?usp=sharing)  
+
+**Practice**:   
+
+1.  What are the mean and median county populations in Ohio?  What is the centriod?
+2.  Based on the mean and median, is the distibution skewed?  What direction?
+3.  Does this match the histogram distribution?
 
 ## Categorical - Sample Porportion of Success
 
 The **sample proportion of success**, denoted by p, is
 $$\hat{p} = \frac {\text{number of S's in the sample}}{n}$$
 
-Where S is the label used for the response designated as success.  The population proportion of successes is denoted by p.
+Where S is the label used for the response designated as success.  The population proportion of successes is denoted by p.  
+
+**Practice**: What is the proportion of metro counties in Ohio?
 
 ## Variability of Data
 
@@ -82,48 +108,35 @@ How much do the data vary from the center?
 
 The simplest numerical measure of the variability of a numerical data set is the range, which is defined to be the difference between the largest and smallest data values.  
 
-$$\text{Range} = \text{maximum} - \text{minimum}$$
+$$\text{Range} = \text{maximum} - \text{minimum}$$  
+
+**Practice**: What is the min, max and range of county populations in Ohio?
 
 ## Variability of Data - Deviation from mean
 
-Deviation from the mean
+Deviation from the mean is the difference between the observation point, denoted x, and the mean of the sample denoted $\overline{x}$.
 
-```{r}
-x <- round(runif(5,0,15),0)
-x
-mean(x)
-y <- x-mean(x)
-y
-```
+$$\text{Deviation from the mean} = x - \overline{x}$$
 
+**Practice**: What is the min, max and average deviation from the mean of county populations in Ohio?
 
 ## Variability of Data - Variance 
-The sample variance, denoted s2 is the sum of the squared deviations from the mean divided by n-1.  
+The sample variance, denoted $s^2$ is the sum of the squared deviations from the mean divided by n-1.  
 
-$$S^2 = \frac{\sum (x - \overline{x})^2}{n-1}= \frac{S_{xx}}{n-1}$$
-
-```{r}
-(x-mean(x))^2
-sum((x-mean(x))^2)/(length(x)-1)
-var(x)
-```
+$$s^2 = \frac{\sum (x - \overline{x})^2}{n-1}= \frac{S_{xx}}{n-1}$$
 
 <div class="notes">
 Squares have to be centered around 0, so there really are merely (n-1) independent values. For example, if you told me (n-1) values, I would know the nth value. We say there are (n-1) degrees of freedom.
 </div>
+
+**Practice**: What is the variance of county populations in Ohio?
 
 ## Variability of Data - Standard deviation
 
 The sample standard deviation, denoted s is the positive square root of the sample variance.  
 $$s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$$
 
-```{r}
-sqrt(sum((x-mean(x))^2)/(length(x)-1))
-sd(x)
-```
-
-The population standard deviation is denoted by $\sigma$.
-
+**Practice**: What is the standard deviation of county populations in Ohio?
 
 ## Variability of Data - Quartiles
 
@@ -131,13 +144,9 @@ The population standard deviation is denoted by $\sigma$.
 * Upper Quartile (Q3) = median of the upper half of the data set 
 * Interquartile range (iqr) = upper quartile - lower quartile
 
-```{r}
-x <- sort(round(runif(10,0,15),0))
-x
-quantile(x, probs = seq(0, 1, 0.25), type = 2)
-```
-
 Note: If n is odd, the median is excluded from both the lower and upper halves of the data.
+
+**Practice**: What is the lower, upper and interquartile range of county populations in Ohio?
 
 ## Variability of Data
 
@@ -165,6 +174,8 @@ A mild outlier would need to be greater than 1.5 * 7 + 14 = 24.5
 
 An extreme outlier would need to be greater than 3 * 7 + 14 = 35
 
+**Practice**: How many county populations in Ohio are mild and extreme outliers?
+
 ## Relative Standing - Box Plot
 
 Constructing a Skeletal Boxplot  
@@ -181,7 +192,7 @@ A **modified boxplot** represents mild outliers by shaded circles and extreme ou
 
 ## Relative Standing - Percentile
 
-For any particular number r between 0 and 100, the **rth percentile** is a value such that r percent of the observation in the data set fall at or below that value.
+For any particular number r between 0 and 100, the **rth percentile** is a value such that r percent of the observation in the data set fall at or below that value.  Use frequency cummulative percentage or area under the distribution curve.
 
 ```{r echo = FALSE, warning=FALSE, message=FALSE, fig.width = 5, fig.height = 3}
 library(ggplot2)
@@ -193,8 +204,9 @@ ggplot(df, aes(x)) + geom_density(adjust=5) + geom_vline(xintercept = y)
 
 Example of normal sample with r of 90% at `r round(qnorm(.9),2)`.  
 
-
 ## Relative Standing - Chebyshev's Rule
+
+Estimation rule for **skewed or multimodal** (non-normal) distributions:  
 
 Consider the number k, where k $\le$ 1. Then the percentage of observations that are within k standard deviations of the mean is at least $100 (1 - \frac{1}{k^2}) %$
 
@@ -206,8 +218,9 @@ Number of Standard Deviations, k| $1 - \frac{1}{k^2} %$| Percentage Within k Sta
 5  | .96 | at least 96%
 10  | .99 | at least 99%
 
-
 ## Relative Standing - Empirical Rule
+
+Estimation rule for **symmetric and unimodal** (normal) distributions:  
 
 If the histogram of values in a data set is reasonably symmetric and unimodal (specifically, is reasonably approximated by a normal curve), then  
 
@@ -215,10 +228,9 @@ If the histogram of values in a data set is reasonably symmetric and unimodal (s
 * Approximately 95% of the observations are within 2 standard deviation of the mean.
 * Approximately 99.7% of the observations are within 3 standard deviation of the mean.
 
-
 ## Relative Standing - Z Score
 
-The **z score** , or standardized score, is how many standard deviations the observation is from the mean.  
+The **z score**, or standardized score, is how many standard deviations the observation is from the mean.  
 
 A positive z score indicates the observation is above the mean and a negative z score indicates the observation is below the mean.
 
@@ -233,10 +245,42 @@ $$\text{Z} = \frac{x- \bar{x}}{S}$$
 * Percentile - Show percent of the observation in the data set fall at or below that value
 * Chebyshev's Rule - Show percentage of observations within k, standard deviations for any distribution
 * Empirical Rule - Show percentage of observations within 1,2 and 3 standard deviations for a normal distribution
-* Z Score - Standardized score of number of standard deviations from the mean and used to calculate percentile for a normal distribution.
+* Z Score - Standardized score of number of standard deviations from the mean and used to calculate percentile for a **normal** distribution.
+
+## Formula and Notation Review {.smaller}
+1.  Center of the data
+    + Sample Mean $\bar{x} = \frac{x_1+x_2+\cdots +x_n}{n} = \frac{\sum (x)}{n}$
+    + Median - midpoint of observed values
+    + Categorical - Sample proportion of success $\hat{p} = \frac {\text{number of S's in the sample}}{n}$
+
+2.  Variability of Data
+    + Deviation from the mean - $x - \overline{x}$
+    + Variance $s^2 = \frac{\sum (x - \overline{x})^2}{n-1}= \frac{S_{xx}}{n-1}$
+    + Standard deviation $s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$
+    + Quartiles - Median of the first and second half of observed values
+  
+3.  Relative Standing
+    + Percentile - Cummulative percentage or area under the distribution curve
+    + Z Score $\text{z} = \frac{x- \bar{x}}{\sigma}$.  For normal distributions, percentile *=NORM.DIST(Z SCORE,0,1,TRUE)*
+
+## Excel Challenge {.smaller}
+
+Write a Statistically descriptive paragraph of Illinios county populations where *italic* should be based on a formula.  Example:  
+
+The counties have a population range of *RANGE* from *MIN* to *MAX* with an average of *MEAN* people.  The median, *MEDIAN*, is *LESS THAN OR GREATER THAN* the mean indicating a *NEGATIVELY OR POSITIVILY* skewed distribution.	The variance of the data is *VARIANCE* with the standard deviation, *STANDARD DEVIATION*, representing the typical deviation from the mean for each county.  
+
+Based on the Chebyshev's Rule 75% of the county population should be within 2 standard deviation of the mean or between *MEAN - 2 SD* and *MEAN + 2 SD* people.  If you look at *PICK A COUNTY* is at *PERCENTILE* percentile with a the z score of *Z SCORE* indicating the county is *Z SCORE* standard deviations from the mean.  
+
+HINTS:   
+
+1.  Use Excel/Google sheet function =concatenate("string one ", A1, " string two.", B1, "string three") to combine paragraph.
+2.  Use Excel/Google sheet function =IF(G4<G5,"less than","greater than") to compare mean and median for distribution skew.
+
 
 ## Homework Chapter 4
 
 4.1, 4.6, 4.14, 4.15  
 4.29, 4.31, 4.32, 4.33  
-4.39, 4.43, 4.50, 4.58
+4.39, 4.43, 4.50, 4.58  
+
+Excel Challenge: Statistically descriptive paragraph of Illinios county populations

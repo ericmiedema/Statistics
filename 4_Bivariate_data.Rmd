@@ -9,24 +9,20 @@ widescreen: true
 
 ![](Pictures/dilbert_causation.png)
 
-### Bivariate Data
+### Bivariate Data: Understanding relationship between variables
 * Scatter plots
 * Correlation
-* Regression
-    + Linear
-    + Nonlinear
+* Regression - Line of best fit
     
 # Chapter 5 - Bivariate Data
 
-## Terms Review
+## Terms Review {.smaller}
 
 A **bivariate** data set consists of observations on two variables made on individuals in a sample or population. A *scatterplot* is a plot of pairs of observed values (both quantitative) of two different variables  
 
 * A **response variable** is thought to be related to the explanatory variable in the experiment, but not controlled by the experimenter.  In a bivariate data set this is called the **dependent variable** and is the value we would like to predict.  The dependent variable is denoted by y.  
 
 * An **explanatory variable** are those variables that have values that are controlled by the experimenter.  Also called factors.  In a bivariate data set this is called the **independent variable** or **predictor variable** and is used to make a prediction of the dependent variable.  The independent variable is denoted by x.  
-
-## Association
 
 **Positive Association** - Two variables are positively associated when above-average values of one tend to accompany above-average values of the other and below-average values tend similarly to occur together. (i.e., Generally speaking, the y values tend to increase as the x values increase.)
 
@@ -48,6 +44,17 @@ op <- options(gvis.plot.tag='chart')
 x<-round(rnorm(10,mean = 150, sd = 10),0)
 y<-round(x+rnorm(10,mean = 0, sd = 5),0)
 df<-data.frame(x = x, y = y)
+#df$Z_x<-(df$x-mean(df$x))/sd(x)
+#df$Z_y<-(df$y-mean(df$y))/sd(y)
+#df$product_z<-df$Z_x*df$Z_y
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
 df$Z_x<-(df$x-mean(df$x))/sd(x)
 df$Z_y<-(df$y-mean(df$y))/sd(y)
 df$product_z<-df$Z_x*df$Z_y
@@ -59,14 +66,9 @@ df$product_z<-df$Z_x*df$Z_y
 * $\bar{y}$ = `r round(mean(y),1)` and $s_x$ = `r round(sd(y),1)`
 * The sum is `r round(sum(df$product_z),1)` divided by 9 to get r = `r round(sum(df$product_z)/9,2)`
 </div>
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
-Table <- gvisTable(df)
-plot(Table)
-```
-'  
+<br>
   
-The sum of the product of Z is `r round(sum(df$product_z),1)` divided by 9 to get r = `r round(sum(df$product_z)/9,2)`
+The sum of the product of Z scores is `r round(sum(df$product_z),1)` divided by 9 to get r = `r round(sum(df$product_z)/9,2)`.  Or use =corrrel() function in statistical software.
 
 ```{r warning=FALSE, message=FALSE}
 cor(x,y)
@@ -131,7 +133,7 @@ The relationship **y = a + bx** is the equation of a straight line.
 ## Least Squares Line
 
 The most widely used criterion for measuring the goodness of fit of a line   
-**y = a + bx** to bivariate data $(x1, y1), (x2, y2),(xn,yn)$ is the sum of the of the squared deviations about the line.
+**y = a + bx** to bivariate data $(x_1, y_1), (x_2, y_2),(x_n,y_n)$ is the sum of the of the squared deviations about the line.
 
 $$SSD = \sum ^n _{i=1} (y_i - (a - bx_i))^2$$
 
@@ -152,6 +154,14 @@ op <- options(gvis.plot.tag='chart')
 x<-round(rnorm(10,mean = 150, sd = 10),0)
 y<-round(2*x+rnorm(10,mean = 0, sd = 5),0)
 df<-data.frame(x = x, y = y)
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
 df$DEV_X<-(df$x-mean(df$x))
 df$DEV_Y<-(df$y-mean(df$y))
 df$PROD_DEV<-df$DEV_X*df$DEV_Y
@@ -170,11 +180,6 @@ df$Residual<-df$y-df$Predicted
 * b = `r sum(df$PROD_DEV)` / `r sum(df$SQR_DEV_X)` = `r b`
 * a = `r round(mean(y),1)` - `r round(mean(x),1)` * `r b` = `r a`
 </div>
-
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
-Table <- gvisTable(df)
-plot(Table)
-```
   
 $$\hat{y} = `r a` + `r b` * x$$
 
@@ -236,7 +241,7 @@ $$r^2 = 1 - \frac{\text{SSResid}}{\text{SSTo}}$$
 
 Where the **total sum of squares**, denoted **SSTo** is
 $$SSTo = \sum ^n _{i=1} (y_i - \bar{y})^2$$
-Where the residual sum of squares**, denoted **SSResid** is
+Where the residual sum of squares, denoted **SSResid** is
 $$SSResid = \sum ^n _{i=1} (y_i - (a - bx_i))^2 = \sum ^n _{i=1} (y_i - \hat{y})^2$$
 
 ## Ploting with R Squared
@@ -305,34 +310,6 @@ plot4<-ggplot(df, aes(x,y)) + geom_point() + stat_smooth(method="lm", se=TRUE, f
 grid.arrange(plot1, plot2, plot3, plot4, ncol=2, nrow = 2)
 ```
 
-## Reciprical Transformation Example
-
-```{r echo = FALSE, warning=FALSE, message=FALSE}
-library(ggplot2)
-library(gridExtra)
-x<-c(runif(90,min = 1, max = 100),runif(10,min = 0, max = 1))
-rand<-x
-
-y<-1/rand+10
-df<-data.frame(x = x, y = y)
-lm_eqn(df)
-
-plot1<-ggplot(df, aes(x,y)) + geom_point() + stat_smooth(method="lm", se=TRUE, fill=NA,
-                formula= y ~ x,colour="red") + labs(title = paste("Reciprocal of x",sep = " "))
-plot2<-ggplot(df, aes(1/x,y)) + geom_point() + geom_smooth(method = "lm") + labs(title = paste("r2 = ",r2,", y = ",a," + ",b,"x", sep = ""))
-
-grid.arrange(plot1, plot2, ncol=2)
-```
-
-<div class="notes">
-* Quadratic - Models with peak or valley such as sales on new iphone or game
-* Reciprocal - curve for high first day or event such as hospital cost per day in the hospital (ED first day)
-* Square Root - ???
-* Log - curve for improvement such as patient satisfaction
-* Exponential
-* Power
-</div>
-
 ## Regression for Bivariate Numeric Dataset
 
 1. Summarize with scatterplot
@@ -343,9 +320,32 @@ grid.arrange(plot1, plot2, ncol=2)
 6. Decide if least-squares line is useful for predictions
 7. Use regression line for prediction
 
+## Summary Formulas for Bivariate Data {.smaller}
+
+Correlation Coefficient $r = r_{xy} = \frac{\sum (Z_x Z_y)}{n-1} = \frac{1}{n-1} \sum ^n _{i=1} \left( \frac{x_i - \bar{x}}{s_x} \right) \left( \frac{y_i - \bar{y}}{s_y} \right)$   
+
+Least Squares Line **$\hat{y} = a + bx$** where  
+
+* Slope of $b = \frac{S_{xy}}{S_{xx}} = \frac{\sum ((x -\bar{x})(y -\bar{y}))}{\sum (x -\bar{x})^2}$
+* Intercept of $a = \bar{y} - b\bar{x}$   
+
+Evaluating the Least Squares Line  
+
+* Residual sum of squares, $SSResid = \sum ^n _{i=1} (y_i - (a + bx_i))^2 = \sum ^n _{i=1} (y_i - \hat{y})^2$   
+* Total sum of squares, $SSTo = \sum ^n _{i=1} (y_i - \bar{y})^2$  
+* Standard deviation about the least squares line, $s_e = \sqrt{\frac{SSResid}{n-2}}$  
+* Coefficient of determination, $r^2 = 1 - \frac{\text{SSResid}}{\text{SSTo}}$   
+
 ## Homework Chapter 5
 
 * 5.1, 5.2, 5.9, 
 * 5.15, 5.16, 5.26
 * 5.29, 5.33, 5.47
+
+Excel Challenge: Using the [Cars Data](https://docs.google.com/spreadsheets/d/1HGtm0XKSBjoGBfcyC7D7O7y7iqfTPcR0hY9v7uh9mS8/edit?usp=sharing) , fit a regression for car weight on mpg.  Include:
+
+1.  Scatterplot with line of best fit
+2.  Calculations for correlation (r), slope (b), intercept (a), Coefficient of determination ($r^2$) and standard deviation about the least squares line ($s_e$)
+3.  Residual plot
+4.  Predicted MPG for 2.5 ton car
 

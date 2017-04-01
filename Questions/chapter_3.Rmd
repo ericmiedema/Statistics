@@ -1,0 +1,23 @@
+---
+title: 'Chapter 4: Statistics'
+author: 'Name____________________'
+output: 
+  word_document:
+    reference_docx: word_style.docx
+---
+<style>
+  .pagebreak { page-break-before: always; }
+</style>
+
+#### Multiple Choice (1 point each)
+
+##### With regards to the shape of a histogram, when are the mean and median equal?
+	
+a.	When the histogram is bimodal.
+b.	When the histogram is unimodal with a longer lower tail.
+c.	When the histogram is unimodal with a longer upper tail.
+d.	When the histogram is symmetric. <ANSWER>
+
+
+
+

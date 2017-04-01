@@ -1,0 +1,460 @@
+---
+output: word_document
+---
+<style>
+  .pagebreak { page-break-before: always; }
+</style>
+
+## Final Exam: Statistics
+
+#### Multiple Choice (1 point each)
+
+##### 1. A survey was conducted to study people's attitudes toward music containing explicit lyrics. A random sample of 1000 adults in the age categories 18 - 25, 26 - 35, and 36 - 45 were selected to participate. They were classified according to age group and response to the question, "Do you think there is a link between listening to music containing explicit lyrics and bullying?   
+
+The data are:   
+
+AGE | YES | NO
+------------- | ------------- | -------------
+18 - 25 | 20  | 350
+26 - 35 | 180 | 200
+36 - 45 | 250 | 0
+
+Which of the following statements is NOT correct?   
+
+a. The null hypothesis is that age category and opinion about bullying are independent.
+b. The alternate hypothesis is that the proportion of people in various age groups who say YES is different from the proportion in various age groups who say NO.
+c. A Type I error would be to conclude that opinions differed across age groups when, in fact, they do not.
+d. A Type II error would be to conclude that opinions are the same across age groups when they are actually different.
+e. The Chisquare test for independence cannot be performed because all cells must have nonzero entries in
+order to do so. <ANSWER>
+
+##### 2. A college admissions officer wishes to compare the SAT scores for the incoming freshmen class to the current sophomore class. Which of the following is the most appropriate technique for gathering the data needed to make this comparison?   
+
+a. observational study
+b. experiment
+c. census <ANSWER>
+d. sample survey
+e. a doubleblind experiment
+
+##### 3. To study the relationship between township and support for a certain amendment concerning property tax, 200 registered voters were surveyed with the following results:   
+
+Township | Against amendment  |  For amendment Neutral | Neutral 
+------------- | ------------- | ------------- | -------------
+Hawk Township | 35 | 62 | 3
+Caln Township | 2 | 40 | 8
+Front Township | 39 | 6 | 5   
+
+What percentage of those surveyed were against the amendment and were residents of Front Township?   
+
+a. 80.5%
+b. 51.3%
+c. 78%
+d. 19.5% <ANSWER>
+e. 39%
+
+##### 4. A researcher is interested in the age at which adolescents get their first paying job. She surveyed a simple random sample of 150 adolescents who have had at least one paying job before the age of 19. The distribution of the ages was found to be approximately normal with a mean of 15.2 years and a standard deviation of 1.6 years. According to the empirical rule, between which two ages do approximately 95% of the adolescents get their first paying job?
+
+a. 13.2 years and 17.2 years
+b. 15.2 years and 18.4 years
+c. 12 years and 15.2 years
+d. 12 years and 18.4 years <ANSWER>
+e. 13.6 years and 16.8 years
+
+##### 5. A car rental company has estimated the following cost probabilities on damages to their rental vehicles incurred while being driven.   
+
+Cost | $0 | $500 | $1,000 | $2,000 | $5,000
+------------- | ------------ | ------------- | ------------ | ------------- | ------------ 
+Probability | 0.15 | 0.10 | 0.40 | 0.20 | ?   
+
+What is the rental company's expected cost for damages per car rental?
+
+a. $2,350
+b. $850
+c. $1,600 <ANSWER>
+d. $2,125
+e. $1,700
+
+##### 6. The weights of male and female tigers between 6 and 12 months of age are summarized in the following boxplots:   
+<center>![](figures/9.png)</center>   
+
+Which of the following statements is NOT correct?
+
+a. The median weight of male tigers is about 150 pounds.
+b. About 50% of male tigers have weights between 140 and 170 pounds.
+c. The mean weight of female tigers is about 110 pounds.
+d. The weights of about 25% of female tigers are more than 120 pounds.
+e. The weights of male tigers are less variable than the weights of female tigers. <ANSWER>
+
+##### 7. A study of TV show genre preferences in three general geographic locations in the United States resulted in the following segmented bar chart:   
+<center>![](figures/10.png)</center>   
+Which of the following is the smallest?
+
+a. The percentage of those from the West Coast who prefer Blockbuster movies. <ANSWER>
+b. The percentage of those from the Midwest who prefer Reality TV.
+c. The percentage of those from the East Coast who prefer either Blockbuster movies or SitComs.
+d. The percentage of those from the Midwest who prefer neither SitComs nor Reality TV.
+e. It is not possible to determine this without actually knowing the number of respondents in each category.
+
+##### 8. The probability that Valley Creek will flood in any given year has been estimated from 150 years of historical data to be 0.20. Which of the following is an accurate interpretation of this statement?   
+
+a. Valley Creek will flood once every five years.
+b. In the next 50 years, Valley Creek will flood in about 10 of those years. <ANSWER>
+c. In the next 100 years, Valley Creek cannot flood fewer than 20 times.
+d. In the last 50 years, Valley Creek flooded exactly 10 times.
+e. In the next 50 years, Valley Creek will flood exactly 10 times.
+
+##### 9. Which of the following statements is (are) true?
+
+I. The larger the sample, the smaller the variance of the sampling distribution.   
+II. Sampling distributions from nonnormal populations are approximately normal when the sample size is large.   
+III. If the population size is much larger than the sample size, then the variance of the sampling distribution remains unchanged, no matter what the sample size is.   
+
+a. I only
+b. III only
+c. I and II only <ANSWER>
+d. I and III only
+e. I, II, and III
+
+##### 10. Thirty-six students completed an algebra exam consisting of 40 questions. The score distribution is described by the following stemandleaf plot:
+
+Leaf | Stem
+------------- | -------------
+0 |0 1 1 6
+1 |2 2 3 5 7 8 8 8
+2 |1 8 8 8 8 9 9 9
+3 |1 2 2 2 4 6 6 6 6 6 8 8
+4 |0 0 0 0
+
+The first quartile of the score distribution is equal to which of the following?
+
+a. 17 <ANSWER>
+b. 7
+c. 36
+d. 17.5
+e. 29
+
+##### 11. The owner of an electronics store believes that the latest shipment of batteries contains more "dead on arrival" batteries than the usual 2%.  He tests the null hypothesis that the proportion of dead batteries equals 2% against the alternative hypothesis that the proportion is greater than 2%. The results of a simple random sample of 53 randomly chosen packages in this shipment are given by:
+
+<center>Test of $H_0: p = 0.02$ verses $H_a: p > 0.02$</center>   
+
+Variable | X | n | Sample p  | p-value
+------------- | ------------ | ------------- | ------------ | ------------
+Dead on arrival | 12 | 53 | 0.2264 | 0.0006   
+
+**Which of the following statements is (are) true?**
+
+I. The p-value of 0.0006 indicates that it is not very likely to get an observed value of 0.2264 if the null hypothesis is true.   
+II. The owner can be quite confident that this batch has significantly more "dead on arrival" batteries than the typical shipment.   
+III. The p-value of 0.0006 tells us that we cannot reject the null hypothesis and that the shipment has 2% or less "dead on
+arrival" batteries.   
+
+a. I only
+b. II only
+c. III only
+d. I and II only  <ANSWER>
+e. II and III only
+
+##### 12. The probability that a visitor of the local botanical gardens walks through the rose garden is 0.65, and the probability that a visitor meanders through the new meadow is 0.45. The probability that a visitor does both activities on the same day is 0.32. What is the probability that a visitor does at least one of the activities on a given day?
+
+a. 0
+b. 0.2925
+c. 0.78 <ANSWER>
+d. 0.22
+e. 0.50
+
+##### 13. The number of foul shots made (out of 30 shots attempted) by 13 athletes is recorded as follows: 3, 7, 8, 9, 10, 10, 10, 18, 18, 20, 22, 22, 29   
+An error was discovered when the coach started to conduct the analysis. Specifically, it was found that one of the 10s should have been a 22. Which measures of central tendency will change as a result?
+
+a. Median only
+b. Mean only
+c. Mode only
+d. Mean and mode only
+e. Mean, median and mode  <ANSWER>
+
+##### 14. A rock gym manager used a random sample of 300 rock climbers to obtain a 95% confidence interval for the mean time (in minutes) it takes to complete a difficult climbing route. This interval was (12.2, 14.3). If he had used a 90% confidence interval instead, the confidence interval would have been _________
+
+a. wider and would have involved a smaller risk of being incorrect.
+b. narrower and would have involved a smaller risk of being incorrect.
+c. wider, but it cannot be determined whether the risk of being incorrect would be greater or smaller.
+d. wider and would have involved a larger risk of being incorrect.
+e. narrower and would have involved a larger risk of being incorrect.  <ANSWER>
+
+##### 15. Different polls were taken to assess the opinion of Americans about whether or not travel to Mars was a good way to spend taxpayer dollars. A certain poll had 49% as "yes" and 47% as "no." News commentators said that public opinion on the issue was statistically divided.  Which of the following would be a plausible explanation of their comment?
+
+a. 4% of the population was undecided
+b. 4% of the population was not surveyed
+c. the margin of error is $\pm 2$% <ANSWER>
+d. 4% of those sampled were indifferent
+e. only 47% to 49% of the population was actually sampled
+
+##### 16. Consider the following three scatterplots:
+
+<center>![](figures/26.png)</center>   
+
+**Which of the following statements is (are) true?** 
+
+I. The intercept for the line of best fit for the data in scatterplot A will be positive.   
+II. The slope for the line of best fit for the data in scatterplot B will be negative.   
+III. There is no discernible relationship between the variables x and y in scatterplot C.   
+
+a. I only
+b. II only
+c. III only
+d. II and III only
+e. I and II only  <ANSWER>
+
+
+##### 17. A four-year liberal arts college is deciding whether or not to begin a new graduate degree program. They wish to assess the opinion of alumni of the college. The Alumni Affairs Department decides to mail a questionnaire to a random sample of 3500 alumni from the past 30 years. Of the 3500 mailed, 679 were returned, and of these, 218 supported the launching of a new graduate degree program.   
+Which of the following statements is true?
+
+a. The population of this study consists of the 218 respondents who favor the graduate degree program.
+b. The 3500 alumni who were randomly mailed a questionnaire is a representative sample of all alumni of the college for the past 30 years.  <ANSWER>
+c. The population of this study consists of the 679 alumni who mailed back a response.
+d. The 3500 alumni receiving the questionnaire constitute the population of the study.
+e. Current students are part of the population of this study.
+
+##### 18. You have sampled 30 amateur tennis players in New York to determine the mean first-serve ball speed. A 95% confidence interval for the mean firstserve ball speed is 85 to 94 miles per hour.   
+Which of the following statements gives a valid interpretation of this interval?
+
+a. If this sampling procedure were repeated several times, 95% of the resulting confidence intervals would contain the true mean first-serve ball speed of amateur tennis players in New York.  <ANSWER>
+b. If this sampling procedure were repeated several times, 95% of the sample means would be between 85 and 94.
+c. If 100 samples were taken and a 95% confidence interval was computed, 5 of the intervals would be included within the confidence interval (85, 94).
+d. 95% of the population of all New York amateur tennis players have a first-serve ball speed between 85 and 94 miles per hour.
+e. 95% of the 30 amateur tennis players sampled have a mean first-serve ball speed between 85 and 94 miles per hour.
+
+##### 19. Consider the following backtoback stem-and-leaf plots:
+
+|Set A  | Stem | Set B
+|------------- | ------------ | ------------
+|  | 0 | 3 4
+|3 | 1 | 1
+|9 7 7 | 2 | 2 8 8 9
+|8 | 3 | 
+|4 5 5 5 | 4 | 1 3
+|2 | 5 | 0
+|8 7 1 1 | 6 | 0 0 0 9
+|2 | 7 | 
+|3 3 | 8 | 4 5
+|5 | 9 | 
+
+**Which of the following statements is (are) true?**  
+
+I. The medians of the distributions for Set A and Set B are the same.   
+II. The modes for Set A and Set B are different.   
+III. The ranges of the distributions for Set A and Set B are the same.   
+
+a. I only
+b. II only
+c. III only
+d. II and III only  <ANSWER>
+e. I and II only
+
+##### 20. Which of the following statements about sampling distributions is NOT true?
+
+a. The mean of the sampling distribution of $\hat{p}$ equals the population proportion p.
+b. The standard deviation of the sampling distribution decreases as the size of the samples used
+increases.
+c. If the sample size n is large, then the sampling distribution of $\bar{x}$ obtained by choosing samples from a
+normal population is approximately normal.
+d. The standard deviation of $\sigma_{\bar{x}_1-\bar{x}_2}$ the sampling distribution of the difference of two means using large samples equals the sum of the population standard deviations.  <ANSWER>
+e. The mean of the sampling distribution of the difference of two means, $\bar{x}_1 - \bar{x}_2$, equals the difference of
+the population means, $\mu_1 - \mu_2$.
+
+##### 21. The weights of new action figures produced in a factory are normally distributed with a mean of 18.6 ounces and standard deviation 0.33 ounces. What is the probability that an action figure chosen at random has weight less than 17.9 ounces?   
+
+a. 0.2420
+b. 0.9865
+c. 0.7420
+d. 0.017  <ANSWER>
+e. 0.5135
+
+##### 22. In order to assess the level of physical fitness in middle-school children, a representative sample of 60,000 middle-school children is to be selected in a densely-populated state. It is known that 30% of the children in that state live in the inner city, 50% live in suburban areas, and 20% live in rural areas. It is also known that physical fitness levels are different in these three types of areas.   
+
+**Which of the following is (are) the most appropriate sampling procedure(s) to use?**
+
+I. Draw random samples of 18,000 inner city children, 30,000 suburban children, and 12, 000 rural children.   
+II. Perform a random sampling of the schools throughout the state to get the desired sample size.   
+III. Draw a random sample of 20,000 children in each of the three categories.   
+
+a. I only  <ANSWER>
+b. II only
+c. III only
+d. I and II are both equally appropriate
+e. I and III are equally appropriate
+
+##### 23. Growth hormones are often used to increase the weight gain of turkeys. In an experiment involving 25 turkeys, five different doses of growth hormone (0, 0.25, 0.5, 0.75, and 1.0 mg/kg) were injected into turkeys (five for each dose) and the subsequent weight gain recorded. A linear relationship appears to hold for the data. The following output regarding the regression line was obtained:
+
+Parameter | Estimate | Test Statistic T | Prob > T | Standard Error of Estimate
+------------- | ------------- | ------------- | ------------- | -------------
+Intercept | 4.2153 | 3.77 | 0.0071 | 1.2210
+Dose | 5.3180 | 3.18 | 0.0215 | 1.6340   
+
+The best fit regression line and 95% confidence interval for its slope are given by which of the following?
+
+a. Regression Line: y = 5.3180 + 4.2153x  
+95% CI for slope: 4.2153 $\pm$ 1.714(1.2210)   
+b. Regression Line: y = 5.3180x + 4.2153   
+95% CI for slope: 5.3180 $\pm$ 2.069(1.634)  <ANSWER>  
+c. Regression Line: y = 5.3180x     
+95% CI for slope: 4.2153 $\pm$ 1.96(1.634)   
+d. Regression Line: y = 5.3180 + 4.2153x   
+95% CI for slope: 4.2153 $\pm$ 2.069(1.2210)   
+e. Regression Line: y = 5.3180x + 4.2153   
+95% CI for slope: 5.3180 $\pm$ 1.714(1.634)   
+
+##### 24. Newly-commissioned lifeguards at the local beach resorts must complete a timed exercise that simulates various rescue conditions. This exercise includes swimming out to the second buoy, dragging a 200-pound dummy to shore in the wake of a riptide, and providing resuscitation for 4 minutes.   
+The times, in minutes, it takes to complete the exercise are recorded for a sample of 100 lifeguards. The mean completion time based on data collected for the past 5 years is 7.5 minutes. The examiner has reason to believe that this year's recruits are less physically-fit than in years past.   
+To test this claim, what are the null and alternative hypotheses?
+
+a. $H_0: \mu = 7.5$ verses $H_0: \mu \ne 7.5$
+b. $H_0: \mu > 7.5$ verses $H_0: \mu = 7.5$
+c. $H_0: \mu = 7.5$ verses $H_0: \mu > 7.5$ <ANSWER>
+d. $H_0: \bar{x} = 7.5$ verses $H_0: \bar{x} < 7.5$
+e. $H_0: \mu = 7.5$ verses $H_0: \bar{x} < 7.5$
+
+##### 25. Suppose that the data (log x, log y) are strongly, positively correlated. Which of the following must be true?
+
+I. The variables x and y can be weakly correlated.   
+II. The residual plot of x and y is randomly dispersed about the x-axis.   
+III. The scatterplot for x and y could look like this:   
+
+<center>![](figures/40.png)</center>   
+
+a. I only
+b. II only
+c. III only <ANSWER>
+d. I and II only
+e. II and III only
+
+#### Multiple Choice (2 point each): 1 pt for formula/showing work and 1pt for solution
+##### 26. Years of data collection have shown that airport metal detectors will show a positive reading (which indicates the presence of metal) 1% of the time when no metal is present and 98% of the time when metal is actually present. Suppose that a random sample of 7 travelers is subjected to a metal detector. What is the probability that the metal detector will not show a positive reading for any of these travelers if metal is not present on any of them?   
+   
+![](solution_work.PNG)   
+
+a. 0.50
+b. 0.9321 <ANSWER>
+c. 1 X $10^-14$
+d. 0.8681
+e. 0.99
+
+##### 27. The probability distribution tables for two random variables X and Y are given below.   
+
+x | -4 | -2 | 0 | 1 | 5
+------------- | ------------ | ------------- | ------------ | ------------- | ------------ 
+P(x) | 0.15 | 0.1 | ? | ? | 0.2   
+
+
+y | 0 | 1 | 5
+------------- | ------------ | ------------- | ------------
+P(y) | ? | 0.2 | 0.6   
+
+Suppose X and Y are independent and P(X = 0 $\cap$ Y = 0) = 0.1. What is P(X = 1)?   
+   
+![](solution_work.PNG)   
+
+a. 0.5
+b. 0.2
+c. 0.35
+d. 0.05 <ANSWER>
+e. 0
+
+##### 28. For new trees of a certain variety between the ages of 6 months and 30 months, there is approximately a linear relationship between height and age. This relationship can be described by y = 15.4 + 0.35x, where y represents the height (in inches) and x represents the age (in months). The tree you planted in the front yard is 16.4 months old and is 23 inches tall. What is its residual according to this model?
+   
+![](solution_work.PNG)   
+
+a. 5.7400
+b. 44.1435
+c. -1.8565
+d. 1.8565 <ANSWER>
+e. 21.1435
+
+##### 29. It was recently discovered that 20% of a crop of Romaine lettuce was exposed to E. Coli bacteria and hence, should not be consumed.  Bags of lettuce harvested from this crop were on the delivery truck for a local grocery store. If there were 300 bags of lettuce on this shipment, find an approximate 95% confidence interval for the percent of bags of lettuce that may be contaminated.
+   
+![](solution_work.PNG)   
+
+a. (0.1620, 0.2380)
+b. (0.1548, 0.2452) <ANSWER>
+c. (0.1548, 1)
+d. (0.1382, 0.2618)
+e. (0.4434, 0.5566)
+
+##### 30. Moving company regulations require that the total weight of a hauling truck not exceed 3,900 pounds. A customer rents a truck and loads 300 boxes of books onto the truck. If the weight distribution for individual boxes is normal with mean 12.5 pounds and standard deviation 3.3 pounds, what is the probability that the regulation will not be met?
+   
+![](solution_work.PNG)   
+
+a. 0.5596
+b. 0.9957
+c. 0.4404
+d. 0.0043  <ANSWER>
+e. 0.0139  <ANSWER>
+
+##### 31. A gardener investigates the relationship between the lengths, y, of newly-planted tomato plants (in inches) and the number of weeks, x, after planting. The summary data are below:
+
+n=12   
+$\bar{x}=7.81$   
+$\bar{y}=6.23$   
+$\sum{(x-\bar{x})^2} = 347$   
+$\sum{(x-\bar{x})(y-\bar{y})} = 288$
+
+Which of the following is the regression line for the tomato plant length as a function of the number of weeks after planting?   
+   
+![](solution_work.PNG)   
+
+a. y = 1.20x - 0.26
+b. y = -0.83x - 0.26
+c. y = 0.83x
+d. y = -0.26x + 0.83
+e. y = 0.83x - 0.26  <ANSWER>
+
+##### 32. A survey was conducted to determine the number of hours per week residents of a certain Midwestern town spend doing yard work during the summer months. The distribution was approximately normal with a mean of 15 hours and a standard deviation of 3 hours.  Approximately what percent of the residents did yard work between 17 and 21 hours?   
+   
+![](solution_work.PNG)   
+
+a. 0.9772%
+b. 22.86%  <ANSWER>
+c. 97.72%
+d. 74.54%
+e. 0.2318%
+
+##### 33. A plant biologist wishes to determine if a new nutrient solution helps lima bean seeds germinate more quickly. She plants two groups of lima bean plants. She treats both groups exactly the same except that she administers the new nutrient solution to lima bean seeds in Group 1, and uses the typical fertilizer for Group 2. She records the number of hours until germination of all plants in both groups. For seeds in Group 1, 26 of 50 germinated within 72 hours, while 15 of 50 seeds in Group 2 germinated within 72 hours.   
+Let $p_1$ be the proportion of all lima bean seeds that would germinate within 72 hours when using the new nutrient solution, and $p_2$ be the proportion of all lima bean seeds that would germinate within 72 hours when using the typical fertilizer.    
+Which of the following is a 90% confidence interval for $p_1 - p_2$?
+   
+![](solution_work.PNG)   
+
+a. $-0.22 \pm 0.1577$
+b. $-0.22 \pm 0.0152$
+c. $0.22 \pm 0.1879$
+d. $0.22 \pm 0.1577$  <ANSWER>
+e. $0.22 \pm 0.0151$
+
+##### 34. A classification of 87 home runs hit at the new Yankee Stadium according to the direction the ball was hit, resulting in the accompanying data:
+
+Direction | Left Field | Left Center | Center | Right Center | Right Field 
+------------- | ------------- | ------------- | ------------- | ------------- | -------------
+Number of Home Runs | 18 | 10 | 7 | 18 | 34  
+
+A goodness-of-fit chi square test is to be used to test the null hypothesis that the proportion of home runs hit is the same for all five directions. At the significance level $\alpha = 0.05$, what are the value of the test statistic and conclusion of the test?   
+   
+![](solution_work.PNG)   
+
+a. Test statistic: 3.02   
+Conclusion of test: do not reject the null hypothesis
+b. Test statistic: 3.02   
+Conclusion of test: reject the null hypothesis
+c. Test statistic: 25.24   
+Conclusion of test: do not reject the null hypothesis  
+d. Test statistic: 25.24   
+Conclusion of test: reject the null hypothesis <ANSWER>
+e. Test statistic: 7.81   
+Conclusion of test: reject the null hypothesis
+
+#####  35. What would be a 90% confidence interval for $\beta$ if a sample of size 15 is used to compute a least squares regression line and gives a = 5.1.b=10.2 and $s_b$ = 2.2?
+   
+![](solution_work.PNG)   
+
+a.	5.448 to 14.592
+b.	6.328 to 14.072
+c.	6.306 to 14.094 <answer>
+d.	9.94 to 10.46
+e.  8 to 12.4 

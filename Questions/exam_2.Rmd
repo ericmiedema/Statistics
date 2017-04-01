@@ -1,0 +1,191 @@
+---
+title: 'Exam Two: Statistics'
+author: 'Name____________________'
+output: 
+  word_document:
+    reference_docx: word_style.docx
+---
+<style>
+  .pagebreak { page-break-before: always; }
+</style>
+
+#### Multiple Choice (1 point each)
+
+##### 1. What is the interquartile range of the age of seven kids randomly sampled at a local mall? The ages are 15, 18, 5, 10, 9, 12 and 13.
+
+a.	4.5
+b.	13
+c.	6 <answer>
+d.	17.9
+e.  10
+
+##### 2. According to the Empirical Rule, what percentage of the observations in a data set that can be reasonably approximated by a normal curve lie within two standard deviations of the mean?
+	
+a.	50%
+b.  68%
+c.	75% 
+d.	95% <answer>
+e.	99.7%
+
+##### 3. In a linear correlation, if y decreases as x increases, what type of correlation would be demonstrated in the graph?
+
+a.	perfect correlation
+b.	no correlation
+c.	positive correlation
+d.	negative correlation <answer>
+
+##### To study the relationship between township and support for a certain amendment concerning property tax, 200 registered voters were surveyed with the following results:   
+
+Township | Against amendment  |  For amendment | Neutral 
+------------- | ------------- | ------------- | -------------
+Hawk Township | 35 | 62 | 3
+Caln Township | 2 | 40 | 8
+Front Township | 39 | 6 | 5   
+
+##### 4.  What percentage of those surveyed were against the amendment and were residents of Front Township?   
+
+a. 80.5%
+b. 51.3%
+c. 78%
+d. 19.5% 
+e. 39% <ANSWER>
+
+##### 5.  What percentage of those surveyed were residents of Front Township given they were against the amendment?  
+a. 6%
+b. 19.5%
+c. 39%
+b. 51.3% <answer>
+c. 78%
+
+##### 6. A car rental company has estimated the following cost probabilities on damages to their rental vehicles incurred while being driven.   
+
+Cost | $0 | $500 | $1,000 | $2,000 | $5,000
+------------- | ------------ | ------------- | ------------ | ------------- | ------------ 
+Probability | 0.15 | 0.10 | 0.40 | 0.20 | ?   
+
+What is the rental company's expected cost for damages per car rental?
+
+a. $2,350
+b. $850
+c. $1,600 <ANSWER>
+d. $2,125
+e. $1,700
+
+##### 7. The weights of male and female tigers between 6 and 12 months of age are summarized in the following boxplots:   
+<center>![](figures/9.png)</center>   
+
+Which of the following statements is NOT correct?
+
+a. The median weight of male tigers is about 150 pounds.
+b. About 50% of male tigers have weights between 140 and 170 pounds.
+c. The mean weight of female tigers is about 110 pounds.
+d. The weights of about 25% of female tigers are more than 120 pounds.
+e. The weights of male tigers are less variable than the weights of female tigers. <ANSWER>
+
+##### 8. The probability that Valley Creek will flood in any given year has been estimated from 150 years of historical data to be 0.20. Which of the following is an accurate interpretation of this statement?   
+
+a. Valley Creek will flood once every five years.
+b. In the next 50 years, Valley Creek will flood in about 10 of those years. <ANSWER>
+c. In the next 100 years, Valley Creek cannot flood fewer than 20 times.
+d. In the last 50 years, Valley Creek flooded exactly 10 times.
+e. In the next 50 years, Valley Creek will flood exactly 10 times.
+
+##### 9. Thirty-six students completed an algebra exam consisting of 36 questions. The score distribution is described by the following stemandleaf plot:
+
+Leaf | Stem
+------------- | -------------
+0 |0 1 1 6
+1 |2 2 3 5 7 8 8 8
+2 |1 8 8 8 8 9 9 9
+3 |1 2 2 2 4 6 6 6 6 6 8 8
+4 |0 0 0 0
+
+The first quartile of the score distribution is equal to which of the following?
+
+a. 17 <ANSWER>
+b. 7
+c. 36
+d. 17.5
+e. 29
+
+##### 10. The probability that a visitor of the local botanical gardens walks through the rose garden is 0.65, and the probability that a visitor meanders through the new meadow is 0.45. The probability that a visitor does both activities on the same day is 0.32. What is the probability that a visitor does at least one of the activities on a given day?
+
+a. 0
+b. 0.2925
+c. 0.78 <ANSWER>
+d. 0.22
+e. 0.50
+
+#### Multiple Choice (2 point each): 1 pt for formula/showing work and 1pt for solution
+##### 1. Years of data collection have shown that airport metal detectors will show a positive reading (which indicates the presence of metal) 1% of the time when no metal is present and 98% of the time when metal is actually present. Suppose that a random sample of 7 travelers is subjected to a metal detector. What is the probability that the metal detector will not show a positive reading for any of these travelers if metal is not present on any of them?   
+   
+![](solution_work.PNG)   
+
+a. 0.50
+b. 0.9321 <ANSWER>
+c. 1 X $10^-14$
+d. 0.8681
+e. 0.99
+
+##### 2. Suppose 10 patients with meningitis received treatment with large doses of penicillin.  Three days later, temperatures were recorded, and the treatment was considered successful if there had been a reduction in a patient's temperature.  Denoting success by S and failture by F, the 10 observations are  
+
+S S F S S S F F S S
+
+Suppose that it is decided to include 20 more patients in the study.  How many of these would be to be S's to give $\hat{p} = 0.80$ for the entire sample of 30 patients?  
+
+![](solution_work.PNG)   
+
+a.	13
+b.	15 
+c.	17 <answer>
+d.  20
+e.  24
+
+##### 3. The probability distribution tables for two random variables X and Y are given below.   
+
+x | -4 | -2 | 0 | 1 | 5
+------------- | ------------ | ------------- | ------------ | ------------- | ------------ 
+P(x) | 0.15 | 0.1 | ? | ? | 0.2   
+
+
+y | 0 | 1 | 5
+------------- | ------------ | ------------- | ------------
+P(y) | ? | 0.2 | 0.6   
+
+Suppose X and Y are independent and P(X = 0 $\cap$ Y = 0) = 0.1. What is P(X = 1)?   
+   
+![](solution_work.PNG)   
+
+a. 0.5
+b. 0.2
+c. 0.35
+d. 0.05 <ANSWER>
+e. 0
+
+##### 4. For new trees of a certain variety between the ages of 6 months and 30 months, there is approximately a linear relationship between height and age. This relationship can be described by y = 15.4 + 0.35x, where y represents the height (in inches) and x represents the age (in months). The tree you planted in the front yard is 16.4 months old and is 23 inches tall. What is its residual according to this model?
+   
+![](solution_work.PNG)   
+
+a. 5.7400
+b. 44.1435
+c. -1.8565
+d. 1.8565 <ANSWER>
+e. 21.1435
+
+##### 5. A gardener investigates the relationship between the lengths, y, of newly-planted tomato plants (in inches) and the number of weeks, x, after planting. The summary data are below:
+
+n=12   
+$\bar{x}=7.81$   
+$\bar{y}=6.23$   
+$\sum{(x-\bar{x})^2} = 347$   
+$\sum{(x-\bar{x})(y-\bar{y})} = 288$
+
+Which of the following is the regression line for the tomato plant length as a function of the number of weeks after planting?   
+   
+![](solution_work.PNG)   
+
+a. y = 1.20x - 0.25
+b. y = -0.83x - 0.25
+c. y = 0.83x
+d. y = -0.25x + 0.83
+e. y = 0.83x - 0.25  <ANSWER>

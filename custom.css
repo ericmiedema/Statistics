@@ -1,0 +1,125 @@
+<style type="text/css">
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+  .col4 {
+    columns: 4 100px;
+    -webkit-columns: 4 100px;
+    -moz-columns: 4 100px;
+  }
+  .col5 {
+    columns: 5 100px;
+    -webkit-columns: 5 100px;
+    -moz-columns: 5 100px;
+  }
+  .col5 {
+    columns: 5 100px;
+    -webkit-columns: 5 100px;
+    -moz-columns: 5 100px;
+  }
+  .col6 {
+    columns: 6 100px;
+    -webkit-columns: 6 100px;
+    -moz-columns: 6 100px;
+  }
+  .col7 {
+    columns: 7 100px;
+    -webkit-columns: 7 100px;
+    -moz-columns: 7 100px;
+  }
+  .col8 {
+    columns: 8 100px;
+    -webkit-columns: 8 100px;
+    -moz-columns: 8 100px;
+  }
+  .ah_darkblue {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background: #003764;
+    border: 2px solid #003764;
+  }
+  .ah_lightblue {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background: #00A0DD;
+    border: #00A0DD;
+  }
+  .ah_white {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
+  .ah_darkgreen {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background-color: #026937;
+    background: #026937;
+  }
+  .ah_lightgreen {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background-color: #6CC04A;
+    background: #6CC04A;
+  }
+  .ah_orange {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background-color: #E24301;
+    background: #E24301;
+  }
+  .ah_red {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background-color: #FF4338;
+    background: #FF4338;
+  }
+}
+</style>

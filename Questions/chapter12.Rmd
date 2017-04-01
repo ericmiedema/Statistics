@@ -1,0 +1,96 @@
+---
+title: "Untitled"
+author: "Eric Miedema"
+date: "November 1, 2016"
+output: html_document
+---
+
+#### Which of the following is the correct test statistic for analyzing univariate categorical variables?
+
+a.	F
+b.	t
+c.	$\chi^2$ <answer>
+d.	z
+
+#### Which of the following is a property of the chi-square distribution?
+a.	The chi-square curve is asymmetric. <answer>
+b.	There is only one chi-square distribution.
+c.	The chi-square curve has no area associated with positive values.
+d.	The chi-square curve has a longer tail on the left side.
+	
+	
+#### What is the test statistic for testing whether the proportion of girls who prefer the color blue or pink or black is the same? Use the table of sample data below.   
+
+Preference  | Blue | Pink | Black
+------------- | ------------- | ------------- | -------------
+Girls  | 40 | 60 | 20 
+
+a. $\chi^2 = 30, df = 3$
+b. t = 0
+c. $\chi^2 = 20, df = 2$ <answer>
+d. z = 0
+
+#### In a study of the effects of the flu shot, independent samples were taken of 500 adults who received the shot and 500 adults who did not receive the flu shot in each of three major cities. The number of people who were diagnosed with the flu was recorded. What are the specific variables in this study and the number of levels for each?
+
+a.	The variables are the adults and there are 1000 with two levels (received shot, did not receive shot).
+b.	The variable is city and there are three levels.
+c.	The variables are flu shot (received, did not receive) and there are two levels.
+d.	There are two variables in this study; 1) city with three levels and 2) flu shot (received, did not receive) with two levels. <answer>
+
+
+#### Suppose a random sample of 1200 high school athletes was taken and classified according to whether or not they aspire to play a professional sport. The data is given in the table below.
+
+Class  | Freshman | Sophmore | Junior | Senior
+------------- | -------------
+Aspire to professional sport  | 200 | 150 | 90 | 50
+Does not aspire to professional sport  | 100 | 150 | 210 | 250 
+
+The test statistic was calculated as $\chi^2 = 18.04$. What are the degrees of freedom and P-value for this test?
+
+a. df = 6 and 0.0005 < P_value < 0.01
+b. df = 8 and 0.02 < P_value < 0.025
+c. df = 4 and 0.001 < P_value < 0.005 
+d. df = 3 and P_value < 0.001 <answer>
+
+
+#### How many degrees of freedom does the chi-square distribution have for a table with 4 columns and 3 rows?
+
+a.	4
+b.	12
+c.	6 <answer>
+d.	3
+
+#### Fill in the blank. The __________ for a chi-square test is computed by assuming the null hypothesis is true and then determining the likelihood of observing data that would produce a chi-square statistic at least as large as the one observed.
+
+a.	test statistic
+b.	P-value <answer>
+c.	expected count
+d.	value of $\chi^2$
+
+#### What does the goodness-of-fit statistic measure?
+
+a.	It is a quantitative measure of the difference between the means of the columns of a table when H0 is true.
+b.	It is a quantitative measure of the difference between the observed counts in the rows and the observed counts in the columns.
+c.	It is a quantitative measure of the difference between the observed counts and the corresponding expected counts for all cells when Ha is true.
+d.	It is a quantitative measure of the difference between the observed counts and the corresponding expected counts for all cells when H0 is true. <answer>
+	
+#### What is the guideline for the assumption of a large sample when using a test statistic with a chi-square distribution?
+
+a.	All cells should have an expected count less than 5.
+b.	At least half of the cells should have an expected count greater than 1.
+c.	All observed counts should be at least 5.
+d.	Every cell should have an expected count that is at least 5. <answer>
+
+#### What type of data is summarized in a two-way frequency table?
+
+a.	Discrete data
+b.	Bivariate categorical data <answer>
+c.	Continuous data
+d.	Bivariate numerical data
+
+#### Which of the following is a categorical variable?
+
+a.	preferred television network <answer>
+b.	average age of individuals in the household
+c.	number of television in the household
+d.	hours of television watched

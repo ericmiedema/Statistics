@@ -1,0 +1,148 @@
+---
+title: "Untitled"
+author: "Eric Miedema"
+date: "November 1, 2016"
+output: word_document
+---
+### Discrete
+
+#### The probability density function for the number of blue marbles in a randomly selected sample of colored marbles is given below. What is the probability that there is more than one blue marble in the sample chosen?
+
+k | 0 | 1 | 2 | 3
+------------- | ------------ | ------------- | ------------ | -------------
+p(k) | 0.25 | 0.25 | 0.25 | 0.25
+
+a.	0.75
+b.	0.25
+c.	1
+d.	0.50 <answer>
+
+#### Suppose a study is conducted at a local store to rate customer satisfaction. The scores can be 1, 2, 3, 4 or 5. The probability density function for the scores is given in the table below. What is the mean value of the scores?
+
+h | 1 | 2 | 3 | 4 | 5
+------------- | ------------ | ------------- | ------------ | ------------- | -------------
+p(k) | 0.15 | 0.50 | 0.30 | 0.05 | 0
+
+a.	0.30
+b.	3
+c.	1
+d.	2.25
+
+#### Which of the following is not a property of a binomial experiment?
+
+a.	Each trial can result in one of only two mutually exclusive outcomes.
+b.	The outcomes are independent from one trial to the next.
+c.	The experiment consists of a varying number of observations, called trials. <answer>
+d.	The probability that a trial results in a success is the same for each trial.
+
+#### An experiment is conducted in which a computer game manufacturer randomly selects discs from the production line and tests for whether or not they function properly. Let x be a random variable representing the number of trials needed until the first faulty disc is observed where a faulty disc is defined as a "success". If the probability of finding a faulty disc is 0.10 for each trial, what is the probability that it will take 20 trials to find a faulty disc?
+
+a.	0.000
+b.	19.79
+c.	0.0135
+d.	1
+
+#### What is the value for 0!?
+
+a.	0
+b.	0.5
+c.	1
+d.  n
+e.	Unknown
+
+#### What is the value for $\binom n 1$?
+
+a.	0
+b.	0.5
+c.	1
+d.  n
+e.	The value of n must be known
+
+#### Suppose a binomial random variable consists of 10 trials with a success of probability 0.35. What are the mean and standard deviation for this binomial random variable?
+
+a.	The mean is 3.5 and the standard deviation is 1.508.
+b.	The mean is 10 and the standard deviation is 0.35.
+c.	The mean is 3.5 and the standard deviation is 2.275.
+d.	The mean is 0 and the standard deviation is 1.
+
+####  For which of the following situations would a binomial distribution not be a reasonable probability model for the random variable?
+
+a.	A researcher observes the group of patients who received an experimental drug. The random variable, x, is the number of patients who had an undesirable side effect.
+b.	A car rental company is interested in the color (red, green, grey, black, or white) of car that customers prefer to rent. The random variable, x, is the color of car selected by the customer.
+c.	A researcher is interested in the gender of babies born at a specific hospital. The researcher plans to observe the next 50 births and record the gender. The random variable, x, is the number of girls born among the 50 observed.
+d.	A manufacturer of lamps is interested in the number of lamps produced that are faulty so he randomly selects 75 lamps and tests whether or not they function correctly. The random variable, x, is the number of lamps that do not work properly.
+
+### Discrete Homework
+
+#### 7.29 and 7.30
+
+Consider the following probability distribution for y = number of broken eggs in a carton:  
+
+y | 0 |1 | 2 | 3 | 4 
+------------- | ------------ | ------------- | ------------ | ------------- | -------------
+p(y) | 0.65 | 0.20 | 0.10 | 0.04 | 0.01  
+
+What is the mean value of z = the number of unbroken eggs for a carton of 12 eggs?
+
+a. 0.56
+b. 11.44
+c. 2
+d. 10
+e. Unknown without the z probability distribution
+
+### Continuous
+
+#### What are the mean $\mu$ and standard deviation $\sigma$ for a standard normal distribution?
+
+a.  $\mu$ = 0 and $\sigma$ = 0
+b.  $\mu$ = 1 and $\sigma$ = 0
+c.  $\mu$ = 0 and $\sigma$ = 1 <answer>
+d.  $\mu$ = 1 and $\sigma$ = 1
+e.  It depends on the data collected.
+
+#### Which of the following is not a property of a normal distribution?
+
+a.	A normal distribution has a bell-shaped density curve.
+b.	A normal distribution is a continuous probability distribution.
+c.	All normal distributions have $\mu$ = 0 and $\sigma$ = 1. <answer>
+d.	The density curve is symmetric about the mean for a normal distribution.
+
+#### What is the area under the standard normal curve that is greater than z = 1.5
+
+a.	0.067 <answer
+b.	The area cannot be determined since the mean and standard deviation are not given.
+c.	0.50
+d.	0.933
+e.  1.5
+
+#### What is the probability that z is between -1.10 and 2.20?
+
+a.	0.122
+b.	0.986
+c.	0.50
+d.	0.85 <answer>
+e.  3.10
+
+#### What is the z score for a soda that costs $1.15 if the population of soda prices has a normal distribution with a mean of $1.00 and a standard deviation of $0.25?
+
+a.	0.60
+b.	-0.60
+c.	0.726
+d.	1.15
+
+### Continuous Homework
+
+#### Problem 7.72 
+
+Consider babies born in the "normal" range of 37-42 weeks gestational age have a normal distribution of $\mu$ = 3500 grams and standard deviation $\sigma$ = 600 grams is a reason model for the probability distribution of the continuous numerical variable x = birth weight fo a randomly selected full-term baby.
+
+What is the probability that the birth weight of a randomly selected full-term baby is between 3000 and 4000 g?
+
+a.  0.6969
+b.  0.5953 <anser>
+c.  0.7976
+d.  0.2023
+e.  0.1014
+
+
+

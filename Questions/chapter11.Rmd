@@ -1,0 +1,89 @@
+---
+title: "Untitled"
+author: "Eric Miedema"
+date: "November 1, 2016"
+output: word_document
+---
+
+#### Which of the following is the correct null hypothesis for testing whether two population means are the same?
+
+a. $H_0: \mu_1 - \mu_1 \ne 0$
+b. $H_0: \mu_1 - \mu_1 = 0$ <ANSWER>
+c. $H_0: \bar{x}_1 - \bar{x}_1 = 0$
+d. $H_0: \mu_1 - \mu_1 = 1$	
+
+
+####  If two independent random samples gave the following information, what would be the t value for testing that the population means are identical? Assume the populations are approximately normal.   
+Sample A: $n_A = 10$,$\bar{x}_A = 10$,$s_A = 5$   
+Sample B: $n_B = 20$,$\bar{x}_B = 12$,$s_B = 6$
+
+a. t=-2.25
+b. t=-0.96 <ANSWER>
+c. t=5.79
+d. t=2.0
+	
+####   Which of the following could be used to determine a conservative estimate for the P-value of a two-sample t test ?
+
+a.	a t curve with the number of degrees of freedom equal to the average of ($n_1-1$) and ($n_2-1$) 
+b.	the standard normal z curve
+c.	a t curve with the number of degrees of freedom equal to the smaller of ($n_1-1$) and ($n_2-1$) <ANSWER>
+d.	a t curve with the number of degrees of freedom equal to zero
+	
+#### Suppose a researcher is interested in estimating the difference between the proportion of errors in the local newspaper during the week and the proportion of errors in the weekend editions. What is the 95% confidence interval for the difference in the proportion of errors? Assume the populations are independent and the samples are randomly taken where the number of pages sampled is n and the number of errors found is x. 
+
+Sample 1 for the week:  $n_1 = 500,x_1 = 125$   
+Sample 2 for the weekend:  $n_2 = 200,x_2 = 70$   
+
+a.	(-0.16, -0.04)
+b.	0.010
+c.	z=2.57
+d.	(-0.18, -0.02) <ANSWER>
+
+#### If a study is interested in testing whether or not there is a difference in the fuel mileage , what is the test statistic for testing the hypothesis of no difference if the sample information is n=25, $\bar{x}_d = 1.2 and $\s_d = 0.75?
+
+a.	It depends on the value for  which is not given.
+b.	t=1.6
+c.	t=8.0 <ANSWER>
+d.	z=1.6
+	
+#### Which of the following is a caution or limitation necessary to keep in mind when performing statistical procedures?
+
+a.	All of these choices are cautions or limitations. <ANSWER>
+b.	If you have complete information on both populations, it would be inappropriate to conduct hypothesis tests or confidence intervals.
+c.	Keep in mind that statistical and practical significance are not always the same.
+d.	The result of a hypothesis test can never show strong support for the null hypothesis.
+
+#### What is the formula $\hat{p_c} = \frac{n_1\hat{p_1} + n_2\hat{p_2}}{n_1 + n_2}$ used to compute?
+
+a.	It is the statistic for estimating the common population proportion when $p_1 = p_2$. <ANSWER>
+b.	It is the test statistic for comparing two population proportions.
+c.	It is the pooled standard deviation for two proportions.
+d.	It is the standard deviation used when constructing a confidence interval for $p_1 - p_2$.
+	
+#### Which of the following is not true?
+
+a.	Independent samples are two samples for which the individuals or objects in the first sample are selected in a manner that has no bearing on the selection of the individuals or objects in the second sample.
+b.	Paired samples are two samples for which each observation in one sample is paired in a meaningful way with a particular observation in the second sample.
+c.	Paired samples are also independent samples. <ANSWER>
+d.	Paired samples often provide more information than independent samples since extraneous effects are screened out.
+	
+#### When should a t curve be used to find the critical value when calculating confidence intervals?
+
+a.	It should be used when the population standard deviation is known.
+b.	It should be used when the sample mean is known.
+c.	It should be used when the population mean is known.
+d.	It should be used when the sample standard deviation is used in place of the population standard deviation. <ANSWER>
+	
+#### Which of the following are necessary to find the rejection region for a t test?
+
+a.	Determine the significance level, $\alpha$.
+b.	All of these choices. <ANSWER>
+c.	Determine the P-value from the appropriate t curve.
+d.	Determine the degrees of freedom for the test.
+	
+#### What conclusion can you make regarding the difference in the mean income of men and the mean income of women in Corporation Z based on the 95% confidence interval, ($-500, $1100), for the difference of two means?
+
+a.	A hypothesis test must be conducted to make any conclusion regarding the average salaries of men and women at Corporation Z.
+b.	We can conclude that women make more money on average than men in Corporation Z.
+c.	We can conclude that there is no difference in the average salaries for men and women in Corporation Z. <ANSWER>
+d.	We can conclude that men make more money on average than women in Corporation Z.

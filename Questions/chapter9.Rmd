@@ -1,0 +1,153 @@
+---
+title: "Chapter 9"
+author: 'Name____________________'
+output: 
+  word_document:
+    reference_docx: word_style.docx
+---
+
+#### Fill in the blank. An unbiased statistic is a statistic whose mean value is __________ the population characteristic estimated. 
+
+a.	half the value of
+b.	equal to <ANSWER>
+c.	greater than
+d.	less than
+
+#### Which of the following is an assumption necessary for computing a large-sample confidence interval for a population proportion?
+
+a.	n must be large and the sample size less than 10% of the population.
+b.	p is an unbiased statistic for estimating .
+c.	The standard deviation of p is $\sigma_\hat{p}=\sqrt{\frac{p(1-p)}{n}}$
+d.	All of these choices are necessary assumptions. <ANSWER>
+	
+#### If (13.10, 13.73) is a 95% confidence interval for a population mean, which of the following would be a 90% confidence interval calculated from the same set of sample data that was used to create the 95% confidence interval above?
+
+a.	(12.99, 13.84)
+b.	(13.15, 13.68) <ANSWER>
+c.	(13.06, 13.77)
+d.	(13.04, 13.79)
+	
+#### Suppose a survey is to be conducted to determine the proportion of cars purchased that are red. What size sample should be taken to ensure the estimate is within 0.10 of the population proportion with 95% confidence?
+
+a.	A sample size of at least 97 should be taken. <ANSWER>
+b.	A sample size of at least 96 should be taken. 
+c.	The sample size cannot be computed from the information given.
+d.	A sample size of at least 35 should be taken.
+e.  A sample size of at least 30 should be taken.
+	
+#### What confidence level is associated with a confidence interval for $\mu$ of the form $(\bar{x} - 1.645*\frac{\sigma}{\sqrt{n}},\bar{x} + 1.645\frac{\sigma}{\sqrt{n}})$?
+
+a.	90% <ANSWER>
+b.	99%
+c.	98%
+d.	95%
+	
+#### What sample size should be used if we would like to estimate the mean age of the college students at a particular campus with 99% confidence? We would also like to be accurate within 3 years and we will assume the population is normally distributed with a standard deviation of 4.5 years.
+
+a.	A sample size of at least 26 should be used.
+b.	A sample size of at least 14 should be used.
+c.	A sample size of at least 9 should be used.
+d.	A sample size of at least 15 should be used. <ANSWER>
+	
+#### How are t distributions distinguished from one another?
+
+a.	their degrees of freedom <ANSWER>
+b.	All t distributions are exactly the same.
+c.	their mean
+d.	their standard deviation
+
+#### Which of the following is not a property of the t distribution?
+
+a.	Each t curve is less spread out than the z curve. <ANSWER>
+b.	All t curves are bell shaped and each is centered at zero.
+c.	The t curve approaches the z curve as the number of degrees of freedom increase.
+d.	As the number of degrees of freedom increases, the spread of the corresponding t curve decreases.
+
+
+#### Let $\mu$ denote the true mean for sales of gravel per day at a local gravel pit. Suppose it can be assumed that $\sigma = 100$. What is a 95% confidence interval for the population mean if a random sample of 20 days is taken and mean sales per day was reported as $5200?
+
+a.	(5163.22, 5236.78)
+b.	(5156.17, 5243.83) <ANSWER>
+c.	(5153.20, 5246.80)
+d.	(5142.40, 5257.60)
+	
+#### What is the t critical value for a sample of size 10 that would be used to create a 90% confidence interval for the population mean?
+a.	2.26 
+b.	1.83 <ANSWER>
+c.	1.81
+d.	3.25
+	
+#### Which of the following is the approximate bound on error for estimating a population mean with 95% confidence?
+a.	$2\frac{s}{n}$ <ANSWER>
+b.	$2\sqrt(\frac{p(1-p)}{n})$ 
+c.	2s
+d.	$\frac{s}{n}$  
+
+#### Which of the following is not an assumption for the z confidence interval for a population proportion?
+
+a.	The sample size is large enough for the sampling distribution of p to be approximately normal.
+b.	The sample is a random sample from the population of interest.
+c.	Sampling is without replacement.
+d.	All of these choices are assumptions for the z confidence interval for a population proportion. <ANSWER>
+
+#### Fill in the blank. A __________ is a number, based on sample data, that represents a plausible value of a population characteristic.
+
+a.	point estimate <ANSWER>
+b.	biased statistic
+c.	confidence level
+d.	confidence interval
+	
+#### A 95% confidence interval and a 99% confidence interval are computed from the same set of data. Which of the following statements is correct?
+
+a.	The intervals have the same width.
+b.	You need to know the sample size, n, and the standard deviation to determine which interval is wider.
+c.	The 95% confidence interval is wider.
+d.	The 99% confidence interval is wider. <ANSWER>
+
+#### Suppose a sample survey to determine which of two candidates a group of voters prefers is conducted. If 20 of the 50 voters surveyed preferred Candidate A, which of the following is a 95% confidence interval for the population proportion of all voters who prefer Candidate A?
+
+a.	(0.28, 0.53)
+b.	(0.26, 0.55) <ANSWER>
+c.	0.40
+d.	(14.32, 25.68)
+
+#### Statistical estimation is concerned with making decisions or predictions about
+
+a.	statistics.
+b.	intervals.
+c.	population characteristics. <ANSWER>
+d.	samples.
+
+#### You have sampled 30 amateur tennis players in New York to determine the mean first-serve ball speed. A 95% confidence interval for the mean first-serve ball speed is 85 to 94 miles per hour.
+
+Which of the following statements gives a valid interpretation of this interval?
+
+a.	If this sampling procedure were repeated several times, 95% of the resulting confidence intervals would contain the true mean first-serve ball speed of amateur tennis players in New York. 
+b.	If this sampling procedure were repeated several times, 95% of the sample means would be between 85 and 94.
+c.	If 100 samples were taken and a 95% confidence interval was computed, 5 of the intervals would be included within the confidence interval (85, 94).
+d.	95% of the population of all New York amateur tennis players have a first-serve ball speed between 85 and 94 miles per hour.
+e.	95% of the 30 amateur tennis players sampled have a mean first-serve ball speed between 85 and 94 miles per hour.
+
+### Homework
+
+#### Problem 9.11
+
+What is the z critical value of 85% confidence level?
+
+a.  P(z < -critical Value) = 85%, where critical value is 1.04
+b.  P(z < -critical Value) = 15%, where critical value is -1.04
+c.  P(z < -critical Value) = 7.5%, where critical value is -1.44
+d.  P(z < -critical Value) = 7.5%, where critical value is 1.44 <answer>
+e.  P(z < -critical Value) = 15%, where critical value is 1.04
+
+#### Problem 9.35
+
+What is the t critical value of 90% confidence level with n = 25?
+
+a.  P(t < critical Value) = 10%, where critical value is -1.32
+b.  P(t < critical Value) = 5%, where critical value is -1.71
+c.  P(t < critical Value) = 90%, where critical value is 1.32
+d.  P(t < critical Value) = 95%, where critical value is 1.71 <answer>
+e.  P(t < critical Value) = 50%, where critical value is 0
+
+

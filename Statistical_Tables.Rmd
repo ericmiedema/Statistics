@@ -1,0 +1,108 @@
+---
+title: "Statistical Tables"
+output: html_document
+fontsize: 11
+---
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 2 100px;
+    -webkit-columns: 2 100px;
+    -moz-columns: 2 100px;
+  }
+  .pagebreak { page-break-before: always; }
+</style>
+
+###### T Critical Value
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+df<-c(1:30,40,60,120,10000)
+CI<-data.frame(Degrees_of_freedom = df, 
+               Conf.Lvl_80 = round(qt(.9,df),2),
+               Conf.Lvl_90 = round(qt(.95,df),2),
+               Conf.Lvl_95 = round(qt(.975,df),2),
+               Conf.Lvl_98 = round(qt(.99,df),2),
+               Conf.Lvl_99 = round(qt(.995,df),2),
+               Conf.Lvl_99.9 = round(qt(.9995,df),2))
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(CI)
+plot(Table)
+```
+
+<div class="pagebreak"> </div>
+###### T Tables (tail area to the right of t for degrees of freedom 1 through 15)
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+df<-c(1:15)
+t_value<-c(0:40)/10
+
+for(i in seq_along(df)){
+  if(i == 1){ a<-round(pt(t_value,df[i],lower.tail = FALSE),3)}
+  else{a<-cbind(a,round(pt(t_value,df[i],lower.tail = FALSE),3))}
+}
+colnames(a)<-as.character(df)
+rownames(a)<-as.character(t_value)
+a<-cbind(t_df = rownames(a),a)
+df<-data.frame(a)
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+
+<div class="pagebreak"> </div>
+###### T Tables (tail area to the right of t for degrees of freedom 16 through 30)
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+df<-c(16:30)
+t_value<-c(0:40)/10
+
+for(i in seq_along(df)){
+  if(i == 1){ a<-round(pt(t_value,df[i],lower.tail = FALSE),3)}
+  else{a<-cbind(a,round(pt(t_value,df[i],lower.tail = FALSE),3))}
+}
+colnames(a)<-as.character(df)
+rownames(a)<-as.character(t_value)
+a<-cbind(t_df = rownames(a),a)
+df<-data.frame(a)
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+
+<div class="pagebreak"> </div>
+###### T Tables (tail area to the right of t for large degrees of freedom)
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+df<-c(30,35,40,45,50,60,70,80,90,100,120,120,10000)
+t_value<-c(0:40)/10
+
+for(i in seq_along(df)){
+  if(i == 1){ a<-round(pt(t_value,df[i],lower.tail = FALSE),3)}
+  else{a<-cbind(a,round(pt(t_value,df[i],lower.tail = FALSE),3))}
+}
+colnames(a)<-as.character(df)
+rownames(a)<-as.character(t_value)
+a<-cbind(t_df = rownames(a),a)
+df<-data.frame(a)
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```

@@ -4,7 +4,7 @@ author: "Eric Miedema"
 output: ioslides_presentation
 widescreen: true
 ---
-## Statistic Class Week 2
+## Statistics Class Week 2
 
 Statistics: Graphical Methods
 
@@ -21,7 +21,8 @@ Statistics: Graphical Methods
 ## Today's Homework  
 
 - Start reading chapter 3
-- Chapter 1 and 2 assignment due Wednesday
+- Chapter 1 and 2 Homework due Friday
+- Chapter 1 and 2 Quiz due Friday
 
 # Chaper 3: Graphical Methods
 
@@ -36,18 +37,12 @@ Visualize the comparison of groups
 
 *  Bar chart
 
-Other charts: Tree diagram, Donut  Chart
-
-<div class="notes">
-The problem is **variability**
-</div>
-
 ## Numeric Data
 
 Visualizing distributions of univariate numeric data  
 
 * Stem-and-leaf diagram
-* Histogram
+* Histogram: bar chart with "bins" for numeric the ranges of values
 
 Visualizing relationships of bivariate numeric data  
 
@@ -64,18 +59,18 @@ Combination Charts and Infographics
 
 Dashboards  
 
-- [Shiny Applications](http://shiny.rstudio.com/gallery/)
+- [Microsoft Power BI](https://app.powerbi.com/visuals/)
 - [Tableau Dashboards](https://public.tableau.com/s/gallery)
+- [Shiny Applications](http://shiny.rstudio.com/gallery/)
 
 Motion and Interactive Charts  
 
-- [The Best Stats You've Ever Seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen?language=en)
 - [Google Charts](https://developers.google.com/chart/)
-- [Other Examples](https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html)
+- [The Best Stats You've Ever Seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen?language=en)
+- [NYT interactive articles](https://www.nytimes.com/interactive/2017/01/18/science/earth/2016-hottest-year-on-record.html?hp&action=click&pgtype=Homepage&clickSource=g-artboard%20g-artboard-v3%20&module=span-ab-lede-package-region&region=top-news&WT.nav=top-news&_r=0)
 
 <div class="notes">
 Napoleon's march 4 variables: Direction, Location, Army size and Temperature
-Grammar of Graphics: 
 </div>
 
 ## Visualize proportions
@@ -92,30 +87,24 @@ Segmented (Stacked) Bar Chart
 1. Draw a bar represent the entire data set
 2. Divide the bar segment based on the frequency (or relative frequency) of each category
 
-## Pie Chart and Stacked Bar Examples
-```{r echo = FALSE, warning=FALSE, message=FALSE}
-sample(letters[c(1:4,6)],10, replace = TRUE)
-```
-![](Pictures/graph_paper.PNG) |  |  ![](Pictures/graph_paper.PNG) 
-
 ## Pie, Stacked Bar or Comparative Bar Chart?
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
-library(dplyr)
 #write.csv(midwest,"Data_Sets/state_demographics.csv",row.names = FALSE)
 #write.csv(msleep,"Data_Sets/animal_sleep.csv",row.names = FALSE)
+#car<-mtcars
+#car$car<-row.names(car)
+#write.csv(cars,"Data_Sets/cars.csv",row.names = FALSE)
 ```
 
 [State Demographic Data](https://docs.google.com/spreadsheets/d/1Dl4B872ZVHWTDKaRXt1kbQDj10txmt0DHCkieiHMKIk/edit?usp=sharing)  
 
 1. What is Illinois race **proportions**? 
-2. How does Illinois race proportions **compare** with other states? Compare with Wisconsin?
-3. How do different states **compare** with percent of adults?
+2. How does Illinois race proportions **compare** with Wisconsin?
 
 <div class="notes">
 1. Pie Chart
 2. Stacked Bar Chart
-3. Comparative Bar Chart
 </div>
 
 ## Illinois Proportions
@@ -135,19 +124,7 @@ plot1 <- ggplot(b, aes(x = reorder(variable,-Race), y = Race)) +
 plot2 <- ggplot(b, aes(x = reorder(variable,-Frequency), y = Frequency)) + 
   geom_bar(stat = "identity") + labs(x = "Race")
 
-library(gridExtra)
 grid.arrange(plot1, plot2, ncol=2)
-```
-
-## Comparing States
-```{r echo = FALSE, warning=FALSE, message=FALSE}
-b<-a %>% group_by(state) %>% mutate(Population = sum(value)) 
-b<- b %>% group_by(state, variable) %>% 
-  summarize(Race = sum(value), Population = mean(Population), Frequency = Race/Population) %>% 
-  arrange(desc(Race))
-
-ggplot(b, aes(x = reorder(variable,-Race), y = Race)) + 
-  geom_bar(stat = "identity") + labs(x = "Race", y ="Population") + facet_wrap(~state)
 ```
 
 ## Comparing IL and WI
@@ -177,6 +154,32 @@ grid.arrange(plot1, plot2, plot2 + coord_flip(), plot3, ncol=2, nrow = 2)
 3. The next digits (or digit) after the stem become(s) the leaf.
 4. Typically, we truncate (leave off) the remaining digits.
 
+## Stem and Leaf Examples
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+set.seed(7)
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+females<-data.frame(Height = round(rnorm(8,mean = 65, sd = 3.5),0), Gender = 'Female')
+males<-data.frame(Height = round(rnorm(8,mean = 70, sd = 4),0), Gender = 'Male')
+df<-rbind(females,males)
+
+females<-data.frame(Weight = round(rnorm(8,mean = 130, sd = 15),0), Gender = 'Female')
+males<-data.frame(Weight = round(rnorm(8,mean = 160, sd = 25),0), Gender = 'Male')
+dfb<-rbind(females,males)
+```
+
+<div class="columns-2">
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(df)
+plot(Table)
+```
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
+Table <- gvisTable(dfb)
+plot(Table)
+```
+</div>
+
 ## Numeric Univariate Data
 
 **Histogram**: A graph for the information in a frequency distribution for a numeric data set.  
@@ -189,37 +192,14 @@ Note: With class intervals of unequal width, the density for the class should be
 
 $$\text{Density} = \frac {\text{relative frequency of the class interval}}{\text{class interval width}}$$
 
+## Describing Distributions
+![](Pictures/distribution_plots.PNG)
 
-## Histogram / Stem and Leaf Examples
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
-library(googleVis)
-op <- options(gvis.plot.tag='chart')
-a<-round(rnorm(20,mean = 150, sd = 10),0)
-b<-sample(c("Male","Female"),20, replace = TRUE)
-df<-data.frame(Weight = a, Gender = b)
-```
-```{r echo = FALSE, warning=FALSE, message=FALSE, results='asis'}
-Table <- gvisTable(df)
-plot(Table)
-```
-
-## Histogram Example
-
-![](Pictures/graph_paper.PNG) 
-
-## Historgram, scatterplot or line chart?
+## Histogram
 
 [Animal Sleep Data](https://docs.google.com/spreadsheets/d/1uN_Gbko-9LFMpERoA897A6_GWRB-5qzuA6qDIldygRw/edit?usp=sharing)   
 
-1. What is the distribution of sleep time for different animals?  What is the cumulative distribution?
-2. How does the animal weight compare with the amount of sleep?
-3. Is the animal type an extraneous variable with the animal weight?
-
-<div class="notes">
-1. Histogram / Cumulative Distribution
-2. Scatter-plot
-3. Scatter-plot with categorical variable
-</div>
+What is the distribution of sleep time for different animals?  What is the cumulative distribution?
 
 ## Animal Length of Sleep
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
@@ -239,25 +219,30 @@ plot2<-ggplot(msleep,aes(sleep_total)) + stat_bin(aes(y=cumsum(..count..)),geom=
 grid.arrange(plot1, plot2, ncol=2)
 ```
 
-## Animal Body Weight vs Sleep
-```{r echo = FALSE, warning=FALSE, message=FALSE}
-plot3<-ggplot(msleep,aes(bodywt, sleep_total))+ geom_point() + 
-  labs(title = "Body Weight vs Sleep", y = "Hours", x = "Pounds")
-a<-msleep %>% filter(bodywt<150 & bodywt > 5)
-a<-msleep %>% filter(vore %in% c("carni", "omni","herbi")) %>% filter(bodywt<300 & bodywt>2)
-plot1<-ggplot(a,aes(bodywt, sleep_total, colour = vore))+ geom_point() + labs(title = "Weight vs Sleep by Type", y = "Hours", x = "Pounds")
-plot2<-ggplot(a,aes(bodywt, sleep_total))+ geom_point() + labs(title = "Weight vs Sleep by Type", y = "Hours", x = "Pounds") + facet_wrap(~vore)
-grid.arrange(plot1, plot2, nrow=2)
-```
+## Scatter Plot
 
-## Describing Historgam Distributions
-![](Pictures/distribution_plots.PNG)
+[Car Data](https://docs.google.com/spreadsheets/d/1HGtm0XKSBjoGBfcyC7D7O7y7iqfTPcR0hY9v7uh9mS8/edit?usp=sharing)   
+
+1. What is the relationship between car weight and MPG?
+2. Does the number of cylinders impact MPG?   
+3. What is your car purchase decision?
+
+## Car MPG
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+p <- ggplot(mtcars, aes(wt, mpg))
+plot1 <- p + geom_point()
+plot2 <- p + geom_point(aes(colour = factor(cyl)))
+
+grid.arrange(plot1, plot2, ncol=2)
+```
 
 ## Time Series
 
 **Time series plot** is a simple graph of data collected over time that can be used to identify trends or patters of interest. Examples include demographic or economic trends, [stock prices](https://www.google.com/finance), business metrics, web site traffic, etc.
 
 ```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(ggplot2movies)
 a<-movies
 a$rating<-round(a$rating,0)
 b<-a %>% group_by(year,rating) %>% summarize(number = sum(length))
@@ -271,3 +256,5 @@ p + geom_line(aes(colour = factor(rating))) + labs(title = "IMDB Movie Ratings")
 * 3.3, 3.8, 3.9 
 * 3.16, 3.20, 3.23
 * 3.41, 3.47
+
+Excel Challenge:  Using the animal data, make a histogram chart with a cummulative line of animal body weight

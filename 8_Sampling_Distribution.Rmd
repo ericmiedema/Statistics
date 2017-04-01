@@ -1,0 +1,248 @@
+---
+title: "Sampling Distributions and Point Estimation"
+author: "Eric Miedema"
+output: ioslides_presentation
+widescreen: true
+---
+
+<style>
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+  .col5 {
+    columns: 5 100px;
+    -webkit-columns: 5 100px;
+    -moz-columns: 5 100px;
+  }
+  .em_lightblue {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background: #00A0DD;
+    border: #00A0DD;
+  }
+  .em_white {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
+  .em_lightgreen {
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial,helvetica;
+    color: #FFFFFF;
+    cursor: default;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+    background-color: #6CC04A;
+    background: #6CC04A;
+  }
+}
+</style>
+
+## Statistics Class Week 7 and 8
+
+"There are three kinds of lies: lies, damned lies, and statistics."  - Benjamin Disraeli, British Prime Minister (late 18th century)  
+
+
+### Announcements
+
+* Chapter 7 Homework Due Friday
+* No Chapter 7 quiz (will integrate problems for next week)
+* Start reading chapter 8 and 9
+
+# Chapter 8 Sampling Distributions
+
+##  Statistical Inference
+
+Any quantity computed from values in a sample is called a **statistic**.
+
+<div class = 'col5'>
+<p class = 'em_white'; style="width: 160px;height: 90px";'> </p>
+<p class = 'em_lightgreen'; style="width: 160px;height: 90px";'>Sample Statistic</p>
+<center><p style = 'font-size: 300%'>&rarr;</p></center>
+<p class = 'em_lightgreen'; style="width: 160px;height: 90px";'>Population Statistic</p>
+<p class = 'em_white'; style="width: 160px;height: 90px";'> </p>
+</div>
+
+<br>
+What are the main "stats" we have learned?  
+How do we know these "stats" are equal to the population?
+
+<div class="notes">
+Numeric Method  | Numeric | Categorical
+------------- | ------------- | -------------
+Center  | Sample Mean $\bar{x} = \frac{x_1+x_2+\cdots +x_n}{n} = \frac{\sum (x)}{n}$  | Sample proportion of success $\hat{p} = \frac {\text{number of S's in the sample}}{n}$
+Variability  | Sample Standard deviation $s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$  |   
+Relative Standing Statistic  | Z SCORE $\text{z} = \frac{x- \bar{x}}{\sigma}$  |  
+</div>
+
+## Sampling Distribution
+
+The observed value of a statistic depends on the particular sample selected from the population; typically, it varies from sample to sample. This variability is called **sampling variability**.
+
+The distribution of a statistic is called its **sampling distribution**.
+
+## Sampling Distribution of a Sample Mean
+
+Let $\bar{x}$ denote the mean of the observations in a random sample of size n from a population having mean $\mu$ and standard deviation $\sigma$.  
+
+Denote the mean value of the distribution by $\mu_\bar{x}$ and standard deviation of the distribution by $\sigma_\bar{x}$ (called the standard error of the mean)
+
+##  Properties
+
+When random samples are selected form a population, the following are properties of the sampling distribution of $\bar{x}$.
+
+1. $\mu = \mu_\bar{x}$ 
+2. $\sigma = \frac{\sigma_\bar{x}}{\sqrt{n}}$  
+This rule is approximately correct as long as no more than 5% of the population is included in the sample.
+3. When the population distribution is normal, the sampling distribution of $\bar{x}$ is also normal for any sample size n.
+4. When n is sufficiently large, the sampling distribution of $\bar{x}$ is approximately normally distributed, even when the population distribution is not itself normal. Central Limit Theorem.
+
+## Practice in Excel {.smaller}
+
+Let x be the amount of time (in minutes) that a particular San Francisco commuter must wait for a train.  Suppose that the density curve is as pictured.
+
+```{r echo = FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+df<-data.frame(x = c(0,20),Density = c(.05,.05))
+dfb<-data.frame(x = c(0,20,40),Density = c(0,.05,0))
+```
+<center>
+```{r echo = FALSE, warning=FALSE, message=FALSE, fig.height= 2.5, fig.width=4}
+ggplot(df, aes(x=x, y=Density)) + geom_line(size = 1) + scale_x_continuous(limits = c(0,25),name = "x - minutes") + scale_y_continuous(limits = c(0,.15))
+```
+</center>
+
+1. Create a sample of 30 commuters with the RANDBETWEEN(0,20) function in excel
+2. What is the average of your sample?
+3. What is the classes average of average samples?
+4. Create 10 samples, plot the sample distribution and calculate $\mu_\bar{x}$ and $\sigma_\bar{x}$
+5. According to sampling distribution properties, what are $\mu$ and $\sigma$?
+
+## Central Limit Theorem
+
+The Central Limit Theorem can safely be applied when n exceeds 30.
+
+If n is large or the population distribution is normal, the standardized variable 
+
+$$\text{Z} = \frac{\bar{x}- \mu_\bar{x}}{\sigma_\bar{x}} = \frac{\bar{x}- \mu}{\frac{\sigma}{\sqrt{n}} }$$
+
+has (approximately) a standard normal (z) distribution regardless of the underlying distribution.
+
+<div class="notes">
+The average of averages is going to be normal.  Especially when n is large.
+</div>
+
+## Why does Central Limit Theorem (CLT) matter?
+
+Results enable inferential statistics about a population mean even when the shape of the population distribution is unknown.
+
+<center>![](Pictures/CLT_graph.png)</center>
+
+<div class="notes">
+Example about skewed graphs.  
+And show histogram of rolling 1 die vs 2 dice.
+</div>
+
+## Example with Different Population Distributions
+
+Random data for 3 distributions with values of 0 to 100
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide'}
+library(ggplot2)
+set.seed(10)
+dfa<-data.frame(Type = "Normal", x = round(rnorm(1000,mean = 50, sd = 10),0))
+dfb<-data.frame(Type = "Uniform", x = round(runif(1000, 0,100),0))
+dfc<-data.frame(Type = "Skewed", x = round(rnorm(1000,mean = 40, sd = 20)+runif(100, 20,30),0))
+dfc$x[dfc$x>100]<-100
+df<-rbind(dfa,dfb,dfc)
+ggplot(df, aes(x, color = Type)) + geom_density(adjust = 3, size = 1) + labs(title = 'Distributions')
+
+```
+
+## Sample Distribution based on n
+
+```{r echo = FALSE, warning=FALSE, message=FALSE, results='hide', fig.width = 9, fig.height = 6}
+dfa<-data.frame(Sample = 1:100, Type = "Normal")
+dfb<-data.frame(Sample = 1:100, Type = "Uniform")
+dfc<-data.frame(Sample = 1:100, Type = "Skewed")
+df_sample<-rbind(dfa,dfb,dfc)
+
+clt<-function(sample_type, n)
+  {
+  mean(sample(df$x[df$Type == sample_type], size = n))
+  }
+
+df_sample$Sample_Mean<-mapply(df_sample$Type,2, FUN = clt)
+plot1<-ggplot(df_sample, aes(Sample_Mean, color = Type)) + geom_density(adjust = 3, size = 1) + labs(title = 'n = 2')
+df_sample$Sample_Mean<-mapply(df_sample$Type,5, FUN = clt)
+plot2<-ggplot(df_sample, aes(Sample_Mean, color = Type)) + geom_density(adjust = 3, size = 1) + labs(title = 'n = 5')
+df_sample$Sample_Mean<-mapply(df_sample$Type,10, FUN = clt)
+plot3<-ggplot(df_sample, aes(Sample_Mean, color = Type)) + geom_density(adjust = 3, size = 1) + labs(title = 'n =10')
+df_sample$Sample_Mean<-mapply(df_sample$Type,20, FUN = clt)
+plot4<-ggplot(df_sample, aes(Sample_Mean, color = Type)) + geom_density(adjust = 3, size = 1) + labs(title = 'n = 20')
+
+library(gridExtra)
+grid.arrange(plot1, plot2, plot3,plot4, ncol=2,nrow = 2)
+```
+
+## Problem Example 8.15
+
+Let x denote the time (in minutes) that is takes a fifth-grade student to read a certain passage.  Suppose that the mean value and standard deviation of z are $\mu = 2$ minutes and $\sigma = 0.8$ minutes, respectively.
+
+1.  If $\bar{x}$ is the sample mean time for a random sample of n = 9 students, where is the $\bar{x}$ distribution center, and how much does it spread out (as described by its standard deviation)?
+2.  What is the center and spread for n = 25 and n = 100?
+3.  Which of the sample sizes would be most likely to result in an $\bar{x}$ value close to $\mu$, and why?
+
+<div class="notes">
+Problem 8.15  
+
+1. $\mu_\bar{x} = 2$, $\sigma_\bar{x} = 0.267$
+2. $\mu_\bar{x} = 2$ will always be 2.  For n = 25, $\sigma_\bar{x} = 0.16$.  When n = 100, $\sigma_\bar{x} = 0.008$
+3. Since n = 100, has the smallest standard deviation it is most likely to have $\bar{x}$ be closer to $\mu$
+</div>
+
+## Sampling Distribution of a Sample Proportion $\hat{p}$
+Let $\hat{p}$ be the proportion of successes in a random sample of size n from a population whose proportion of S's (successes) is p. Denote the mean of p by $\mu_\hat{p}$ and the standard deviation by $\sigma_\hat{p}$.
+
+## Sample Proportion Properties
+
+When random samples are selected from a population, the following are properties of the sampling distribution $\hat{p}$
+
+1.  $\mu_\hat{p} = p$
+2.  $\sigma_\hat{p} = \sqrt{\frac{p(1-p)}{n}}$
+3. When n is large and p is not too near 0 or 1, the sampling distribution of p is approximately normal.
+    + General rule if np and n(1-P) are greater than 10 then the sample distribution is normal
+
+## Proporiton Practice
+
+About 42% of adults plan on celebrating St. Patrick's Day and of those planning to celebrate about 25% plan on going to a St. Patrick's Day parade.  
+
+1. Create a sample of 30 randomly selected adults and indicate if they are planning to attend a St. Patrick's Day parade.  
+    + Use excel function =BINOM.INV(1, 0.1, RAND())
+2. Based on your generated sample, what is $\mu_\hat{p}$ and $\sigma_\hat{p}$?
+3. What would sample distribution of 25 samples look like if the sample size was changed to 50?
+
+## Chapter 8 Homework {.smaller}
+
+* 8.10, 8.11,8.19
+* 8.22, 8.23, 8.29
+
+Excel Challenge: Sample distribution plots with calculated stats in caption $\mu$ and $\sigma$:
+
+1.  San Francisco commuter waiting for a train. 10 samples with n = 30 in each sample
+    + Use =RANDBETWEEN(0,20) function in excel to generate data
+2.  Adults planning on going to a St. Patrick's Day parade. 25 samples with n = 30 in each sample
+    + Use =BINOM.INV(1, 0.1, RAND()) function in excel to generate data
+3.  Adults planing on going to a St. Patrick's Day parade. 25 samples with n = 50 in each sample
+    + Use =BINOM.INV(1, 0.1, RAND()) function in excel to generate data

@@ -1,0 +1,36 @@
+---
+title: "Formula Overview"
+output:
+  html_document:
+    toc: yes
+---
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 2 100px;
+    -webkit-columns: 2 100px;
+    -moz-columns: 2 100px;
+  }
+  .myClass_border
+  {
+   border: 3px solid black;
+    padding: 2px;
+    margin: 2px;
+  }
+  .pagebreak { page-break-before: always; }
+</style>
+<div class="myClass_border">
+<center><h3>Numeric Methods</h3></center>  
+
+Numeric Method  | Numeric | Categorical
+------------- | ------------- | -------------
+Center  | Sample Mean $\bar{x} = \frac{x_1+x_2+\cdots +x_n}{n} = \frac{\sum (x)}{n}$  | Sample proportion of success $\hat{p} = \frac {\text{number of S's in the sample}}{n}$
+Variability  | Sample Standard deviation $s = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}$  |   
+Relative Standing Statistic  | Z SCORE $\text{z} = \frac{x- \bar{x}}{\sigma}$  |  
+Percentage calculation for normal distributions | Use formula of *=NORM.DIST(Z SCORE,0,1,TRUE)* or statistical table |  
+
+</div>

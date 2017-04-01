@@ -1,0 +1,146 @@
+---
+title: "Exam 3"
+author: 'Name____________________'
+output: 
+  word_document:
+    reference_docx: word_style.docx
+---
+<style>
+  .pagebreak { page-break-before: always; }
+</style>
+
+#### Multiple Choice (1 point each)
+##### 1.  Which of the following is the definition of a Type I error for a statistical test?
+
+a.	It is the probability of making a correct decision. 
+b.	It is denoted by $\beta$.
+c.	It is the error of accepting the null hypothesis when it is false.
+d.	It is the error of rejecting the null hypothesis when it is true. <ANSWER>
+
+##### 2.  What are the mean and standard deviation of the sampling distribution $\bar{x}$ if random samples of size 25 are selected from a population with a mean of 110 and a standard deviation of 10?   
+
+a. $\mu_\bar{x} = 110$ and $\sigma_\bar{x} = 10$
+b. $\mu_\bar{x} = 110$ and $\sigma_\bar{x} = 2$ <ANSWER>
+c. $\mu_\bar{x} = 4.4$ and $\sigma_\bar{x} = 2$
+d. $\mu_\bar{x} = 110$ and $\sigma_\bar{x} = 1.414$
+
+##### 3. A car rental company has estimated the following cost probabilities on damages to their rental vehicles incurred while being driven.   
+
+Cost | $0 | $500 | $1,000 | $2,000 | $5,000
+------------- | ------------ | ------------- | ------------ | ------------- | ------------ 
+Probability | 0.15 | 0.10 | 0.40 | 0.20 | ?   
+
+What is the rental company's expected cost for damages per car rental?
+
+a. $2,350
+b. $850
+c. $1,600 <ANSWER>
+d. $2,125
+e. $1,700
+
+##### 4. You have sampled 30 amateur tennis players in New York to determine the mean first-serve ball speed. A 95% confidence interval for the mean firstserve ball speed is 85 to 94 miles per hour.   
+Which of the following statements gives a valid interpretation of this interval?
+
+a. If this sampling procedure were repeated several times, 95% of the resulting confidence intervals would contain the true mean first-serve ball speed of amateur tennis players in New York.  <ANSWER>
+b. If this sampling procedure were repeated several times, 95% of the sample means would be between 85 and 94.
+c. If 100 samples were taken and a 95% confidence interval was computed, 5 of the intervals would be included within the confidence interval (85, 94).
+d. 95% of the population of all New York amateur tennis players have a first-serve ball speed between 85 and 94 miles per hour.
+e. 95% of the 30 amateur tennis players sampled have a mean first-serve ball speed between 85 and 94 miles per hour.
+
+##### 5.  Which of the following is not a property of the t distribution?
+
+a.	Each t curve is less spread out than the z curve. <ANSWER>
+b.	All t curves are bell shaped and each is centered at zero.
+c.	The t curve approaches the z curve as the number of degrees of freedom increase.
+d.	As the number of degrees of freedom increases, the spread of the corresponding t curve decreases.
+
+##### 6.  When does the Central Limit Theorem state that the sampling distribution of $\bar{x}$ is well approximated by a normal curve?   
+
+a.	When the standard deviation of the population is normally distributed.
+b.	When the population distribution is not itself normal and n is greater than 30. <ANSWER>
+c.	Only when the population distribution itself is normal.
+d.	When the population is skewed.
+
+##### 7.  What is the P-value for a test of $H_0: p =.4$ versus $H_a: p \ne .4$ with a test statistic of z = 1.8?
+
+a.	0.036 
+b.	1.928
+c.	0.072 <ANSWER>
+d.	0.9641
+
+##### 8.  Suppose the average score on the SAT exam is $\mu = 1200$. A group of high school students believe that the average score is actually lower. What would be the null and alternative hypotheses used in testing their claim using a random sample of 200 students SAT scores?
+
+a. $H_0: \mu = 1200$ versus $H_a: \mu < 1200$ <ANSWER>
+b. $H_0: \mu = 1200$ versus $H_a: \mu > 1200$
+c. $H_0: \mu = 1200$ versus $H_a: \mu < 200$
+d. $H_0: \mu = 1200$ versus $H_a: \mu \ne 1200$
+
+##### 9. Which of the following statements is (are) true?
+
+I. The larger the sample, the smaller the variance of the sampling distribution.
+II. Sampling distributions from nonnormal populations are approximately normal when the sample size is large.   
+III. If the population size is much larger than the sample size, then the variance of the sampling distribution remains unchanged, no matter what the sample size is.   
+
+a. I only
+b. III only
+c. I and II only <ANSWER>
+d. I and III only
+e. I, II, and III
+
+##### 10. A rock gym manager used a random sample of 300 rock climbers to obtain a 95% confidence interval for the mean time (in minutes) it takes to complete a difficult climbing route. This interval was (12.2, 14.3). If he had used a 90% confidence interval instead, the confidence interval would have been _________
+
+a. wider and would have involved a smaller risk of being incorrect.
+b. narrower and would have involved a smaller risk of being incorrect.
+c. wider, but it cannot be determined whether the risk of being incorrect would be greater or smaller.
+d. wider and would have involved a larger risk of being incorrect.
+e. narrower and would have involved a larger risk of being incorrect.  <ANSWER>
+
+#### Multiple Choice (2 point each): 1 pt for formula/showing work and 1pt for solution
+##### 1.  If a population has a proportion of successes of p = 0.60, what is $P(\hat{p} \le 0.5)$ if a random sample of size n = 30 is selected?   
+   
+![](solution_work.PNG)   
+
+a.	0.6195
+b.	0
+c.	0.1318 <ANSWER>
+d.	There is not enough information given to answer the question.
+<R: pnorm((.5-.6)/sqrt(.6*.4/30))>
+
+
+##### 2.  Let $\mu$ denote the true mean for sales of gravel per day at a local gravel pit. Suppose it can be assumed that $\sigma = 100$. What is a 95% confidence interval for the population mean if a random sample of 20 days is taken and mean sales per day was reported as $5200?
+
+![](solution_work.PNG)   
+
+a.  (5163.22, 5236.78)
+b.	(5156.17, 5243.83) <ANSWER>
+c.	(5153.20, 5246.80)
+d.	(5142.40, 5257.60)
+
+##### 3.  Suppose the salaries of elementary school teachers are approximately normally distributed with a mean income of $25,000 and a standard deviation of $5,000. If a random sample of size 25 is taken and the mean calculated, what is the probability that this mean value will be between $22,000 and $24,000?
+
+![](solution_work.PNG)   
+
+a.	0.1465
+b.	0.4207
+c.	0.1584
+d.	0.1573 <ANSWER>
+
+##### 4.  Suppose a survey is to be conducted to determine the proportion of cars purchased that are red. What size sample should be taken to ensure the estimate is within 0.10 of the population proportion with 95% confidence?
+
+![](solution_work.PNG)   
+
+a.	A sample size of at least 97 should be taken. <ANSWER>
+b.	A sample size of at least 96 should be taken. 
+c.	The sample size cannot be computed from the information given.
+d.	A sample size of at least 35 should be taken.
+e.	A sample size of at least 30 should be taken.
+
+##### 5. It was recently discovered that 20% of a crop of Romaine lettuce was exposed to E. Coli bacteria and hence, should not be consumed.  Bags of lettuce harvested from this crop were on the delivery truck for a local grocery store. If there were 300 bags of lettuce on this shipment, find an approximate 95% confidence interval for the percent of bags of lettuce that may be contaminated.
+   
+![](solution_work.PNG)   
+
+a. (0.1620, 0.2380)
+b. (0.1548, 0.2452) <ANSWER>
+c. (0.1548, 1)
+d. (0.1382, 0.2618)
+e. (0.4434, 0.5566)
