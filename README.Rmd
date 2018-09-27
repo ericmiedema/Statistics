@@ -2,9 +2,8 @@
 title: "Statistic and Statistical languages"
 author: "Eric Miedema"
 output:
-  html_document:
-    toc: true
-    keep_md: yes
+  md_document:
+    variant: markdown_github
 ---
 <style>
   .col2 {
